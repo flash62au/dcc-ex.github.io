@@ -578,7 +578,7 @@
 <li><p><a class="reference external" href="#action-commands-getting-ex-rail-to-do-something">Actions</a> - Commands that ‘do’ something</p></li>
 <li><p><a class="reference external" href="#sequence-flow-flow-control-commands">Flow Control Commands</a></p>
 <ul>
-<li><p><a class="reference internal" href="#conditionals">Conditionals</a> &amp; Branching - Commands that change the flow/order in which the commands are executed</p></li>
+<li><p><a class="reference internal" href="#getting-started-conditionals"><span class="std std-ref">Conditionals</span></a> &amp; <a class="reference internal" href="#branching">Branching</a> - Commands that change the flow/order in which the commands are executed</p></li>
 <li><p><a class="reference internal" href="#delays-waits">Delays &amp; Waits</a> - Commands that change the timing of the execution of the commands</p></li>
 </ul>
 </li>
@@ -667,7 +667,7 @@
 <p>For a simple sequence, once triggered, the system steps though each and every instruction as quickly as possible until it hits <code class="docutils literal notranslate"><span class="pre">DONE</span></code> at the end of the sequence.</p>
 <p>However there are a number of ways that the processing of a sequence can be changed:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#conditionals">Conditionals</a></p></li>
+<li><p><a class="reference internal" href="#getting-started-conditionals"><span class="std std-ref">Conditionals</span></a></p></li>
 <li><dl class="simple">
 <dt><a class="reference internal" href="#branching">Branching</a></dt><dd><ul>
 <li><p><a class="reference external" href="#call-and-return">CALL</a> - Branch to a separate sequence expecting a RETURN</p></li>
@@ -680,7 +680,7 @@
 </ul>
 <p>The timing of the execution of the commands can be altered as well with ‘Delay’ and ‘Wait’ type commands.</p>
 <section id="conditionals">
-<h5><a class="toc-backref" href="#id18">Conditionals</a><a class="headerlink" href="#conditionals" title="Permalink to this heading"></a></h5>
+<span id="getting-started-conditionals"></span><h5><a class="toc-backref" href="#id18">Conditionals</a><a class="headerlink" href="#conditionals" title="Permalink to this heading"></a></h5>
 <p>If a conditional is encountered, the following (enclosed) commands are only executed if the specified conditions are met.</p>
 <p>Conditionals have the structure:</p>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
