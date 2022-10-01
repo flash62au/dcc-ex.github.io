@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diagnostic d Commands &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>DCC++ Command Reference &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Diagnostics &lt;D ACK&gt; Command" href="diagnostic-d-ack-command.html" />
-    <link rel="prev" title="Using a Serial Monitor" href="serial-monitor.html" />
+    <link rel="next" title="Developer and API reference" href="../developers/index.html" />
+    <link rel="prev" title="Programming Locos (CVs)" href="programming-locos.html" />
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -137,8 +137,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../software/command-reference.html">DCC-EX Command Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../software/command-summary.html">DCC-EX Command Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command-summary.html">DCC-EX Command Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -318,13 +318,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../software/index.html">Software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../software/programming-locos.html">Programming Locos (CVs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="programming-locos.html">Programming Locos (CVs)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../software/index-dcpp-commands.html">DCC++ Command Reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../software/command-reference.html">DCC-EX Command Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../software/command-summary.html">DCC-EX Command Summary</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DCC++ Command Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command-summary.html">DCC-EX Command Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/index.html">Developer and API reference</a><ul>
@@ -340,14 +340,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../accessories/suppliers-cases.html">Cases / Enclosures</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Diagnostic Tools</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="serial-monitor.html">Using a Serial Monitor</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Diagnostic d Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
-<li class="toctree-l4"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tools/serial-monitor.html">Using a Serial Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index-diagnostics-d.html">Diagnostic d Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tools/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tools/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
 </ul>
 </li>
 </ul>
@@ -406,10 +406,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">Reference</a> &raquo;</li>
-          <li><a href="index.html">Diagnostic Tools</a> &raquo;</li>
-      <li>Diagnostic d Commands</li>
+      <li>DCC++ Command Reference</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/tools/index-diagnostics-d.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/software/index-dcpp-commands.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -418,26 +417,13 @@
            <div itemprop="articleBody">
              
   <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="diagnostic-d-commands">
-<h1>Diagnostic d Commands<a class="headerlink" href="#diagnostic-d-commands" title="Permalink to this heading"></a></h1>
-<p><a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
+<section id="dcc-command-reference">
+<h1>DCC++ Command Reference<a class="headerlink" href="#dcc-command-reference" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../../levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html#d-ack-on">&lt;D ACK ON&gt;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html#d-ack-limit-ma">&lt;D ACK LIMIT mA&gt;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html#d-ack-min-s">&lt;D ACK MIN µS&gt;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html#d-ack-max-s">&lt;D ACK MAX µS&gt;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html#d-progboost">&lt;D PROGBOOST&gt;</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-ack-command.html#making-the-changes-permanent">Making the Changes Permanent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html#speed-step-configuration">Speed Step Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html#the-following-commands-turn-on-1-or-off-0-various-diagnostic-traces">The following commands turn ON(1) or OFF(0) various diagnostic traces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diagnostic-d-command.html#the-following-commands-might-help-in-exceptional-circumstances">The following commands might help in exceptional circumstances</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="command-reference.html">DCC-EX Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-summary.html">DCC-EX Command Summary</a></li>
 </ul>
 </div>
 </section>
@@ -446,8 +432,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="serial-monitor.html" class="btn btn-neutral float-left" title="Using a Serial Monitor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="diagnostic-d-ack-command.html" class="btn btn-neutral float-right" title="Diagnostics &lt;D ACK&gt; Command" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="programming-locos.html" class="btn btn-neutral float-left" title="Programming Locos (CVs)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../developers/index.html" class="btn btn-neutral float-right" title="Developer and API reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
