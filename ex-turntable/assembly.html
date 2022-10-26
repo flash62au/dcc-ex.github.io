@@ -662,14 +662,14 @@
 </div>
 <p>At the time of writing, there is no installer for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.</p>
 <p>As noted in the tip above, you should have a <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> folder alongside the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> folder, and neither should reside in the other (the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> software is required in the next step):</p>
-<a class="reference internal image-reference" href="../_images/two-folders.png"><img alt="Two folders" src="../_images/two-folders.png" style="width: 433.2px; height: 139.2px;" /></a>
+<a class="reference internal image-reference" href="../_images/two-folders.png"><img alt="Two folders" src="../_images/two-folders.png" style="width: 603.0px; height: 246.0px;" /></a>
 <p>The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the <a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Install using the Arduino IDE</span></a> page.</p>
-<p>When you get to the point of opening the sketch, ensure you open the Turntable-EX sketch:</p>
-<a class="reference internal image-reference" href="../_images/open-turntable-ex-sketch.png"><img alt="Open EX-Turntable sketch" src="../_images/open-turntable-ex-sketch.png" style="width: 514.1999999999999px; height: 364.2px;" /></a>
+<p>When you get to the point of opening the sketch, ensure you open the EX-Turntable sketch:</p>
+<a class="reference internal image-reference" href="../_images/open-turntable-ex-sketch.png"><img alt="Open EX-Turntable sketch" src="../_images/open-turntable-ex-sketch.png" style="width: 358.2px; height: 249.6px;" /></a>
 <p>Use Windows Explorer to either copy or rename “config.example.h” to “config.h”.</p>
 <p>If you need to make adjustments to config.h, refer to the <a class="reference internal" href="configure.html"><span class="doc">Configuration options</span></a>.</p>
 <p>Set the board type to “Nano” and set the correct Processor type (typically ATMega328P):</p>
-<a class="reference internal image-reference" href="../_images/select-nano.png"><img alt="Select Nano" src="../_images/select-nano.png" style="width: 383.4px; height: 240.6px;" /></a>
+<a class="reference internal image-reference" href="../_images/select-nano.png"><img alt="Select Nano" src="../_images/select-nano.png" style="width: 475.79999999999995px; height: 247.2px;" /></a>
 <p>After any adjustments are made and “config.h” has been created, the software can be uploaded to the Arduino with the upload button:</p>
 <a class="reference internal image-reference" href="../_images/upload_arrow.jpg"><img alt="Upload" src="../_images/upload_arrow.jpg" style="width: 162.39999999999998px; height: 102.89999999999999px;" /></a>
 <p>Once the software is loaded successfully on to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, the stepper motor should automatically start rotating in an attempt to find its “home” position, which will be activated when the magnet at one end of the turntable comes in close proximity to the hall effect sensor.</p>
@@ -715,7 +715,7 @@ Turntable homed successfully
 <p class="admonition-title">Note</p>
 <p>As mentioned previously, your CommandStation needs to be running the “add-turntable-controller” branch of <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller">EX-CommandStation</a>.</p>
 <p>This will display in the serial console of your CommandStation as version 4.0.2.</p>
-<p>If the “myHal.cpp_example.txt” is missing the lines referred to below, or if you receive compile errors that the file “IO_TurntableEX” is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>If the “myHal.cpp_example.txt” is missing the lines referred to below, or if you receive compile errors that the file “IO_EXTurntable” is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
 <p>The zip file containing the correct version of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> should also be attached to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> release.</p>
 </div>
 <p>Before you will be able to test or use <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, you need to configure the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software to load the appropriate device driver.</p>
@@ -731,15 +731,15 @@ Turntable homed successfully
 <span class="cp">#include</span> <span class="cpf">&quot;IO_HCSR04.h&quot;    // Ultrasonic range sensor</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;IO_VL53L0X.h&quot;   // Laser time-of-flight sensor</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;IO_DFPlayer.h&quot;  // MP3 sound player</span><span class="cp"></span>
-<span class="c1">//#include &quot;IO_TurntableEX.h&quot;   // EX-Turntable turntable controller</span>
+<span class="c1">//#include &quot;IO_EXTurntable.h&quot;   // EX-Turntable turntable controller</span>
 </pre></div>
 </div>
 <p>Note the last line, this is the device driver required to enable <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> support.</p>
 <p>Scrolling down towards the bottom of that file, you will also see this indented section:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//=======================================================================</span>
-<span class="c1">// The following directive defines a EX-Turntable turntable instance.</span>
+<span class="c1">// The following directive defines an EX-Turntable turntable instance.</span>
 <span class="c1">//=======================================================================</span>
-<span class="c1">// TurntableEX::create(VPIN, Number of VPINs, I2C Address)</span>
+<span class="c1">// EXTurntable::create(VPIN, Number of VPINs, I2C Address)</span>
   <span class="c1">//</span>
 <span class="c1">// The parameters are:</span>
 <span class="c1">//   VPIN=600</span>
@@ -748,19 +748,19 @@ Turntable homed successfully
 <span class="c1">//</span>
 <span class="c1">// Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.</span>
 
-<span class="c1">//TurntableEX::create(600, 1, 0x60);</span>
+<span class="c1">//EXTurntable::create(600, 1, 0x60);</span>
 </pre></div>
 </div>
 <p>If you don’t have an existing “myHal.cpp” file, then follow these steps to create a new one: <a class="reference internal" href="../reference/developers/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a>. Note that you don’t need to worry about copying or providing device driver files, as these are already included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
 <p>Copy and paste the relevant lines from the “myHal.cpp_example.txt” file as above, which should result in the following content in your new “myHal.cpp” file:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;IODevice.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;IO_TurntableEX.h&quot;   // EX-Turntable turntable controller</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;IO_EXTurntable.h&quot;   // EX-Turntable turntable controller</span><span class="cp"></span>
 
 <span class="kt">void</span> <span class="nf">halSetup</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">//=======================================================================</span>
   <span class="c1">// The following directive defines a EX-Turntable turntable instance.</span>
   <span class="c1">//=======================================================================</span>
-  <span class="c1">// TurntableEX::create(VPIN, Number of VPINs, I2C Address)</span>
+  <span class="c1">// EXTurntable::create(VPIN, Number of VPINs, I2C Address)</span>
   <span class="c1">//</span>
   <span class="c1">// The default parameters are:</span>
   <span class="c1">//   VPIN=600</span>
@@ -769,7 +769,7 @@ Turntable homed successfully
   <span class="c1">//</span>
   <span class="c1">// Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.</span>
 
-  <span class="n">TurntableEX</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">);</span>
+  <span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -778,7 +778,7 @@ Turntable homed successfully
 <li><p>VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer <a class="reference internal" href="../reference/developers/hal.html#overview"><span class="std std-ref">Overview</span></a>).</p></li>
 <li><p>I2C address=0x60 - This is the default address on the i2c bus that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in “myHal.cpp” and in “config.h” in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> software.</p></li>
 </ul>
-<p>If you already have an existing “myHal.cpp” file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the “#include” needs to be before “void halSetup() {” and the “TurntableEX::create…” needs to be before the final “}”.</p>
+<p>If you already have an existing “myHal.cpp” file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the “#include” needs to be before “void halSetup() {” and the “EXTurntable::create…” needs to be before the final “}”.</p>
 <p>Follow the rest of the directions for <a class="reference internal" href="../reference/developers/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a> all the way through to the <a class="reference internal" href="../reference/developers/hal-config.html#upload-the-new-version-of-the-software"><span class="std std-ref">Upload the new version of the software</span></a> step to upload your newly configured CommandStation.</p>
 <p>Note there is no point in checking the driver at this stage as <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is not connected, and will show as “OFFLINE”.</p>
 </section>
