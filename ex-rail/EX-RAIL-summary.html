@@ -143,7 +143,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/inputs-outputs/index.html">Input and Output Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/index.html">Sensors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/which-sensor-type.html">Which sensor type to use?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/ir-sensor.html">IR Sensor Boards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
@@ -275,6 +277,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/motor-boards.html">Supported Motor Drivers</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
@@ -331,6 +334,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/index.html">Sensors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/which-sensor-type.html">Which sensor type to use?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/ir-sensor.html">IR Sensor Boards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/inputs-outputs/sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
@@ -710,7 +714,11 @@
 <td><p>Tests if signal is green</p></td>
 </tr>
 <tr class="row-even"><td><p>IFRE( id, value )</p></td>
-<td><p>Tests if a rotary encoder is at the specified position <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p></td>
+<td><div class="line-block">
+<div class="line">Tests if a rotary encoder is at the specified position</div>
+<div class="line"><span style="color:red">This feature is not available in the current 'Production' version</span></div>
+</div>
+</td>
 </tr>
 <tr class="row-odd"><td><p>ELSE</p></td>
 <td><p>Provides alternative logic to any IF related command returning False</p></td>
@@ -738,10 +746,18 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>POWERON</p></td>
-<td><p>Power on track, will UNJOIN programming from main <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p></td>
+<td><div class="line-block">
+<div class="line">Power on track, will UNJOIN programming from main</div>
+<div class="line"><span style="color:red">This feature is not available in the current 'Production' version</span></div>
+</div>
+</td>
 </tr>
 <tr class="row-odd"><td><p>POWEROFF</p></td>
-<td><p>Power off track <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p></td>
+<td><div class="line-block">
+<div class="line">Power off track</div>
+<div class="line"><span style="color:red">This feature is not available in the current 'Production' version</span></div>
+</div>
+</td>
 </tr>
 <tr class="row-even"><td><p>JOIN</p></td>
 <td><p>Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks</p></td>
@@ -820,14 +836,18 @@
 <td><p>A task is automatically started at this point during startup</p></td>
 </tr>
 <tr class="row-even"><td><p>PARSE ( command_string)</p></td>
-<td><p>Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE(“&lt;1 JOIN&gt;”)</p>
-<p>This is much less efficient than using an equivalent EXRAIL command. So don’t use it for anything that EX-RAIL can do directly.</p>
-<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<td><div class="line-block">
+<div class="line">Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE(“&lt;1 JOIN&gt;”)</div>
+<div class="line">This is much less efficient than using an equivalent EXRAIL command. So don’t use it for anything that EX-RAIL can do directly.</div>
+<div class="line"><span style="color:red">This feature is not available in the current 'Production' version</span></div>
+</div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>DRIVE( analog_pin )</p></td>
-<td><p><strong>*Under Construction*</strong> Not complete, DO NOT USE</p>
-<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<td><div class="line-block">
+<div class="line"><strong>*Under Construction*</strong> Not complete, DO NOT USE</div>
+<div class="line"><span style="color:red">This feature is not available in the current 'Production' version</span></div>
+</div>
 </td>
 </tr>
 </tbody>
@@ -957,7 +977,11 @@
 <td><p>Event handler for linear DCC accessory packet value 0</p></td>
 </tr>
 <tr class="row-even"><td><p>ONCHANGE( id )</p></td>
-<td><p>Event handler for a sensor changing state <br /> <span style="color:red">This feature is not available in the current 'Production' version</span></p></td>
+<td><div class="line-block">
+<div class="line">Event handler for a sensor changing state</div>
+<div class="line"><span style="color:red">This feature is not available in the current 'Production' version</span></div>
+</div>
+</td>
 </tr>
 </tbody>
 </table>
