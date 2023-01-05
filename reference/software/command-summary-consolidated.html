@@ -520,26 +520,25 @@
 <h3>Power management<a class="headerlink" href="#power-management" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[MAIN</span> <span class="pre">|</span> <span class="pre">PROG</span> <span class="pre">|</span> <span class="pre">JOIN]</span> <span class="pre">&gt;</span></code></p></td>
-<td><p><strong>&lt;pX [MAIN|PROG|JOIN]&gt;</strong> <br />
-Where “X” is 1=on | 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track.</p></td>
-<td><p>Turns power on and off to the MAIN and PROG tracks independently from each other. Also allows joining the MAIN and PROG tracks together <br />
-<strong>onOff</strong> = 1=on 0=off</p></td>
+<td><p><strong>Track Power</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;pX</span> <span class="pre">[MAIN\|PROG\|JOIN]&gt;</span></code> <br />
+Where “X” is 1=on | 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. <br />
+Turns power on and off to the MAIN and PROG tracks independently from each other. Also allows joining the MAIN and PROG tracks together <br /> <br />
+<strong>onOff</strong>: 1=on 0=off</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RESET&gt;</span></code></p></td>
-<td><p>n/a</p></td>
-<td><p>Re-boot the command Station</p></td>
+<td><p><strong>Re-boot the command Station</strong> <br />
+Response: <em>n/a</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -548,79 +547,81 @@ Where “X” is 1=on | 0=off. MAIN, PROG and JOIN are returned when you invoke 
 <h3>Loco (Cab) Commands<a class="headerlink" href="#loco-cab-commands" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">register</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">1|0&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> <br /> <br />
-Legacy Return: <strong>Deprecated</strong> <br />
-<code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">register</span> <span class="pre">speed</span> <span class="pre">direction&gt;</span></code> <br />
-do not rely on this return</p></td>
-<td><p>Set the speed and direction of a loco <br />
+<td><p><strong>Set the speed and direction of a loco</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> <br />
 <strong>speed</strong> - 0-127 <br />
 <strong>direction</strong> - 1=forward 0=reverse <br />
-Note: this starts a reminder process for any external updates to the loco’s status.</p></td>
+Note: this starts a reminder process for any external updates to the loco’s status. <br /> <br />
+Legacy response: <strong>Deprecated</strong> <br />
+<code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">register</span> <span class="pre">speed</span> <span class="pre">direction&gt;</span></code> - do not rely on this response</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> <br /> Note: <br />
+<td><p>Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.|BR|
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> <br /> <br />
+Note: <br />
 If the cab (loco) is not in the reminders table. The Command Station will not return a valid response until a speed is applied to the cab. In this case <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">-1&gt;</span></code> will be returned.</p></td>
-<td><p>Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[cab]&gt;</span></code></p></td>
-<td><p>n/a</p></td>
-<td><p>Remove one or all locos from reminders.</p></td>
+<td><p><strong>Remove one or all locos from reminders</strong> <br /> <br />
+Response: <em>n/a</em></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> For each loco in the reminders list</p></td>
-<td><p>Emergency Stop</p></td>
+<td><p><strong>Emergency Stop</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> (For each loco in the reminders list.)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[cab]&gt;</span></code></p></td>
-<td><p>n/a</p></td>
-<td><p>Remove one or all cabs from reminders.</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1|0&gt;</span></code></p></td>
+<td><p><strong>Turns loco decoder functions ON and OFF</strong> <br /> <br />
+Response <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1|0&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code></p></td>
-<td><p>Turns loco decoder functions ON and OFF</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code></p></td>
+<td><p><strong>Request the list defined Roster Entry IDs</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code> <br />
+Returns the list of defined roster entry IDs</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code></p></td>
-<td><p>Returns the defined roster entry IDs</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR</span> <span class="pre">id&gt;</span></code></p></td>
+<td><p><strong>Request details of a specific Roster Entry</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id</span> <span class="pre">&quot;description&quot;</span> <span class="pre">&quot;function1/function2/function3/...&quot;&gt;</span></code> <br />
+Returns the ID, description, and function map of the specified roster entry ID</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id</span> <span class="pre">&quot;description&quot;</span> <span class="pre">&quot;function1/function2/function3/...&quot;&gt;</span></code></p></td>
-<td><p>Returns the ID, description, and function map of the specified roster entry ID</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code></p></td>
+<td><p><strong>Request the list of Turnout/Point IDs</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code> <br />
+Returns the list of defined turnout/Point IDs</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code></p></td>
-<td><p>Returns the defined turnout IDs</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT</span> <span class="pre">id&gt;</span></code></p></td>
+<td><p><strong>Request details of a specific Turnout/Point</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">state</span> <span class="pre">&quot;[description]&quot;&gt;</span></code> <br />
+Returns the ID, state, and description of the specified Turnout/Point ID</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">state</span> <span class="pre">&quot;[description]&quot;&gt;</span></code></p></td>
-<td><p>Returns the ID, state, and description of the specified turnout ID</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code></p></td>
+<td><p><strong>Request the list of Automation and Route IDs</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code> <br />
+Returns the defined automation and route IDs</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code></p></td>
-<td><p>Returns the defined automation and route IDs</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA</span> <span class="pre">id&gt;</span></code></p></td>
+<td><p><strong>Request details of a specific Automation or Route</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">&quot;[description]&quot;&gt;</span></code> <br />
+Returns the ID, type, and description of the specified automation/route ID <br />
+<strong>type</strong>: ‘A’=automation ‘R’=route</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">&quot;[description]&quot;&gt;</span></code></p></td>
-<td><p>Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code></p></td>
+<td><p><strong>Request a deliberate update of cab</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> <br />
+Returns an update of cab speed, directions and functions in the same format as the cab broadcast</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code></p></td>
-<td><p>Requests a deliberate update of cab speed/functions in the same format as the cab broadcast</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code></p></td>
-<td><p><strong>Deprecated</strong></p></td>
-<td><p>legacy function. <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code></p></td>
+<td><p><strong>Deprecated</strong> <br />
+legacy function. <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -629,28 +630,23 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>System Information<a class="headerlink" href="#system-information" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code></p></td>
-<td><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">&lt;iDCCEX</span> <span class="pre">version</span> <span class="pre">/</span> <span class="pre">microprocessorType</span> <span class="pre">/</span> <span class="pre">MotorControllerType</span> <span class="pre">/</span> <span class="pre">buildNumber&gt;</span></code> <br /></dt><dd><p><code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code></p>
-</dd>
-</dl>
-</td>
-<td><p>CommandStation Status</p></td>
+<td><p><strong>Request CommandStation Status</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;iDCCEX</span> <span class="pre">version</span> <span class="pre">/</span> <span class="pre">microprocessorType</span> <span class="pre">/</span> <span class="pre">MotorControllerType</span> <span class="pre">/</span> <span class="pre">buildNumber&gt;</span></code> <br />
+Response (for each): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;c&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;c</span> <span class="pre">&quot;CurrentMAIN&quot;</span> <span class="pre">current</span> <span class="pre">C</span> <span class="pre">&quot;Milli&quot;</span> <span class="pre">&quot;0&quot;</span> <span class="pre">max_ma</span> <span class="pre">&quot;1&quot;</span> <span class="pre">trip_ma&gt;</span></code></p></td>
-<td><p>Current on the MAIN Track <br />
+<td><p><strong>Request Current on the MAIN Track</strong> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;c</span> <span class="pre">&quot;CurrentMAIN&quot;</span> <span class="pre">current</span> <span class="pre">C</span> <span class="pre">&quot;Milli&quot;</span> <span class="pre">&quot;0&quot;</span> <span class="pre">max_ma</span> <span class="pre">&quot;1&quot;</span> <span class="pre">trip_ma&gt;</span></code> <br />
 <strong>c</strong> - the current response indicator <br />
 <strong>CurrentMAIN</strong> - Static text for software like JMRI <br />
 <strong>current</strong> - Current in MilliAmps <br />
@@ -662,8 +658,8 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <strong>trip_ma</strong> - The overcurrent limit that will trip the software circuit breaker in mA</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code></p></td>
-<td></td>
-<td><p>Show number of supported cabs. Will return either <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">20&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">30&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">50&gt;</span></code></p></td>
+<td><p><strong>Show number of supported cabs</strong> <br /> <br />
+Response: Will return either <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">20&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">30&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">50&gt;</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -672,35 +668,28 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>Writing CVs - Program on the main<a class="headerlink" href="#writing-cvs-program-on-the-main" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">ignored</span> <span class="pre">hex1</span> <span class="pre">hex2</span> <span class="pre">[hex3</span> <span class="pre">[hex4</span> <span class="pre">[hex5]]]&gt;</span></code></p></td>
-<td></td>
-<td><p>Write a DCC packet the MAIN track</p></td>
+<td><p><strong>Write a DCC packet the MAIN track</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">cab</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></td>
-<td></td>
 <td><p>Write CV on main track</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">cab</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value&gt;</span></code></p></td>
-<td></td>
 <td><p>Write CV bit on main track</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></td>
-<td></td>
 <td><p>Write CV. <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></td>
-<td></td>
 <td><p>Write bit to cv. <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
 </tr>
 </tbody>
@@ -710,43 +699,34 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>Writing CVs - Programming track<a class="headerlink" href="#writing-cvs-programming-track" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></p></td>
-<td></td>
 <td><p>Read Loco address (programming track only)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cab&gt;</span></code></p></td>
-<td></td>
 <td><p>write cab address to loco on prog track</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value</span> <span class="pre">&gt;</span></code></p></td>
-<td></td>
 <td><p>write CV</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">0|1&gt;</span></code></p></td>
-<td></td>
 <td><p>Write bit to cv.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></td>
-<td></td>
 <td><p>Verify/Read of cv with guessed value</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">0|1&gt;</span></code></p></td>
-<td></td>
 <td><p>Verify/Read bit of cv with guessed value</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;P</span> <span class="pre">ignored</span> <span class="pre">hex1</span> <span class="pre">hex2</span> <span class="pre">[hex3</span> <span class="pre">[hex4</span> <span class="pre">[hex5]]]&gt;</span></code></p></td>
-<td></td>
 <td><p>Writes a DCC packet to the PROG track</p></td>
 </tr>
 </tbody>
@@ -756,35 +736,28 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>Writing CVs - Programming track - Tuning<a class="headerlink" href="#writing-cvs-programming-track-tuning" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code></p></td>
-<td></td>
 <td><p>Override ACK processing mA pulse size</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code></p></td>
-<td></td>
 <td><p>Override ACK processing minimum pulse width</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">uS&gt;</span></code></p></td>
-<td></td>
 <td><p>Override ACK processing max pulse width</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">x&gt;</span></code></p></td>
-<td></td>
 <td><p>Adjust ACK retries to number x (default is 2)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code></p></td>
-<td></td>
 <td><p>Override 250mA prog track limit while idle.</p></td>
 </tr>
 </tbody>
@@ -794,23 +767,19 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>DCC Accessories<a class="headerlink" href="#dcc-accessories" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">linear_address</span> <span class="pre">1|0&gt;</span></code></p></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">addr</span> <span class="pre">subaddr</span> <span class="pre">1|0&gt;</span></code></p></td>
-<td></td>
 <td></td>
 </tr>
 </tbody>
@@ -820,23 +789,19 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>Turnouts/Points<a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code></p></td>
-<td></td>
 <td><p>List defined turnouts</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">0|1|C|T&gt;</span></code></p></td>
-<td></td>
 <td><p>Throw (1 or T) or close(0 or C) a defined turnout</p></td>
 </tr>
 </tbody>
@@ -846,23 +811,19 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>Sensors<a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code></p></td>
-<td></td>
 <td><p>Lists Status of all sensors.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code></p></td>
-<td></td>
 <td><p>Lists definition all defined sensors.</p></td>
 </tr>
 </tbody>
@@ -872,23 +833,19 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>WiFi Control<a class="headerlink" href="#wifi-control" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+command&gt;</span></code></p></td>
-<td></td>
 <td><p>Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code></p></td>
-<td></td>
 <td><p>Force the Command Station into “WiFi Connected” mode</p></td>
 </tr>
 </tbody>
@@ -901,19 +858,16 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>TBA<a class="headerlink" href="#tba" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SPEED28|SPEED128&gt;</span></code></p></td>
-<td></td>
 <td><p>Switch between 28 and 128 speed steps</p></td>
 </tr>
 </tbody>
@@ -923,35 +877,28 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>Turnouts/Points - Configuration<a class="headerlink" href="#turnouts-points-configuration" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">address</span> <span class="pre">subaddress&gt;</span></code></p></td>
-<td></td>
 <td><p>Define DCC turnout</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linear_address&gt;</span></code></p></td>
-<td></td>
 <td><p>Define DCC turnout</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrownPos</span> <span class="pre">closedPos</span> <span class="pre">profile&gt;</span></code></p></td>
-<td></td>
 <td><p>Define servo turnout</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code></p></td>
-<td></td>
 <td><p>Define VPIN turnout</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code></p></td>
-<td></td>
 <td><p>Delete turnout</p></td>
 </tr>
 </tbody>
@@ -961,23 +908,19 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>Sensors - Configuration<a class="headerlink" href="#sensors-configuration" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">0|1&gt;</span></code></p></td>
-<td></td>
 <td><p>Creates a new sensor ID, with specified PIN and PULLUP</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id&gt;</span></code></p></td>
-<td></td>
 <td><p>Deletes definition of sensor ID</p></td>
 </tr>
 </tbody>
@@ -987,23 +930,19 @@ If the cab (loco) is not in the reminders table. The Command Station will not re
 <h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code></p></td>
-<td></td>
 <td><p>Lists all defined output pins</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">iflag&gt;</span></code></p></td>
-<td></td>
 <td><p>Creates a new output ID, with specified PIN and IFLAG values.</p></td>
 </tr>
 </tbody>
@@ -1029,27 +968,22 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 <h3>EEPROM management<a class="headerlink" href="#eeprom-management" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code></p></td>
-<td></td>
 <td><p>Store definitions to EEPROM</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code></p></td>
-<td></td>
 <td><p>Erase ALL (turnouts, sensors, and outputs) from EEPROM</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EEPROM&gt;</span></code></p></td>
-<td></td>
 <td><p>Diagnostic dump eeprom contents</p></td>
 </tr>
 </tbody>
@@ -1059,51 +993,40 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 <h3>Diagnostic traces<a class="headerlink" href="#diagnostic-traces" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code></p></td>
-<td></td>
 <td><p>Shows cab numbers and speed in reminder table</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code></p></td>
-<td></td>
 <td><p>Shows remaining RAM (Free Memory)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td></td>
 <td><p>Enables ACK diagnostics</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td></td>
 <td><p>Enables Command Parser diagnostics</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ETHERNET</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td></td>
 <td><p>Enables Ethernet diagnostics</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">LCN</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td></td>
 <td><p>Enables LCN interface diagnostics</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td></td>
 <td><p>Enables WiFi diagnostics</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIT</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td></td>
 <td><p>Enables WiThrottle diagnostics</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code></p></td>
-<td></td>
 <td><p>Shows configured servo board and GPIO extender board config and used pins</p></td>
 </tr>
 </tbody>
@@ -1113,31 +1036,25 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 <h3>I/O (HAL) Diagnostics<a class="headerlink" href="#i-o-hal-diagnostics" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code></p></td>
-<td></td>
 <td><p>List HAL devices and allocated VPINs</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code></p></td>
-<td></td>
 <td><p>Set servo position to <cite>value</cite> on pin <cite>vpin</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANOUT</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[param2]&gt;</span></code></p></td>
-<td></td>
 <td><p>Write <cite>value</cite> to analogue pin <cite>vpin</cite>, supplying <cite>param2</cite> to the driver.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANIN</span> <span class="pre">vpin&gt;</span></code></p></td>
-<td></td>
 <td><p>Read and display pin <cite>vpin</cite>’s analogue value.</p></td>
 </tr>
 </tbody>
@@ -1147,19 +1064,16 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 <h3>Other<a class="headerlink" href="#other" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 75%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
-<th class="head"><p>Response</p></th>
-<th class="head"><p>Description</p></th>
+<th class="head"><p>Description / Response</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;U</span> <span class="pre">...&gt;</span></code></p></td>
-<td></td>
 <td><p>Is reserved for user commands (through user filter)</p></td>
 </tr>
 </tbody>
