@@ -532,11 +532,11 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[MAIN|PROG|JOIN]</span> <span class="pre">&gt;</span></code></p></td>
-<td><p><strong>Track Power</strong> <br /> <br />
+<td><p><strong>Track Power</strong> <br />
+Turns power on and off to the MAIN and PROG tracks independently from each other. Also allows joining the MAIN and PROG tracks together <br />
+<strong>onOff</strong>: 1=on 0=off <br /> <br />
 Response: <code class="docutils literal notranslate"><span class="pre">&lt;pX</span> <span class="pre">[MAIN|PROG|JOIN]&gt;</span></code> <br />
-Where “X” is 1=on | 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. <br />
-Turns power on and off to the MAIN and PROG tracks independently from each other. Also allows joining the MAIN and PROG tracks together <br /> <br />
-<strong>onOff</strong>: 1=on 0=off</p></td>
+Where “X” is 1=on | 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RESET&gt;</span></code></p></td>
 <td><p><strong>Re-boot the command Station</strong> <br />
@@ -581,7 +581,7 @@ Response: <em>n/a</em></p></td>
 <td><p><strong>Emergency Stop</strong> <br /> <br />
 Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> (For each loco in the reminders list.)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1|0&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">1|0&gt;</span></code></p></td>
 <td><p><strong>Turns loco decoder functions ON and OFF</strong> <br /> <br />
 Response <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code></p></td>
 </tr>
@@ -622,8 +622,8 @@ Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</sp
 Returns an update of cab speed, directions and functions in the same format as the cab broadcast</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code></p></td>
-<td><p><strong>Deprecated</strong> <br />
-legacy function. <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
+<td><p>legacy function. <br />
+<strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -643,8 +643,8 @@ legacy function. <strong>Deprecated, please use &lt;W cv value&gt; instead</stro
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code></p></td>
 <td><p><strong>Request CommandStation Status</strong> <br /> <br />
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;iDCCEX</span> <span class="pre">version</span> <span class="pre">/</span> <span class="pre">microprocessorType</span> <span class="pre">/</span> <span class="pre">MotorControllerType</span> <span class="pre">/</span> <span class="pre">buildNumber&gt;</span></code> <br />
-Response (for each): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code></p></td>
+Response (single): <code class="docutils literal notranslate"><span class="pre">&lt;iDCCEX</span> <span class="pre">version</span> <span class="pre">/</span> <span class="pre">microprocessorType</span> <span class="pre">/</span> <span class="pre">MotorControllerType</span> <span class="pre">/</span> <span class="pre">buildNumber&gt;</span></code> <br />
+Response (for each defined Turnout/Point): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;c&gt;</span></code></p></td>
 <td><p><strong>Request Current on the MAIN Track</strong> <br /> <br />
@@ -711,10 +711,10 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></p></td>
-<td><p><strong>Read Loco address (programming track only)</strong> <br /> <br /></p></td>
+<td><p><strong>Read DCC decoder address</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cab&gt;</span></code></p></td>
-<td><p><strong>W**rite cab address to loco on prog track</strong> <br /> <br /></p></td>
+<td><p><strong>Write DCC address to cab (loco)</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value</span> <span class="pre">&gt;</span></code></p></td>
 <td><p><strong>Write CV</strong> <br /> <br /></p></td>
@@ -945,20 +945,16 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 <td><p><strong>Lists all defined output pins</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">iflag&gt;</span></code></p></td>
-<td><p><strong>Creates a new output ID, with specified PIN and IFLAG values</strong> <br /> <br /></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
-              1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
-
-IFLAG, bit 1: 0 = state of pin restored on power-up to either ACTIVE or INACTIVE
-                  depending on state before power-down.
-              1 = state of pin set on power-up, or when first created,
-                  to either ACTIVE of INACTIVE depending on IFLAG, bit 2
-
-IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first created
-              1 = state of pin set to ACTIVE upon power-up or when first created
-</pre></div>
-</div>
-</td>
+<td><p><strong>Creates a new output ID, with specified PIN and IFLAG values</strong> <br /> <br />
+<strong>IFLAG, bit 0</strong>: <br />
+0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW) <br />
+1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH) <br /> <br />
+<strong>IFLAG, bit 1</strong>: <br />
+0 = state of pin restored on power-up to either ACTIVE or INACTIVE depending on state before power-down.  <br />
+1 = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2 <br /> <br />
+<strong>IFLAG, bit 2</strong>:
+0 = state of pin set to INACTIVE upon power-up or when first created <br />
+1 = state of pin set to ACTIVE upon power-up or when first created</p></td>
 </tr>
 </tbody>
 </table>
