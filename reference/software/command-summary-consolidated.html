@@ -506,12 +506,14 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cab</span></code> - DCC Address. i.e. a Loco. (eg. 3-9999)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">speed</span></code> - 0-127</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> - 1=forward 0=reverse</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dir</span></code> <code class="docutils literal notranslate"><span class="pre">direction</span></code> - 1=forward 0=reverse</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">speedByte</span></code> - 0=stopped 1-127=reverse 128-256=forward</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">function</span></code> - function number related to a specific DCC decoder/ loco (e.g. 0-27)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">functionMap</span></code> - individual bits of the returned number represent the state of the specific functions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">funct</span></code> <code class="docutils literal notranslate"><span class="pre">function</span></code> - function number related to a specific DCC decoder/ loco (e.g. 0-27)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functMap</span></code> <code class="docutils literal notranslate"><span class="pre">functionMap</span></code> - individual bits of the returned number represent the state of the specific functions</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">slot</span></code> - redundant parameter.  This needs to be included but is ignored by the EX-CommandStation</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">register</span></code> - redundant parameter.  This needs to be included but is ignored by the EX-CommandStation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reg</span></code> <code class="docutils literal notranslate"><span class="pre">register</span></code> - redundant parameter.  This needs to be included but is ignored by the EX-CommandStation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">desc</span></code> <code class="docutils literal notranslate"><span class="pre">description</span></code> -</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">byte</span></code> -</p></li>
 </ul>
 </section>
 <section id="controlling-the-ex-commandstation">
@@ -529,9 +531,9 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[MAIN</span> <span class="pre">|</span> <span class="pre">PROG</span> <span class="pre">|</span> <span class="pre">JOIN]</span> <span class="pre">&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[MAIN|PROG|JOIN]</span> <span class="pre">&gt;</span></code></p></td>
 <td><p><strong>Track Power</strong> <br /> <br />
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;pX</span> <span class="pre">[MAIN\|PROG\|JOIN]&gt;</span></code> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;pX</span> <span class="pre">[MAIN|PROG|JOIN]&gt;</span></code> <br />
 Where “X” is 1=on | 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. <br />
 Turns power on and off to the MAIN and PROG tracks independently from each other. Also allows joining the MAIN and PROG tracks together <br /> <br />
 <strong>onOff</strong>: 1=on 0=off</p></td>
@@ -556,18 +558,18 @@ Response: <em>n/a</em></p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">register</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">1|0&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">reg</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code></p></td>
 <td><p><strong>Set the speed and direction of a loco</strong> <br /> <br />
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br />
 <strong>speed</strong> - 0-127 <br />
-<strong>direction</strong> - 1=forward 0=reverse <br />
+<strong>dir</strong> - 1=forward 0=reverse <br />
 Note: this starts a reminder process for any external updates to the loco’s status. <br /> <br />
 Legacy response: <strong>Deprecated</strong> <br />
-<code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">register</span> <span class="pre">speed</span> <span class="pre">direction&gt;</span></code> - do not rely on this response</p></td>
+<code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">reg</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - do not rely on this response</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab&gt;</span></code></p></td>
 <td><p>Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.|BR|
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> <br /> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> <br />
 Note: <br />
 If the cab (loco) is not in the reminders table. The Command Station will not return a valid response until a speed is applied to the cab. In this case <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">-1&gt;</span></code> will be returned.</p></td>
 </tr>
@@ -577,11 +579,11 @@ Response: <em>n/a</em></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code></p></td>
 <td><p><strong>Emergency Stop</strong> <br /> <br />
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> (For each loco in the reminders list.)</p></td>
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> (For each loco in the reminders list.)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1|0&gt;</span></code></p></td>
 <td><p><strong>Turns loco decoder functions ON and OFF</strong> <br /> <br />
-Response <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code></p></td>
+Response <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code></p></td>
 <td><p><strong>Request the list defined Roster Entry IDs</strong> <br /> <br />
@@ -590,7 +592,7 @@ Returns the list of defined roster entry IDs</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Request details of a specific Roster Entry</strong> <br /> <br />
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id</span> <span class="pre">&quot;description&quot;</span> <span class="pre">&quot;function1/function2/function3/...&quot;&gt;</span></code> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id</span> <span class="pre">&quot;desc&quot;</span> <span class="pre">&quot;funct1/funct2/funct3/...&quot;&gt;</span></code> <br />
 Returns the ID, description, and function map of the specified roster entry ID</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code></p></td>
@@ -600,7 +602,7 @@ Returns the list of defined turnout/Point IDs</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JT</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Request details of a specific Turnout/Point</strong> <br /> <br />
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">state</span> <span class="pre">&quot;[description]&quot;&gt;</span></code> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">state</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br />
 Returns the ID, state, and description of the specified Turnout/Point ID</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code></p></td>
@@ -610,13 +612,13 @@ Returns the defined automation and route IDs</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JA</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Request details of a specific Automation or Route</strong> <br /> <br />
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">&quot;[description]&quot;&gt;</span></code> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br />
 Returns the ID, type, and description of the specified automation/route ID <br />
 <strong>type</strong>: ‘A’=automation ‘R’=route</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code></p></td>
 <td><p><strong>Request a deliberate update of cab</strong> <br /> <br />
-Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">register</span> <span class="pre">speedByte</span> <span class="pre">functionMap&gt;</span></code> <br />
+Response: <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br />
 Returns an update of cab speed, directions and functions in the same format as the cab broadcast</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code></p></td>
@@ -681,16 +683,16 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 <td><p><strong>Write a DCC packet the MAIN track</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">cab</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></td>
-<td><p>Write CV on main track</p></td>
+<td><p><strong>Write CV on main track</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">cab</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value&gt;</span></code></p></td>
-<td><p>Write CV bit on main track</p></td>
+<td><p><strong>Write CV bit on main track</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></td>
-<td><p>Write CV. <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
+<td><p>Write CV <br /> <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></td>
-<td><p>Write bit to cv. <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
+<td><p>Write bit to CV <br /> <strong>Deprecated, please use &lt;W cv value&gt; instead</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -709,25 +711,25 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></p></td>
-<td><p>Read Loco address (programming track only)</p></td>
+<td><p><strong>Read Loco address (programming track only)</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cab&gt;</span></code></p></td>
-<td><p>write cab address to loco on prog track</p></td>
+<td><p><strong>W**rite cab address to loco on prog track</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value</span> <span class="pre">&gt;</span></code></p></td>
-<td><p>write CV</p></td>
+<td><p><strong>Write CV</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">0|1&gt;</span></code></p></td>
-<td><p>Write bit to cv.</p></td>
+<td><p><strong>Write bit to CV</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></td>
-<td><p>Verify/Read of cv with guessed value</p></td>
+<td><p><strong>Verify/Read of CV with guessed value</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">0|1&gt;</span></code></p></td>
-<td><p>Verify/Read bit of cv with guessed value</p></td>
+<td><p><strong>Verify/Read bit of CV with guessed value</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;P</span> <span class="pre">ignored</span> <span class="pre">hex1</span> <span class="pre">hex2</span> <span class="pre">[hex3</span> <span class="pre">[hex4</span> <span class="pre">[hex5]]]&gt;</span></code></p></td>
-<td><p>Writes a DCC packet to the PROG track</p></td>
+<td><p><strong>Writes a DCC packet to the PROG track</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -746,19 +748,19 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code></p></td>
-<td><p>Override ACK processing mA pulse size</p></td>
+<td><p><strong>8Override ACK processing mA pulse size</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code></p></td>
-<td><p>Override ACK processing minimum pulse width</p></td>
+<td><p><strong>Override ACK processing minimum pulse width</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">uS&gt;</span></code></p></td>
-<td><p>Override ACK processing max pulse width</p></td>
+<td><p><strong>Override ACK processing max pulse width</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">x&gt;</span></code></p></td>
-<td><p>Adjust ACK retries to number x (default is 2)</p></td>
+<td><p><strong>Adjust ACK retries to number x (default is 2)</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code></p></td>
-<td><p>Override 250mA prog track limit while idle.</p></td>
+<td><p><strong>Override 250mA prog track limit while idle</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -777,10 +779,10 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">linear_address</span> <span class="pre">1|0&gt;</span></code></p></td>
-<td></td>
+<td><p><strong>???</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">addr</span> <span class="pre">subaddr</span> <span class="pre">1|0&gt;</span></code></p></td>
-<td></td>
+<td><p><strong>???</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -799,10 +801,10 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code></p></td>
-<td><p>List defined turnouts</p></td>
+<td><p><strong>List defined turnouts</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">0|1|C|T&gt;</span></code></p></td>
-<td><p>Throw (1 or T) or close(0 or C) a defined turnout</p></td>
+<td><p><strong>Throw (1 or T) or close(0 or C) a defined turnout</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -821,10 +823,10 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code></p></td>
-<td><p>Lists Status of all sensors.</p></td>
+<td><p><strong>Lists Status of all sensors</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code></p></td>
-<td><p>Lists definition all defined sensors.</p></td>
+<td><p><strong>Lists definition all defined sensors</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -843,10 +845,10 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+command&gt;</span></code></p></td>
-<td><p>Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</p></td>
+<td><p><strong>Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code></p></td>
-<td><p>Force the Command Station into “WiFi Connected” mode</p></td>
+<td><p><strong>Force the Command Station into “WiFi Connected” mode</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -868,7 +870,7 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SPEED28|SPEED128&gt;</span></code></p></td>
-<td><p>Switch between 28 and 128 speed steps</p></td>
+<td><p><strong>Switch between 28 and 128 speed steps</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -886,20 +888,20 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">address</span> <span class="pre">subaddress&gt;</span></code></p></td>
-<td><p>Define DCC turnout</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">addr</span> <span class="pre">subaddr&gt;</span></code></p></td>
+<td><p><strong>Define DCC turnout</strong> <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linear_address&gt;</span></code></p></td>
-<td><p>Define DCC turnout</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linear_addr&gt;</span></code></p></td>
+<td><p><strong>Define DCC turnout</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrownPos</span> <span class="pre">closedPos</span> <span class="pre">profile&gt;</span></code></p></td>
-<td><p>Define servo turnout</p></td>
+<td><p><strong>Define servo turnout</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code></p></td>
-<td><p>Define VPIN turnout</p></td>
+<td><p><strong>Define VPIN turnout</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p>Delete turnout</p></td>
+<td><p><strong>Delete turnout</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -918,10 +920,10 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">0|1&gt;</span></code></p></td>
-<td><p>Creates a new sensor ID, with specified PIN and PULLUP</p></td>
+<td><p><strong>Creates a new sensor ID, with specified PIN and PULLUP</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p>Deletes definition of sensor ID</p></td>
+<td><p><strong>Deletes definition of sensor ID</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -940,13 +942,10 @@ Response: Will return either <code class="docutils literal notranslate"><span cl
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code></p></td>
-<td><p>Lists all defined output pins</p></td>
+<td><p><strong>Lists all defined output pins</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">iflag&gt;</span></code></p></td>
-<td><p>Creates a new output ID, with specified PIN and IFLAG values.</p></td>
-</tr>
-</tbody>
-</table>
+<td><p><strong>Creates a new output ID, with specified PIN and IFLAG values</strong> <br /> <br /></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>IFLAG, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
               1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
 
@@ -959,6 +958,10 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
               1 = state of pin set to ACTIVE upon power-up or when first created
 </pre></div>
 </div>
+</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">0|1&gt;</span></code> : Sets output ID to either INACTIVE or ACTIVE state</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id&gt;</span></code> : Deletes definition of output ID</p>
@@ -978,13 +981,13 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code></p></td>
-<td><p>Store definitions to EEPROM</p></td>
+<td><p><strong>Store definitions to EEPROM</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code></p></td>
-<td><p>Erase ALL (turnouts, sensors, and outputs) from EEPROM</p></td>
+<td><p><strong>Erase ALL (turnouts, sensors, and outputs) from EEPROM</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EEPROM&gt;</span></code></p></td>
-<td><p>Diagnostic dump eeprom contents</p></td>
+<td><p><strong>Diagnostic dump eeprom contents</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -1003,31 +1006,31 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code></p></td>
-<td><p>Shows cab numbers and speed in reminder table</p></td>
+<td><p><strong>Shows cab numbers and speed in reminder table</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code></p></td>
-<td><p>Shows remaining RAM (Free Memory)</p></td>
+<td><p><strong>Shows remaining RAM (Free Memory)</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td><p>Enables ACK diagnostics</p></td>
+<td><p><strong>Enables ACK diagnostics</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td><p>Enables Command Parser diagnostics</p></td>
+<td><p><strong>Enables Command Parser diagnostics</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ETHERNET</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td><p>Enables Ethernet diagnostics</p></td>
+<td><p><strong>Enables Ethernet diagnostics</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">LCN</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td><p>Enables LCN interface diagnostics</p></td>
+<td><p><strong>Enables LCN interface diagnostics</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td><p>Enables WiFi diagnostics</p></td>
+<td><p><strong>Enables WiFi diagnostics</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIT</span> <span class="pre">ON|OFF&gt;</span></code></p></td>
-<td><p>Enables WiThrottle diagnostics</p></td>
+<td><p><strong>Enables WiThrottle diagnostics</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code></p></td>
-<td><p>Shows configured servo board and GPIO extender board config and used pins</p></td>
+<td><p><strong>Shows configured servo board and GPIO extender board config and used pins</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
@@ -1046,7 +1049,7 @@ IFLAG, bit 2: 0 = state of pin set to INACTIVE upon power-up or when first creat
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code></p></td>
-<td><p>List HAL devices and allocated VPINs</p></td>
+<td><p><strong>List HAL devices and allocated VPINs</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code></p></td>
 <td><p>Set servo position to <cite>value</cite> on pin <cite>vpin</cite>.</p></td>
