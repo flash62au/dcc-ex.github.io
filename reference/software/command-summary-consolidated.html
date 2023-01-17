@@ -572,7 +572,13 @@ Turns power on and off to the MAIN and PROG tracks together or independently. Al
 <strong>onOff</strong>: 1=on 0=off <br />
 <strong>track</strong>: &lt;blank&gt;= Both Main and Programming Tracks ‘MAIN’= Main track  ‘PROG’=Programming Track ‘JOIN’=Join the Main and Programming tracks temporarily <br /> <br />
 Response: <code class="docutils literal notranslate"><span class="pre">&lt;pX</span> <span class="pre">[MAIN|PROG|JOIN]&gt;</span></code> <br />
-Where “X” is 1=on | 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. <br /></p></td>
+Where “X” is 1=on | 0=off. MAIN, PROG and JOIN are returned when you invoke commands on just one track. <br />
+e.g. <br />
+Response (Both Main and Prog on): <code class="docutils literal notranslate"><span class="pre">&lt;p1&gt;</span></code> <br />
+Response (Main on only): <code class="docutils literal notranslate"><span class="pre">&lt;p1</span> <span class="pre">MAIN&gt;</span></code>
+Response (Prog on only): <code class="docutils literal notranslate"><span class="pre">&lt;p1</span> <span class="pre">PROG&gt;</span></code>
+Response (Joined - Main and Prog on): <code class="docutils literal notranslate"><span class="pre">&lt;p1</span> <span class="pre">JOIN&gt;</span></code>
+Response (All off): <code class="docutils literal notranslate"><span class="pre">&lt;p0&gt;</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RESET&gt;</span></code></p></td>
 <td><p><strong>Re-boot the command Station</strong> <br /> <br />
@@ -819,18 +825,18 @@ Response (fail):</p></td>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code></p></td>
 <td><p><strong>Override ACK processing mA pulse size</strong> <br /> <br />
-Response (successful): <br />
-Response (fail):</p></td>
+Response (successful): N/A <br />
+Response (fail): N/A</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code></p></td>
 <td><p><strong>Override ACK processing minimum pulse width</strong> <br /> <br />
-Response (successful): <br />
-Response (fail):</p></td>
+Response (successful): N/A <br />
+Response (fail): N/A</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">uS&gt;</span></code></p></td>
 <td><p><strong>Override ACK processing max pulse width</strong> <br /> <br />
-Response (successful): <br />
-Response (fail):</p></td>
+Response (successful): N/A <br />
+Response (fail): N/A</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">x&gt;</span></code></p></td>
 <td><p><strong>Adjust ACK retries to number x (default is 2)</strong> <br /> <br />
@@ -839,7 +845,7 @@ Response (fail):</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code></p></td>
 <td><p><strong>Override 250mA prog track limit while idle</strong> <br /> <br />
-Response (successful): <br />
+Response (successful): <code class="docutils literal notranslate"><span class="pre">?</span></code> <br />
 Response (fail):</p></td>
 </tr>
 </tbody>
@@ -895,19 +901,19 @@ Repeated for each defined Turnout/Point <br />
 Response (DCC Accessories): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">address</span> <span class="pre">subaddress</span> <span class="pre">state&gt;</span></code> <br />
 Response (Servos): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrown_position</span> <span class="pre">closed_position</span> <span class="pre">profile</span> <span class="pre">state&gt;</span></code> <br />
 Response (VPIN): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin</span> <span class="pre">state&gt;</span></code> <br />
-Response (LCN): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">LCN</span> <span class="pre">state&gt;`</span></code> <br />
+Response (LCN): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">LCN</span> <span class="pre">state&gt;</span></code> <br />
 Response (fail): <code class="docutils literal notranslate"><span class="pre">?</span></code> <br />
 Response (no defined turnouts/points):  <code class="docutils literal notranslate"><span class="pre">?</span></code> <br /> <br />
 <strong>state</strong> - 0=closed 1=thrown</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">0|1|C|T&gt;</span></code></p></td>
 <td><p><strong>Throw (1 or T) or close(0 or C) a defined turnout/point</strong> <br /> <br />
-Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">0|1&gt;`</span></code> <br />
+Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">0|1&gt;</span></code> <br />
 Response (fail):  <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Delete defined turnout/point</strong> <br /> <br />
-Response (successful): <code class="docutils literal notranslate"><span class="pre">?`</span></code> <br />
+Response (successful): <code class="docutils literal notranslate"><span class="pre">?</span></code> <br />
 Response (fail):  <code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
 </tr>
 </tbody>
@@ -929,26 +935,26 @@ Response (fail):  <code class="docutils literal notranslate"><span class="pre">?
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Q&gt;</span></code></p></td>
 <td><p><strong>Lists Status of all sensors</strong> <br /> <br />
-Response (successful): <br />
-Response (fail):</p></td>
+Response (successful) Repeat for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">id&gt;</span></code> <br />
+Response (fail):  N/A</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code></p></td>
 <td><p><strong>Lists definition all defined sensors</strong> <br /> <br />
-Response (successful): <br />
-Response (fail):</p></td>
+Response (successful) Repeat for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">??</span> <span class="pre">state&gt;</span></code> <br />
+Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code></p></td>
 <td><p><strong>Create a new sensor ID</strong> <br />
 <strong>id</strong> numeric ID 0-32767 of the sensor <br />
 <strong>vpin</strong> pin number of the input to be controlled by the sensor object <br />
 <strong>pullup</strong> 1=Use pull-up resistor ACTIVE=LOW 0=don’t use pull-up resistor ACTIVE=HIGH <br /> <br />
-Response (successful): <code class="docutils literal notranslate"><span class="pre">?</span></code> <br />
-Response (fail):  <code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br />
+Response (fail):  ?</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Delete defined sensor</strong> <br /> <br />
-Response (successful): <code class="docutils literal notranslate"><span class="pre">?</span></code> <br />
-Response (fail): <code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br />
+Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -970,12 +976,12 @@ Response (fail): <code class="docutils literal notranslate"><span class="pre">?<
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+command&gt;</span></code></p></td>
 <td><p><strong>Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</strong> <br /> <br />
 Response (successful): <br />
-Response (fail):</p></td>
+Response (fail):  ?</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code></p></td>
 <td><p><strong>Force the Command Station into “WiFi Connected” mode</strong> <br /> <br />
 Response (successful): <br />
-Response (fail):</p></td>
+Response (fail):  ?</p></td>
 </tr>
 </tbody>
 </table>
@@ -995,8 +1001,8 @@ Response (fail):</p></td>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SPEED28|SPEED128&gt;</span></code></p></td>
 <td><p><strong>Switch between 28 and 128 speed steps</strong> <br /> <br />
-Response (successful): <br />
-Response (fail):</p></td>
+Response (successful): <code class="docutils literal notranslate"><span class="pre">?</span></code> <br />
+Response (fail):  ?</p></td>
 </tr>
 </tbody>
 </table>
@@ -1160,7 +1166,7 @@ Response (fail):</p></td>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code></p></td>
 <td><p><strong>Shows cab numbers and speed in reminder table</strong> <br /> <br />
 Response (successful): <br />
-Response (fail):</p></td>
+Response (fail / no cabs in table):</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code></p></td>
 <td><p><strong>Shows remaining RAM (Free Memory)</strong> <br /> <br />
