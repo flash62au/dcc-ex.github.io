@@ -985,7 +985,7 @@ Response (fail):  N/A</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code></p></td>
 <td><p><strong>Lists definition all defined sensors</strong> <br /> <br />
-Response (successful) Repeat for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">??</span> <span class="pre">state&gt;</span></code> <br />
+Response (successful) Repeated for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> <br />
 Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code></p></td>
@@ -994,7 +994,9 @@ Response (fail): <code class="docutils literal notranslate"><span class="pre">&l
 <strong>vpin</strong> pin number of the input to be controlled by the sensor object <br />
 <strong>pullup</strong> 1=Use pull-up resistor ACTIVE=LOW 0=don’t use pull-up resistor ACTIVE=HIGH <br /> <br />
 Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br />
-Response (fail):  ?</p></td>
+Response (fail):  ? <br />
+Note: Once defined, the EX-CS will send a <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id&gt;</span></code> response anytime the sensor is activated,
+and a <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">id&gt;</span></code> response when deactivated.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><strong>Delete defined sensor</strong> <br /> <br />
