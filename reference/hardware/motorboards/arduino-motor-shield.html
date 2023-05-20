@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arduino Motor Shield &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Arduino Motor Shield R3 &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -32,7 +32,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Deek-Robot Motor Shield" href="deek-robot-motor-shield.html" />
-    <link rel="prev" title="Supported Motor Drivers" href="../motor-boards.html" />
+    <link rel="prev" title="DCC-EX EX-MotorShield8874 RevA" href="ex-motor-shield-8874.html" />
 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -78,9 +78,12 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
     
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../begin/what-to-know.html">What do I need to know?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../begin/levels.html">Choose Your Comfort Level</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Products</span></p>
+<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../../ex-commandstation/index.html">EX-CommandStation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-commandstation/get-started/index.html">Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
@@ -103,6 +106,7 @@
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="ex-motor-shield-8874.html">DCC-EX EX-MotorShield8874 - 5A [RECOMMENDED]</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
 <li class="toctree-l4"><a class="reference internal" href="deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
 <li class="toctree-l4"><a class="reference internal" href="flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
@@ -267,6 +271,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-toolbox/using.html">EX-Toolbox - Installing and Using</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support &amp; Info</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../support/index.html">Troubleshooting &amp; Getting Help</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../support/index-ex-cs.html">EX-CommandStation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../support/ex-cs-faq.html">Frequently Asked Questions (FAQ)</a></li>
@@ -324,12 +331,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/engine-driver-physical-knobs.html">Adding a Physical Dial/Knob to Engine Driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/uwt50.html">TCS UWT-50 (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../throttles/hardware/uwt50.html">TCS UWT-50 &amp; UWT-100 WiFi Throttles (Physical)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Download</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../download/index.html">Downloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../download/ex-commandstation.html">EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
@@ -338,6 +348,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../download/ex-ioexpander.html">EX-IOExpander</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../under-development/index.html">Features under development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
@@ -366,6 +379,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../motor-boards.html">Supported Motor Drivers</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="ex-motor-shield-8874.html">DCC-EX EX-MotorShield8874 - 5A [RECOMMENDED]</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
 <li class="toctree-l4"><a class="reference internal" href="deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
 <li class="toctree-l4"><a class="reference internal" href="flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
@@ -457,6 +471,8 @@
 </li>
 </ul>
 </li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -464,6 +480,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../media-resources/index.html">Media Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../merchandise/index.html">DCC-EX Merchandise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">About, Press &amp; Contributing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/about.html">About Us - Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/press/index.html">Press / Announcements</a><ul>
@@ -519,7 +537,7 @@
           <li class="breadcrumb-item"><a href="../../../ex-commandstation/index.html">EX-CommandStation</a></li>
           <li class="breadcrumb-item"><a href="../../../ex-commandstation/advanced-setup/index.html">Advanced Options</a></li>
           <li class="breadcrumb-item"><a href="../motor-boards.html">Supported Motor Drivers</a></li>
-      <li class="breadcrumb-item active">Arduino Motor Shield</li>
+      <li class="breadcrumb-item active">Arduino Motor Shield R3</li>
   
     
       <li class="wy-breadcrumbs-aside">
@@ -533,11 +551,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-<section id="arduino-motor-shield">
-<h1>Arduino Motor Shield<a class="headerlink" href="#arduino-motor-shield" title="Permalink to this heading"></a></h1>
+<section id="arduino-motor-shield-r3">
+<h1>Arduino Motor Shield R3<a class="headerlink" href="#arduino-motor-shield-r3" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<p>Easy to use, widely available and is rated 2A load per channel. In reality, without a heatsink and fan, it can only handle about 1.3 Amps. This is the standard by which we compare other boards that are about the same, worse, or better.</p>
+<p>Easy to use, widely available, and in the latest R3 version it is compatible with our next generation of Command Station hardware. It is rated at 2A of load per channel, but without a heatsink and fan, it can only realistically handle about 1.3A per channel. This board is the standard by which we compare other boards that are about the same, worse, or better.</p>
 <a class="reference internal image-reference" href="../../../_images/arduino_motorshield2.jpg"><img alt="Arduino Motor Shield R3" src="../../../_images/arduino_motorshield2.jpg" style="width: 300.0px; height: 266.0px;" /></a>
+<p>Schematics are available on the <a class="reference external" href="https://docs.arduino.cc/static/8a72fae47a56558ca26308105253350e/schematics.pdf">Arduino website</a>.</p>
 <p><a class="reference internal" href="../../../ex-commandstation/get-started/assembly.html"><span class="doc">Install the Arduino Motor Shield</span></a></p>
 </section>
 
@@ -549,7 +568,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../motor-boards.html" class="btn btn-neutral float-left" title="Supported Motor Drivers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ex-motor-shield-8874.html" class="btn btn-neutral float-left" title="DCC-EX EX-MotorShield8874 RevA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="deek-robot-motor-shield.html" class="btn btn-neutral float-right" title="Deek-Robot Motor Shield" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
