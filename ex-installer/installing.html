@@ -7,7 +7,7 @@
 <meta content="EX-CommandStation Command Station EX-Installer" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using the Installer &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Using the Installer (Windows x64) &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -32,7 +32,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Testing your installation" href="testing.html" />
+    <link rel="next" title="Using the Installer (Windows x32, MacOS or Linux)" href="installing-original-installer.html" />
     <link rel="prev" title="EX-Installer" href="index.html" />
 
      
@@ -156,7 +156,8 @@
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="index.html">Install using EX-Installer</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="#">Using the Installer</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Using the Installer (Windows x64)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installing-original-installer.html">Using the Installer (Windows x32, MacOS or Linux)</a></li>
 <li class="toctree-l5"><a class="reference internal" href="testing.html">Testing your installation</a></li>
 </ul>
 </li>
@@ -223,7 +224,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">EX-Installer</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Using the Installer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using the Installer (Windows x64)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing-original-installer.html">Using the Installer (Windows x32, MacOS or Linux)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testing.html">Testing your installation</a></li>
 </ul>
 </li>
@@ -543,7 +545,7 @@
           <li class="breadcrumb-item"><a href="../ex-commandstation/advanced-setup/index.html">Advanced Options</a></li>
           <li class="breadcrumb-item"><a href="../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a></li>
           <li class="breadcrumb-item"><a href="index.html">EX-Installer</a></li>
-      <li class="breadcrumb-item active">Using the Installer</li>
+      <li class="breadcrumb-item active">Using the Installer (Windows x64)</li>
   
     
       <li class="wy-breadcrumbs-aside">
@@ -558,36 +560,54 @@
            <div itemprop="articleBody">
              
 <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-installer.png"><img alt="EX-Installer" class="image-product-logo-float-right" src="../_images/product-logo-ex-installer.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="using-the-installer">
-<h1>Using the Installer<a class="headerlink" href="#using-the-installer" title="Permalink to this heading"></a></h1>
+<section id="using-the-installer-windows-x64">
+<h1>Using the Installer (Windows x64)<a class="headerlink" href="#using-the-installer-windows-x64" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="https://github.com/DCC-EX/exInstaller/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The instructions on this page refer to the new <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span>.  This is currently only supported on Microsoft x64 Windows Computers. <br /> If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the <a class="reference internal" href="installing-original-installer.html"><span class="doc">original Installer</span></a> instead.</p>
+</div>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#requirements-for-installing" id="id7">Requirements (for installing)</a></p></li>
-<li><p><a class="reference internal" href="#getting-ready" id="id8">1. Getting Ready</a></p></li>
-<li><p><a class="reference internal" href="#download-and-run-ex-installer" id="id9">2. Download and Run EX-Installer</a></p></li>
-<li><p><a class="reference internal" href="#the-ex-installer-window" id="id10">3. The EX-Installer Window</a></p>
+<li><p><a class="reference internal" href="#requirements-for-installing" id="id1">Requirements (for installing)</a></p></li>
+<li><p><a class="reference internal" href="#getting-ready" id="id2">1. Getting Ready</a></p></li>
+<li><p><a class="reference internal" href="#download-and-run-ex-installer" id="id3">2. Download and Run EX-Installer</a></p>
 <ul>
-<li><p><a class="reference internal" href="#choose-your-options" id="id11">Choose your options</a></p></li>
-<li><p><a class="reference internal" href="#compile-and-upload" id="id12">Compile and Upload</a></p></li>
+<li><p><a class="reference internal" href="#a-the-ex-installer-welcome-screen" id="id4">a. The EX-Installer Welcome screen</a></p></li>
+<li><p><a class="reference internal" href="#b-manage-cli-screen" id="id5">b. Manage CLI screen</a></p></li>
+<li><p><a class="reference internal" href="#c-select-your-device-screen" id="id6">c. Select Your Device screen</a></p></li>
+<li><p><a class="reference internal" href="#d-select-the-product-to-install-screen" id="id7">d. Select the Product to Install screen</a></p></li>
+<li><p><a class="reference internal" href="#e-products" id="id8">e. products</a></p>
+<ul>
+<li><p><a class="reference internal" href="#i-select-ex-commandstation-version-screen" id="id9">i) Select EX-CommandStation Version screen</a></p></li>
+<li><p><a class="reference internal" href="#ii-configure-screen" id="id10">ii) Configure screen</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#next-steps-test-your-setup" id="id13">Next Steps - Test your setup</a></p></li>
+<li><p><a class="reference internal" href="#f-load-screen" id="id11">f. Load screen</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#next-steps-test-your-setup" id="id12">Next Steps - Test your setup</a></p></li>
 </ul>
 </nav>
 </aside>
 <section id="requirements-for-installing">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Requirements (for installing)</a><a class="headerlink" href="#requirements-for-installing" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Requirements (for installing)</a><a class="headerlink" href="#requirements-for-installing" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>a Windows, Linux or MacOS X <strong>Computer</strong></p></li>
+<li><p>a Windows x64  <strong>computer</strong></p></li>
 <li><p>a <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p>
 <ul>
-<li><p>Arduino Mega or Arduino Uno</p></li>
-<li><p>Motor shield</p></li>
-<li><p>optional WiFi shield or ethernet shield</p></li>
-<li><p>optional LCD or oLED display</p></li>
+<li><p>an Arduino microprocessor, based on any of:</p>
+<ul>
+<li><p>Arduino Mega, Arduino Uno or Nano</p></li>
+<li><p>Expressif ESP32</p></li>
+<li><p>STMicroelectronicsm Nucleo/STM32</p></li>
+</ul>
+</li>
+<li><p>a motor shield</p></li>
+<li><p>optionally, a WiFi shield or ethernet shield</p></li>
+<li><p>optionally, an LCD or oLED display</p></li>
 </ul>
 </li>
 <li><p>a <strong>USB cable</strong> to connect your computer to the Microcontroller</p></li>
@@ -598,164 +618,107 @@
 </aside>
 </section>
 <section id="getting-ready">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">1. Getting Ready</a><a class="headerlink" href="#getting-ready" title="Permalink to this heading"></a></h2>
-<p><strong>(for Windows, Mac OS X, and Linux (including the Raspberry Pi))</strong></p>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">1. Getting Ready</a><a class="headerlink" href="#getting-ready" title="Permalink to this heading"></a></h2>
+<p><strong>For Windows x64</strong></p>
 <div class="warning-float-right admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Antivirus Software</strong> <br /> You <em>may</em> need to turn off your antivirus software before you try to install. <br /> Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.</p>
 </div>
 <ul class="simple">
 <li><p><strong>Connect</strong> your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> to your computer</p></li>
-<li><p>Determine which COM Port the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is plugged into</p>
-<ul>
-<li><p>for Microsoft Windows:</p>
-<ul>
-<li><p>open (run) the ‘Device Manager’ app and look at the ‘Ports (COM &amp; LPT)’ as you plug or unplug the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
-<li><p>take note of the COM number (in brackets after the name of the device)</p></li>
-</ul>
-</li>
-<li><p>for Mac OS or Linux:</p>
-<ul>
-<li><p>Open a command terminal and run the command <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/dev/tty.usbmodem*</span></code></p></li>
-<li><p>The device will have a name such as <code class="docutils literal notranslate"><span class="pre">/dev/tty.usbmodem12033</span></code></p></li>
-<li><p>if there are more than one devices listed, unplug <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, re-run the command to note the device that remains, then plug <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> back in again to obtain the correct device name</p></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </section>
 <section id="download-and-run-ex-installer">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">2. Download and Run EX-Installer</a><a class="headerlink" href="#download-and-run-ex-installer" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">2. Download and Run EX-Installer</a><a class="headerlink" href="#download-and-run-ex-installer" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Download the <a class="reference internal" href="../download/ex-commandstation.html#ex-installer"><span class="std std-ref">EX-Installer</span></a> app <br /> depending on your computer’s operating system it will automatically determine the version you need and download it</p></li>
-<li><p>Extract the downloaded <strong>Installer</strong> into its own folder with your favorite unzip program <br /> <br /></p></li>
-<li><p>For Microsoft Windows:</p>
+<li><p>Download the new <a class="reference internal" href="../download/ex-commandstation.html#ex-installer"><span class="std std-ref">EX-Installer</span></a> app.</p></li>
+<li><p>For Microsoft Windows x64:</p>
 <ul>
-<li><p>Open File Manager</p></li>
-<li><p><strong>Run</strong> <code class="docutils literal notranslate"><span class="pre">exInstaller.exe</span></code> <br /> <br /></p></li>
-</ul>
-</li>
-<li><p>For Mac OS or Linux:</p>
-<ul>
-<li><p>Open a terminal window and navigate to that folder</p></li>
-<li><p><strong>Run the installer with</strong> the following command: <code class="docutils literal notranslate"><span class="pre">./exInstaller</span></code> <br /> <br /></p></li>
+<li><p>Open the Windows <em>File Manager</em></p></li>
+<li><p>Find the folder in which the <strong>EX-Installer-Win64.exe</strong> was saved. <br /> Generally this will default to downloading to the <em>downloads</em> folder but your browser may be configured differently.</p></li>
+<li><p><strong>Run</strong> <code class="docutils literal notranslate"><span class="pre">EX-Installer-Win64.exe</span></code> <br /> <br /> Note: depending on the configuration of your computer the ‘.exe’ may or may not appear. This is not of concern.</p></li>
 </ul>
 </li>
 <li><p>You will be presented with the following screen…</p></li>
 </ul>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
+<section id="a-the-ex-installer-welcome-screen">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">a. The EX-Installer Welcome screen</a><a class="headerlink" href="#a-the-ex-installer-welcome-screen" title="Permalink to this heading"></a></h3>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../_images/welcome.png"><img alt="EX-Installer - Welcome" src="../_images/welcome.png" style="width: 320.0px; height: 252.4px;" /></a>
+</figure>
+<p>This screen provides some basic information about the process.</p>
+<p>It also provides a debugging option. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.</p>
+<p>To proceed, click the :<span class="guilabel">Manage CLI</span> button.</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
-<section id="the-ex-installer-window">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">3. The EX-Installer Window</a><a class="headerlink" href="#the-ex-installer-window" title="Permalink to this heading"></a></h2>
-<div class="warning-float-right admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Wait!</strong></p>
-<p>The <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.</p>
+<section id="b-manage-cli-screen">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">b. Manage CLI screen</a><a class="headerlink" href="#b-manage-cli-screen" title="Permalink to this heading"></a></h3>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../_images/manage_cli.png"><img alt="EX-Installer - Manage CLI" src="../_images/manage_cli.png" style="width: 320.0px; height: 252.0px;" /></a>
+</figure>
+<p>This screen allows you to Install or update the Arduino Command Line Interface (CLI).</p>
+<p>We use the Arduino Command Line Interface (CLI) to upload the DCC-EX products to your Arduino.  The CLI eliminates the need to install the more daunting Arduino IDE.  EX-Installer is able to manage the installation and updating of the Arduino CLI for you at the click of a button.</p>
+<p>If you have not installed the CLi previously you will see a :<span class="guilabel">Install Arduino CLI</span> button.</p>
+<p>If have previously installed the CLI you will see a :<span class="guilabel">Refresh Arduino CLI</span> button.</p>
+<div class="note-float-right admonition note">
+<p class="admonition-title">Note</p>
+<p>Enabling additional platforms is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!</p>
 </div>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/installer.png"><img alt="EX-Installer" src="../_images/installer.png" style="width: 480.0px; height: 330.0px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 55 </span><span class="caption-text">Installer Window</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<p>There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.</p>
-<section id="choose-your-options">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Choose your options</a><a class="headerlink" href="#choose-your-options" title="Permalink to this heading"></a></h3>
-<p>In the left side options pane, use the dropdown selector boxes to choose the following options:</p>
-<figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../_images/installer-options.png"><img alt="Options Pane" src="../_images/installer-options.png" style="width: 349.8px; height: 420.0px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 56 </span><span class="caption-text">Options Pane</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<aside class="sidebar">
-<p><span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span> is now only in a maintenance support state only.  If you are still using it, we recommend that you move to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.  It will function on the same hardware a <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>.</p>
-</aside>
-<ol class="arabic simple">
-<li><p>Select your <strong>Command Station Type</strong> <br /> This should (almost always) be <strong>‘Command Station EX’</strong></p></li>
-<li><p>Select your <strong>Arduino Board Type</strong></p></li>
-<li><p>Select your <strong>Motor Shield</strong> <br /></p></li>
-<li><p>Select your <strong>COM Port</strong> <br /> The installer will usually find it for you but check against the COM port your took note of earlier</p></li>
-<li><p>Check the checkbox for your networking method if you have a Network Shield or WiFi Shield installed</p></li>
-<li><p>Check the checkbox for your display type if using an LCD or OLED display</p></li>
-<li><p>Check the Free Mem warning if you need to diagnose memory issues</p></li>
-<li><p>Press the <span class="guilabel">Compile and Upload</span> button</p></li>
-</ol>
-<section id="wifi-checkbox">
-<h4>WiFi Checkbox<a class="headerlink" href="#wifi-checkbox" title="Permalink to this heading"></a></h4>
-<p>MAKE SURE THIS BOX IS CHECKED - If you want WiFi, this box <strong>must</strong> be checked. If you don’t want WiFi, you can leave it checked anyway so that if you add WiFi later, you won’t have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station. If you aren’t using WiFi and want to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren’t going to use WiFi, unchecking the box will free about 10kb of progmem and about 2kb of RAM.</p>
-<p>If you have installed a WiFi board, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), this will set up the Command Station to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like “DCC-EX-xxxxxx”, where the “xxxxxx” are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.</p>
-<p>If you wish to connect to your home network instead (connect to your router using “Station Mode”), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:</p>
-<figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../_images/wifi.png"><img alt="WiFi Options" src="../_images/wifi.png" style="width: 480.0px; height: 330.0px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 57 </span><span class="caption-text">Wifi Options</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p><strong>WiFi SSID</strong> - The name of your home network.</p></li>
-<li><p><strong>WiFi Password</strong> - The password required to connect to your home network.</p></li>
-<li><p><strong>Host Name</strong> - If your WiFi Board supports it, this name can be used in addition to the IP address.</p></li>
-<li><p><strong>Server Port</strong> - This is the communication port our internal <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> uses to communicate with devices like <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>. We recommend leaving it set to 2560 because <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> also uses that port should you ever want to use <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>.</p></li>
-<li><p><strong>IP Address</strong> - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the Command Station always uses the same one, you can enter it here.</p></li>
-</ul>
+<p>If you are using an Espressif or STMicroelectronics device, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.</p>
+<p>You must have Arduino CLI installed to proceed, simply click the :<span class="guilabel">Install Arduino CLI</span> button if it is showing.</p>
+<p>If you already have the Arduino CLI installed, it is recommended to refresh it periodically (e.g. weekly) to ensure support for the various devices is kept up to date. To refresh the CLI, simply click the :<span class="guilabel">Refresh Arduino CLI</span> button.</p>
+<p>Once the CLI is installed, To proceed, click the :<span class="guilabel">Select your device</span> button.</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
-<section id="ethernet-checkbox">
-<h4>Ethernet Checkbox<a class="headerlink" href="#ethernet-checkbox" title="Permalink to this heading"></a></h4>
-<p>If you have an Ethernet shield and check this box, you will see options to change the following settings:</p>
-<figure class="align-default" id="id4">
-<a class="reference internal image-reference" href="../_images/ethernet.jpg"><img alt="Ethernet Options" src="../_images/ethernet.jpg" style="width: 269.1px; height: 295.2px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 58 </span><span class="caption-text">Ethernet Options</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
-</figcaption>
+<section id="c-select-your-device-screen">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">c. Select Your Device screen</a><a class="headerlink" href="#c-select-your-device-screen" title="Permalink to this heading"></a></h3>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../_images/select_device.png"><img alt="EX-Installer - Select Device" src="../_images/select_device.png" style="width: 320.0px; height: 252.0px;" /></a>
 </figure>
-<ul class="simple">
-<li><p><strong>Host Name</strong> - If your Ethernet Board supports it, this name can be used in addition to the IP address.</p></li>
-<li><p><strong>Server Port</strong> - This is the communication port our internal <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> uses to communicate with devices like <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>.</p></li>
-<li><p><strong>MAC Address</strong> - This is the unique identifier for your Ethernet Shield. We recommend leaving this setting as is. If you ever have more than one Ethernet shield on your network and there is a conflict, you can change this setting.</p></li>
-<li><p><strong>IP Address</strong> - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the Command Station always uses the same one, you can enter it here.</p></li>
-</ul>
-</section>
-<section id="lcd-checkbox">
-<h4>LCD Checkbox<a class="headerlink" href="#lcd-checkbox" title="Permalink to this heading"></a></h4>
-<p>If you have a 2 or 4 line LCD display connected and check this box, you will see the following options you can edit for your display:</p>
-<figure class="align-default" id="id5">
-<a class="reference internal image-reference" href="../_images/lcd.jpg"><img alt="LCD Options" src="../_images/lcd.jpg" style="width: 286.2px; height: 191.70000000000002px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 59 </span><span class="caption-text">LCD Options</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
-</figcaption>
+<p>On this screen you will need to a) select the type of device you wish to load the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software onto, and b) the USB port you have connected the device to on your computer.</p>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> will attempt to work out both of these for you, but it may need assistance.</p>
+<p>Click on the :<span class="guilabel">Scan for Devices</span> button.</p>
+<p>If you see <strong>No devices found</strong> to means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.</p>
+<p>If you have not connected the device, connect it now and click the button again.</p>
+<p>::todo:  If the device is not recognised.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/select_device_multiple_devices.png"><img alt="EX-Installer - Select Device - Multiple Devices" src="../_images/select_device_multiple_devices.png" style="width: 262.2px; height: 44.4px;" /></a>
 </figure>
-<ul class="simple">
-<li><p><strong>LCD Address (in Decimal format)</strong> - This is the address of your display, it is usually 39 (for 0x27) or 63 (for 0x3F)</p></li>
-<li><p><strong>LCD Columns</strong> - The number of vertical columns on your display</p></li>
-<li><p><strong>LCD Rows</strong> - The number of horizontal rows or lines on your display</p></li>
-</ul>
-<p>For more information about using displays, see <a class="reference internal" href="../reference/hardware/i2c-displays.html"><span class="doc">I2C Displays</span></a></p>
-</section>
-<section id="oled-checkbox">
-<h4>OLED CheckBox<a class="headerlink" href="#oled-checkbox" title="Permalink to this heading"></a></h4>
-<p>If you have an OLED display connected and check this box, you will see the following options you can edit for your display:</p>
-<figure class="align-default" id="id6">
-<a class="reference internal image-reference" href="../_images/oled.jpg"><img alt="OLED Options" src="../_images/oled.jpg" style="width: 285.3px; height: 148.5px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 60 </span><span class="caption-text">OLED Options</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
-</figcaption>
+<p>If more than one device (on different USB ports) is found, you will need to select which one you wish to work with.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/select_device_selection.png"><img alt="EX-Installer - Select Device - Selection" src="../_images/select_device_selection.png" style="width: 141.6px; height: 104.39999999999999px;" /></a>
 </figure>
-<ul class="simple">
-<li><p><strong>OLED Width (in pixels)</strong> - Enter the width or number of horizontal pixels on your display</p></li>
-<li><p><strong>OLED Height (in pixels)</strong> - Enter the height or number of vertical pixels on your display</p></li>
-</ul>
-<p>For more information about using displays, see <a class="reference internal" href="../reference/hardware/i2c-displays.html"><span class="doc">I2C Displays</span></a></p>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> will attempt to work out what type of Arduino you have selected but some cases (especially with cheap clone devices) it will not be able to do so.</p>
+<p>Check and select the appropriate board for the drop down list.</p>
+<p>Once you have a port and device type selected, To proceed, click the :<span class="guilabel">Select product to install</span> button.</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
-<section id="refresh-ports-button">
-<h4>Refresh Ports Button<a class="headerlink" href="#refresh-ports-button" title="Permalink to this heading"></a></h4>
-<p>This button allows you to refresh the serial ports in case you didn’t have the Arduino connected when you opened the program, or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.</p>
+<section id="d-select-the-product-to-install-screen">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">d. Select the Product to Install screen</a><a class="headerlink" href="#d-select-the-product-to-install-screen" title="Permalink to this heading"></a></h3>
+<p>Once you have Product, To proceed, click the :<span class="guilabel">xxx</span> button.</p>
+</section>
+<section id="e-products">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">e. products</a><a class="headerlink" href="#e-products" title="Permalink to this heading"></a></h3>
+<p>Currently only the installation of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is supported.</p>
+<section id="i-select-ex-commandstation-version-screen">
+<h4><a class="toc-backref" href="#id9" role="doc-backlink">i) Select EX-CommandStation Version screen</a><a class="headerlink" href="#i-select-ex-commandstation-version-screen" title="Permalink to this heading"></a></h4>
+<p>Once you have selected version and chose how to configure, To proceed, click the :<span class="guilabel">xxx</span> button.</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
+</section>
+<section id="ii-configure-screen">
+<h4><a class="toc-backref" href="#id10" role="doc-backlink">ii) Configure screen</a><a class="headerlink" href="#ii-configure-screen" title="Permalink to this heading"></a></h4>
+<p>To proceed, click the :<span class="guilabel">xxx</span> button.</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 </section>
-<section id="compile-and-upload">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Compile and Upload</a><a class="headerlink" href="#compile-and-upload" title="Permalink to this heading"></a></h3>
-<p><span class="guilabel">Compile and Upload</span> <strong>Button</strong></p>
-<p>Once you have configured your options, press this button to compile all the source code and upload it to your Command Station.</p>
+<section id="f-load-screen">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">f. Load screen</a><a class="headerlink" href="#f-load-screen" title="Permalink to this heading"></a></h3>
+<figure class="align-left">
+<a class="reference internal image-reference" href="../_images/load.png"><img alt="EX-Installer - Load" src="../_images/load.png" style="width: 320.0px; height: 252.4px;" /></a>
+</figure>
+<p>To proceed, click the :<span class="guilabel">xxx</span> button.</p>
+<hr class="docutils" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have any difficulties check the <a class="reference internal" href="../support/ex-cs-troubleshooting.html"><span class="doc">Troubleshooting</span></a> page for assistance.</p>
@@ -764,7 +727,7 @@
 </section>
 <hr class="docutils" />
 <section id="next-steps-test-your-setup">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">Next Steps - Test your setup</a><a class="headerlink" href="#next-steps-test-your-setup" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Next Steps - Test your setup</a><a class="headerlink" href="#next-steps-test-your-setup" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.</p>
@@ -781,7 +744,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="EX-Installer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="testing.html" class="btn btn-neutral float-right" title="Testing your installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installing-original-installer.html" class="btn btn-neutral float-right" title="Using the Installer (Windows x32, MacOS or Linux)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

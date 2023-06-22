@@ -158,7 +158,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../advanced-setup/installation-options/index.html">Installation Options</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ex-installer/index.html">Install using EX-Installer</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../ex-installer/installing.html">Using the Installer (Windows x64)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../ex-installer/installing-original-installer.html">Using the Installer (Windows x32, MacOS or Linux)</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../ex-installer/testing.html">Testing your installation</a></li>
 </ul>
 </li>
@@ -225,7 +226,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ex-installer/index.html">EX-Installer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-installer/installing.html">Using the Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-installer/installing.html">Using the Installer (Windows x64)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-installer/installing-original-installer.html">Using the Installer (Windows x32, MacOS or Linux)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-installer/testing.html">Testing your installation</a></li>
 </ul>
 </li>
@@ -597,6 +599,11 @@
 <li><p>a <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> (Arduino Mega/Uno + Motor shield and optional WiFi shield)</p></li>
 <li><p>a <strong>USB cable</strong> to connect your computer to the Microcontroller</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The new <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> is currently only supported on Microsoft Windows x64 computers.
+If you have a Microsoft Windows x32, Apple MacOS or Linux based computer you will need use the old installer for now.</p>
+</div>
 </section>
 <section id="getting-ready">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">1. Getting Ready</a><a class="headerlink" href="#getting-ready" title="Permalink to this heading"></a></h2>
@@ -609,7 +616,8 @@
 <li><p><strong>Connect</strong> your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> to your computer</p></li>
 <li><p>Determine which COM Port the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is plugged into</p>
 <ul>
-<li><p>for Microsoft Windows:</p>
+<li><p>This step is not required for the new EX-Installer (on Microsoft Windows x64 computers).</p></li>
+<li><p>for Microsoft x32 Windows (using the original installer):</p>
 <ul>
 <li><p>open (run) the ‘Device Manager’ app and look at the ‘Ports (COM &amp; LPT)’ as you plug or unplug the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
 <li><p>take note of the COM number (in brackets after the name of the device)</p></li>
@@ -629,14 +637,18 @@
 <section id="download-and-run-ex-installer">
 <h2><a class="toc-backref" href="#id7" role="doc-backlink">2. Download and Run EX-Installer</a><a class="headerlink" href="#download-and-run-ex-installer" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Download the <a class="reference internal" href="../../download/ex-commandstation.html#ex-installer"><span class="std std-ref">EX-Installer</span></a> app <br /> depending on your computer’s operating system it will automatically determine the version you need and download it</p></li>
-<li><p>Extract the downloaded <strong>Installer</strong> into its own folder with your favorite unzip program <br /> <br /></p></li>
-<li><p>For Microsoft Windows:</p>
-<ul>
+<li><p>Download the <a class="reference internal" href="../../download/ex-commandstation.html#ex-installer"><span class="std std-ref">EX-Installer</span></a> app</p></li>
+</ul>
+<p><br /> depending on your computer’s operating system it will automatically determine the version you need and download it
+* Extract the downloaded <strong>Installer</strong> into its own folder with your favourite unzip program <br /> <br />
+* For Microsoft Windows:</p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Open File Manager</p></li>
 <li><p><strong>Run</strong> <code class="docutils literal notranslate"><span class="pre">exInstaller.exe</span></code> <br /> <br /></p></li>
 </ul>
-</li>
+</div></blockquote>
+<ul class="simple">
 <li><p>For Mac OS or Linux:</p>
 <ul>
 <li><p>Open a terminal window and navigate to that folder</p></li>
