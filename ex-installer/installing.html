@@ -576,17 +576,23 @@
 <li><p><a class="reference internal" href="#download-and-run-ex-installer" id="id7">2. Download and Run EX-Installer</a></p>
 <ul>
 <li><p><a class="reference internal" href="#a-the-ex-installer-welcome-screen" id="id8">a. The ‘EX-Installer Welcome’ screen</a></p></li>
-<li><p><a class="reference internal" href="#b-manage-cli-screen" id="id9">b. ‘Manage CLI’ screen</a></p></li>
+<li><p><a class="reference internal" href="#b-manage-arduino-cli-screen" id="id9">b. ‘Manage Arduino CLI’ screen</a></p></li>
 <li><p><a class="reference internal" href="#c-select-your-device-screen" id="id10">c. ‘Select Your Device’ screen</a></p></li>
 <li><p><a class="reference internal" href="#d-select-the-product-to-install-screen" id="id11">d. ‘Select the Product to Install’ screen</a></p></li>
 <li><p><a class="reference internal" href="#e-product-specific-screens" id="id12">e. Product Specific screens</a></p>
 <ul>
-<li><p><a class="reference internal" href="#ex-commandstation" id="id13">EX-CommandStation</a></p></li>
+<li><p><a class="reference internal" href="#ex-commandstation" id="id13">EX-CommandStation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#i-select-ex-commandstation-version-screen" id="id14">i) ‘Select EX-CommandStation Version’ screen</a></p></li>
+<li><p><a class="reference internal" href="#ii-install-ex-commandstation-configuration-screen" id="id15">ii) ‘Install EX-CommandStation’ - Configuration screen</a></p></li>
+<li><p><a class="reference internal" href="#iii-compile-and-load-screen" id="id16">iii) ‘Compile and Load’ screen</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#next-steps-test-your-setup" id="id14">Next Steps - Test your setup</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#next-steps-test-your-setup" id="id17">Next Steps - Test your setup</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -594,18 +600,18 @@
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Requirements (for installing)</a><a class="headerlink" href="#requirements-for-installing" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>a Microsoft Windows x64  <strong>computer</strong></p></li>
-<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> hardware, comprising of:</p>
+<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> <strong>hardware</strong>, comprising of:</p>
 <ul>
-<li><p>an Arduino microprocessor, based on any of:</p>
+<li><p>an <strong>Arduino microprocessor</strong>, based on any of:</p>
 <ul>
 <li><p>Arduino Mega, Arduino Uno or Nano</p></li>
 <li><p>Expressif ESP32</p></li>
 <li><p>STMicroelectronicsm Nucleo/STM32</p></li>
 </ul>
 </li>
-<li><p>a motor shield</p></li>
-<li><p>optionally, a WiFi shield or ethernet shield</p></li>
-<li><p>optionally, an LCD or oLED display</p></li>
+<li><p>a <strong>motor shield</strong></p></li>
+<li><p>optionally, a <strong>WiFi shield</strong> or ethernet shield</p></li>
+<li><p>optionally, an <strong>LCD or oLED display</strong></p></li>
 </ul>
 </li>
 <li><p>a <strong>USB cable</strong> to connect your computer to the Microcontroller</p></li>
@@ -622,13 +628,13 @@
 <p><strong>Antivirus Software</strong> <br /> You <em>may</em> need to turn off your antivirus software before you try to install. <br /> Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.</p>
 </div>
 <ul class="simple">
-<li><p><strong>Connect</strong> your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> hardware to your computer via USB.</p></li>
+<li><p><strong>Connect</strong> your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> <strong>hardware</strong> to your computer via USB.</p></li>
 </ul>
 </section>
 <section id="download-and-run-ex-installer">
 <h2><a class="toc-backref" href="#id7" role="doc-backlink">2. Download and Run EX-Installer</a><a class="headerlink" href="#download-and-run-ex-installer" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Download the new <a class="reference internal" href="../download/ex-commandstation.html#ex-installer"><span class="std std-ref">EX-Installer</span></a> app.</p></li>
+<li><p>Download the <strong>new</strong> <a class="reference internal" href="../download/ex-commandstation.html#ex-installer"><span class="std std-ref">EX-Installer</span></a> app.</p></li>
 <li><p>For Microsoft Windows x64:</p>
 <ul>
 <li><p>Open the Windows <em>File Manager</em></p></li>
@@ -644,13 +650,13 @@
 <figure class="align-left">
 <a class="reference internal image-reference" href="../_images/welcome.png"><img alt="EX-Installer - Welcome" src="../_images/welcome.png" style="width: 320.0px; height: 252.4px;" /></a>
 </figure>
-<p>This screen provides some basic information about the process.</p>
+<p>This screen provides some basic information about the process of loading the Software.</p>
 <p>There is <em>debugging</em> option on this page. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.</p>
 <p>To proceed, click the <span class="guilabel">Manage Arduino CLI</span> button.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
-<section id="b-manage-cli-screen">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">b. ‘Manage CLI’ screen</a><a class="headerlink" href="#b-manage-cli-screen" title="Permalink to this heading"></a></h3>
+<section id="b-manage-arduino-cli-screen">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">b. ‘Manage Arduino CLI’ screen</a><a class="headerlink" href="#b-manage-arduino-cli-screen" title="Permalink to this heading"></a></h3>
 <figure class="align-left">
 <a class="reference internal image-reference" href="../_images/manage_cli.png"><img alt="EX-Installer - Manage CLI" src="../_images/manage_cli.png" style="width: 320.0px; height: 252.0px;" /></a>
 </figure>
@@ -663,8 +669,8 @@
 <p>Enabling additional platforms is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!</p>
 </div>
 <p>If you are using an Espressif or STMicroelectronics device, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.</p>
-<p>You must have Arduino CLI installed to proceed, simply click the <span class="guilabel">Install Arduino CLI</span> button if it is showing.</p>
-<p>If you already have the Arduino CLI installed, it is recommended to refresh it periodically (e.g. weekly) to ensure support for the various devices is kept up to date. To refresh the CLI, simply click the :<span class="guilabel">Refresh Arduino CLI</span> button.</p>
+<p>You <em>must</em> have Arduino CLI installed to proceed, simply click the <span class="guilabel">Install Arduino CLI</span> button if it is showing.</p>
+<p>If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the :<span class="guilabel">Refresh Arduino CLI</span> button.</p>
 <p>Once the CLI is installed, To proceed, click the :<span class="guilabel">Select your device</span> button.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
@@ -685,11 +691,11 @@
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/select_device_multiple_devices.png"><img alt="EX-Installer - Select Device - Multiple Devices" src="../_images/select_device_multiple_devices.png" style="width: 262.2px; height: 44.4px;" /></a>
 </figure>
-<p>If more than one device (on different USB ports) is found, you will need to select which one you wish to work with.</p>
+<p>If more than one device is found (on different USB ports), you will need to select which one you wish to load the software on to.</p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/select_device_selection.png"><img alt="EX-Installer - Select Device - Selection" src="../_images/select_device_selection.png" style="width: 141.6px; height: 104.39999999999999px;" /></a>
 </figure>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> will attempt to work out what type of Arduino you have connect but some cases (especially with cheap clone devices) it will not be able to do so.</p>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> will attempt to work out what type of Arduino you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.)</p>
 <p>Check and select the appropriate board from the drop down list.</p>
 <p>Once you have a port and device type selected, to proceed, click the <span class="guilabel">Select product to install</span> button.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -709,12 +715,17 @@
 <section id="ex-commandstation">
 <h4><a class="toc-backref" href="#id13" role="doc-backlink">EX-CommandStation</a><a class="headerlink" href="#ex-commandstation" title="Permalink to this heading"></a></h4>
 <section id="i-select-ex-commandstation-version-screen">
-<h5>i) ‘Select EX-CommandStation Version’ screen<a class="headerlink" href="#i-select-ex-commandstation-version-screen" title="Permalink to this heading"></a></h5>
+<h5><a class="toc-backref" href="#id14" role="doc-backlink">i) ‘Select EX-CommandStation Version’ screen</a><a class="headerlink" href="#i-select-ex-commandstation-version-screen" title="Permalink to this heading"></a></h5>
 <figure class="align-left">
 <a class="reference internal image-reference" href="../_images/select_cs_version.png"><img alt="EX-Installer - Select EX-CommandStation version" src="../_images/select_cs_version.png" style="width: 320.0px; height: 252.0px;" /></a>
 </figure>
+<p>On this screen you need to select:</p>
+<ul class="simple">
+<li><p>Which version of the EX-CommandStation software you wish to load</p></li>
+<li><p>How you wish to configure the software</p></li>
+</ul>
 <p><em>Which version</em></p>
-<p>Select which version of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software to load onto your hardware.  If you are unsure, or have been directed by the support team, select <code class="docutils literal notranslate"><span class="pre">Latest</span> <span class="pre">Production</span></code>.</p>
+<p>Select which version of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software to load onto your hardware.  If you are unsure, or unless you have been otherwise directed by the support team, we recommend you select <code class="docutils literal notranslate"><span class="pre">Latest</span> <span class="pre">Production</span></code>.</p>
 <p>Options are:</p>
 <ul class="simple">
 <li><p>Latest Production - Recommended!</p></li>
@@ -722,30 +733,36 @@
 <li><p>Select a specific version</p></li>
 </ul>
 <p><em>How to configure</em></p>
-<p>Select how you wish to configure your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. If you are updating a previous version, or have manually made configuration changes, select <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">options</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">next</span> <span class="pre">screen</span></code></p>
+<p>Select how you wish to configure your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. Unless you are updating a previous version that you manually configured, or want to manually make advanced configuration changes, select <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">options</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">next</span> <span class="pre">screen</span></code></p>
 <p>Options are:</p>
 <ul class="simple">
 <li><p>Configure options on the next screen</p></li>
 <li><p>Use my existing configuration files</p></li>
 </ul>
-<p>If you select <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">my</span> <span class="pre">existing</span> <span class="pre">configuration</span> <span class="pre">files</span></code> your will be propted to find the folder where the configuration files are located.</p>
+<p>If you select <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">my</span> <span class="pre">existing</span> <span class="pre">configuration</span> <span class="pre">files</span></code> your will be prompted to find the folder where the configuration files are located.</p>
 <p>If you have selected <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">options</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">next</span> <span class="pre">screen</span></code>, to proceed, click the <span class="guilabel">Configure EX-CommandStation</span> button.</p>
 <p>If you have selected <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">my</span> <span class="pre">existing</span> <span class="pre">configuration</span> <span class="pre">files</span></code>, to proceed, click the <span class="guilabel">Complie and Upload</span> button.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 <section id="ii-install-ex-commandstation-configuration-screen">
-<h5>ii) ‘Install EX-CommandStation’ - Configuration screen<a class="headerlink" href="#ii-install-ex-commandstation-configuration-screen" title="Permalink to this heading"></a></h5>
+<h5><a class="toc-backref" href="#id15" role="doc-backlink">ii) ‘Install EX-CommandStation’ - Configuration screen</a><a class="headerlink" href="#ii-install-ex-commandstation-configuration-screen" title="Permalink to this heading"></a></h5>
 <figure class="align-left">
 <a class="reference internal image-reference" href="../_images/ex_cs_configure.png"><img alt="EX-Installer - EX-CommandStation Configuration" src="../_images/ex_cs_configure.png" style="width: 481.20000000000005px; height: 379.20000000000005px;" /></a>
 </figure>
-<p>If you have selected <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">options</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">next</span> <span class="pre">screen</span></code> on the previous screen you will be present with this screen.</p>
-<p>On this screen you can select some of the flexible and optional feature of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>Only if you have selected <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">options</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">next</span> <span class="pre">screen</span></code> on the previous screen will you be presented with this screen.</p>
+<p>On this screen you can select some of the flexible and optional features of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>:abbr:</p>
+<ul class="simple">
+<li><p>Motor Driver type</p></li>
+<li><p>LCD or oLED display</p></li>
+<li><p>Wifi</p></li>
+<li><p>Ethernet</p></li>
+</ul>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 <p><strong>Motor Driver</strong></p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/ex_cs_configure_motor_shield.png"><img alt="EX-Installer - EX-CommandStation - Configure Motor Driver" src="../_images/ex_cs_configure_motor_shield.png" style="width: 222.6px; height: 138.0px;" /></a>
 </figure>
-<p>You must select your motor driver that you have installed.  The installer can’t detect this, so you must select the correct board or the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> may not work.</p>
+<p>You <em>must</em> select the motor driver type that you have installed.  The installer can’t detect this, so you must select the correct board or the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> may not work.</p>
 <p>The options include:</p>
 <ul class="simple">
 <li><p>STANDARD_MOTOR_SHIELD</p></li>
@@ -763,7 +780,7 @@
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/ex_cs_configure_screen.png"><img alt="EX-Installer - EX-CommandStation - Configure Display Driver" src="../_images/ex_cs_configure_screen.png" style="width: 216.29999999999998px; height: 69.6px;" /></a>
 </figure>
-<p>If you have installed and optional OLED or LED display, enable the <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">have</span> <span class="pre">a</span> <span class="pre">display</span></code> option, which will present you with a drop down list to select the type of display you have.</p>
+<p>If you have installed and optional oLED or LED display, enable the <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">have</span> <span class="pre">a</span> <span class="pre">display</span></code> option, which will present you with a drop down list to select the type of display you have.</p>
 <p>The options include:</p>
 <ul class="simple">
 <li><p>LCD - 16 columns x 2 rows</p></li>
@@ -772,16 +789,16 @@
 <li><p>OLED 128 x 64</p></li>
 </ul>
 <p><strong>WiFi</strong></p>
-<p>If you have installed and optional WiFi board, or are using a microcontoller board with integrated WiFi, enable the <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">have</span> <span class="pre">WiFi</span></code> option, which will present you with additional options.</p>
+<p>If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">have</span> <span class="pre">WiFi</span></code> option, which will present you with additional options.</p>
 <p>You can configure the WiFi for EX-CommandStation two ways:</p>
 <ul class="simple">
 <li><p>Access Point mode <br /> Select <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">my</span> <span class="pre">EX-CommandStation</span> <span class="pre">as</span> <span class="pre">an</span> <span class="pre">Access</span> <span class="pre">Point</span></code> <br /> You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as <em>Access Point Mode</em>. (Most useful if your layout is away from the house, or you transport your layout frequently.)</p></li>
-<li><p>Station mode <br /> Select <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">my</span> <span class="pre">EX-CommandStation</span> <span class="pre">to</span> <span class="pre">my</span> <span class="pre">existing</span> <span class="pre">wireless</span> <span class="pre">network</span></code> <br /> The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as Station Mode.</p></li>
+<li><p>Station mode <br /> Select <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">my</span> <span class="pre">EX-CommandStation</span> <span class="pre">to</span> <span class="pre">my</span> <span class="pre">existing</span> <span class="pre">wireless</span> <span class="pre">network</span></code> <br /> The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as <em>Station Mode</em>.</p></li>
 </ul>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../_images/ex_cs_configure_wifi_access_point.png"><img alt="EX-Installer - EX-CommandStation - Configure WiFi Access Point" src="../_images/ex_cs_configure_wifi_access_point.png" style="width: 268.2px; height: 73.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 55 </span><span class="caption-text"><strong>Use my EX-CommandStation as an Access Point</strong></span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 57 </span><span class="caption-text"><strong>Use my EX-CommandStation as an Access Point</strong></span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 <div class="legend">
 <p>If <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">my</span> <span class="pre">EX-CommandStation</span> <span class="pre">as</span> <span class="pre">an</span> <span class="pre">Access</span> <span class="pre">Point</span></code> is selected, two additional options are presented:</p>
 <ul class="simple">
@@ -796,7 +813,7 @@
 <figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../_images/ex_cs_configure_wifi_station.png"><img alt="EX-Installer - EX-CommandStation - Configure Wifi - Station Mode" src="../_images/ex_cs_configure_wifi_station.png" style="width: 341.4px; height: 72.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 56 </span><span class="caption-text"><strong>Connect my EX-CommandStation to my existing wireless network</strong></span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 58 </span><span class="caption-text"><strong>Connect my EX-CommandStation to my existing wireless network</strong></span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 <div class="legend">
 <p>If <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">my</span> <span class="pre">EX-CommandStation</span> <span class="pre">to</span> <span class="pre">my</span> <span class="pre">existing</span> <span class="pre">wireless</span> <span class="pre">network</span></code> is selected, two additional options are presented:</p>
 <ul class="simple">
@@ -816,13 +833,13 @@
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 <section id="iii-compile-and-load-screen">
-<h5>iii) ‘Compile and Load’ screen<a class="headerlink" href="#iii-compile-and-load-screen" title="Permalink to this heading"></a></h5>
+<h5><a class="toc-backref" href="#id16" role="doc-backlink">iii) ‘Compile and Load’ screen</a><a class="headerlink" href="#iii-compile-and-load-screen" title="Permalink to this heading"></a></h5>
 <figure class="align-left">
 <a class="reference internal image-reference" href="../_images/ex_cs_load.png"><img alt="EX-Installer - Load" src="../_images/ex_cs_load.png" style="width: 320.0px; height: 252.4px;" /></a>
 </figure>
 <p>To proceed, click the <span class="guilabel">Load</span> button.</p>
-<p>Results are in the lower half of the screen</p>
-<p>If there are no errors, you can proceed to testing you setup.</p>
+<p>Results are shown in the lower half of the screen.</p>
+<p>If there are no errors, you can proceed to testing your setup.</p>
 <div class="admonition-todo admonition" id="id2">
 <p class="admonition-title">Todo</p>
 <p>if there are errors</p>
@@ -838,7 +855,7 @@
 </section>
 <hr class="docutils" />
 <section id="next-steps-test-your-setup">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Next Steps - Test your setup</a><a class="headerlink" href="#next-steps-test-your-setup" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Next Steps - Test your setup</a><a class="headerlink" href="#next-steps-test-your-setup" title="Permalink to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.</p>
