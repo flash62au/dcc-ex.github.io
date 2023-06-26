@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-06-26T23:34:54.070726+00:00</updated>
+  <updated>2023-06-26T23:44:42.793568+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
@@ -163,5 +163,58 @@
     <summary>&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.</summary>
     <category term="ex-toolbox" label="ex-toolbox"/>
     <published>2023-03-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20220801.html</id>
+    <title>Our New Name</title>
+    <updated>2022-08-01T00:00:00+00:00</updated>
+    <author>
+      <name>Fred Decker</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="our-new-name"&gt;
+
+&lt;p&gt;In order to better fit with our mission and provide a more clear and consistant image as our offerings expand, we have changed our name from &lt;strong&gt;‘DCC++ EX’&lt;/strong&gt; to &lt;span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; "&gt;DCC-&lt;span style="color: #00a3b9;"&gt;EX&lt;/span&gt;&lt;/span&gt;, dropping the &lt;strong&gt;‘++’&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We have also changed our product names to have a consistent form of &lt;strong&gt;EX-&amp;lt;product name&amp;gt;&lt;/strong&gt; (without spaces in the product names if there are multiple words).&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt; - &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/span&gt; - &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;WebThrottle&lt;/span&gt;&lt;/span&gt; - &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt; - &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/span&gt; - &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;DCCInspector&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To go along with it we have created logos for the individual products&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="../../ex-commandstation/index.html"&gt;&lt;img alt="EX-CommandStation" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-commandstation.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-installer/index.html"&gt;&lt;img alt="EX-Installer" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-installer.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-webthrottle/index.html"&gt;&lt;img alt="EX-WebThrottle" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-webthrottle.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-rail/index.html"&gt;&lt;img alt="EX-RAIL" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-rail.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-turntable/index.html"&gt;&lt;img alt="EX-Turntable" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-turntable.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-dccinspector/index.html"&gt;&lt;img alt="EX-DCCInspector" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-dccinspector.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../download/ex-commandstation.html#getting-basestation-classic"&gt;&lt;img alt="baseStationClassic" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-basestationclassic.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To synopsize:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;DCC-EX is the organization&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;EX-CommandStation (or EX-CS) is our command station product&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;section id="why-we-made-the-change"&gt;
+&lt;h2&gt;Why We Made the Change&lt;/h2&gt;
+&lt;p&gt;When we began this journey, we picked up on the work of Gregg E. Berman who created the original Arduino based DCC “Base Station”, called “DCC++”. He chose that name as a play on words between the NMRA’s “Digital Command Control” specification, “DCC”, and the computer programming language used on the Arduino called “C++”. If you put DCC and C++ together, you get DCC++. So DCC++ became the product name. When we extended and ultimately completely rewrote the software inspired by DCC++, we chose the name “DCC++EX” for “DCC++ Extended”. Over time and with much input from users, we decided we needed to make some changes.&lt;/p&gt;
+&lt;p&gt;The first change was calling the “Base Station” a “Command Station”. This better reflected standardized terms used in the model railroading community.&lt;/p&gt;
+&lt;p&gt;We also noticed that there was confusion between our company/team name and the product. “DCC-EX” is the company while DCC++EX was our first product, the Command Station. DCC++EX was being used interchangeably to refer to both the company and the command station. Additionally, DCC++EX is a mouthful, it is difficult to pronounce and requires special characters (the plus signs) when written or typed. This causes issues on places that do not accept plus signs in names, like GitHub and Google.&lt;/p&gt;
+&lt;p&gt;For the above reasons, and since we have long ago expanded byond the original DCC++ project, we felt it was best to drop the “++”. At the same time, we needed to address the fact that we had a growing list of products and trademarks that should be consistent. While “EX” was always in the name, sometimes it was as a prefix and sometimes as a suffix. To remedy this, all our offerings now begin with “EX”, as in “EX-CommandStation” or “EX-CS” for short.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="what-has-not-changed"&gt;
+&lt;h2&gt;What Has Not changed&lt;/h2&gt;
+&lt;p&gt;Everything you knew and loved about what we now call “DCC++ Classic”. We have kept the old DCC++ command language and extended it. Switching to EX-CommandStation from DCC++ is a simple upgrade, and using accessories like throttles that speak the DCC++ command language still work as before (with many improvements).&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="yet-to-do"&gt;
+&lt;h2&gt;Yet To Do&lt;/h2&gt;
+&lt;p&gt;(These still refer to to DCC++EX and will be changed over time) :&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;GitHub&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;FaceBook&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="won-t-do"&gt;
+&lt;h2&gt;Won’t do&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;internal code references the &amp;lt;DCC++&amp;gt; codes/commands&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span style="font-weight: bold; color: #00353d; font-size: 100%;"&gt;BaseStationClassic (DCC++)&lt;/span&gt; won’t be renamed but does get a new logo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20220801.html" rel="alternate"/>
+    <summary>In order to better fit with our mission and provide a more clear and consistant image as our offerings expand, we have changed our name from ‘DCC++ EX’ to &lt;span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; "&gt;DCC-&lt;span style="color: #00a3b9;"&gt;EX&lt;/span&gt;&lt;/span&gt;, dropping the ‘++’.</summary>
+    <category term="dcc-ex" label="dcc-ex"/>
+    <published>2022-08-01T00:00:00+00:00</published>
   </entry>
 </feed>
