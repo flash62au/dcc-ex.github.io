@@ -2,21 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-06-27T01:24:07.456372+00:00</updated>
+  <updated>2023-06-27T04:39:33.750205+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
   <entry>
     <id>https://dcc-ex.com/news/posts/20230515.html</id>
-    <title>DCC-EX Releases 5A EX-MotorShield8874</title>
+    <title>DCC-EX Releases 5amp EX-MotorShield8874</title>
     <updated>2023-05-15T00:00:00+00:00</updated>
     <author>
       <name>Paul Antoine</name>
     </author>
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
-&lt;section id="dcc-ex-releases-5a-ex-motorshield8874"&gt;
+&lt;section id="dcc-ex-releases-5amp-ex-motorshield8874"&gt;
 
-&lt;p&gt;DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the EX-MotorShield8874 providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.&lt;/p&gt;
+&lt;p&gt;DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the EX-MotorShield8874, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.&lt;/p&gt;
 &lt;p&gt;The EX-MotorShield8874 addresses the needs of DCC-EX users wanting to run multiple locos, across multiple power districts without requiring expensive DCC boosters. A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.&lt;/p&gt;
 &lt;p&gt;The EX-MotorShield8874 is the first offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire. DCC-EX hardware lead Paul Antoine says “the open source vision for hardware designs from the DCC-EX community means individual users can order small batch manufacturing of all DCC-EX endorsed designs for themselves, friends and fellow club members. Or they have the choice to buy the same quality of product from licensed local resellers in their countries of origin.”&lt;/p&gt;
 &lt;img alt="DCC-EX EX-MotorShield8874 RevA Semify" src="https://dcc-ex.com/_images/ex_motorshield8874.jpeg" style="width: 750.0px; height: 500.0px;" /&gt;
@@ -34,7 +34,7 @@
 &lt;/section&gt;
 </content>
     <link href="https://dcc-ex.com/news/posts/20230515.html" rel="alternate"/>
-    <summary>DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the EX-MotorShield8874 providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.</summary>
+    <summary>DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the EX-MotorShield8874, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <published>2023-05-15T00:00:00+00:00</published>
   </entry>
@@ -72,11 +72,14 @@
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="version-5-progress-and-a-breaking-change-in-the-development-branch"&gt;
 
-&lt;p&gt;We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go. Amongst other things, this has resulted in one potentially “breaking” change for users of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt;’s capability to run sequences/routes on startup.&lt;/p&gt;
+&lt;p&gt;We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go.&lt;/p&gt;
+&lt;p&gt;Amongst other things, this has resulted in one potentially “breaking” change for users of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt;’s capability to run sequences/routes on start-up.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Breaking change:&lt;/strong&gt; The implicit AUTOSTART at the beginning of the “myAutomation.h” file for &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt; has been disabled, as we have found it confuses a great many first time users.&lt;/p&gt;
-&lt;p&gt;What does this mean?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;What does this mean?&lt;/p&gt;
 &lt;p&gt;Previously, when your &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt; started up with a “myAutomation.h” file present, anything defined prior to the very first &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;DONE&lt;/span&gt;&lt;/code&gt; statement would execute automatically. This was used to do things like set turnouts/points to a known startup position, automatically start routes or sequences for fully automated layouts, and so forth.&lt;/p&gt;
 &lt;p&gt;As of v4.2.31, this behaviour is disabled, meaning nothing defined in “myAutomation.h” will automatically start unless preceded by the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;AUTOSTART&lt;/span&gt;&lt;/code&gt; directive (see &lt;a class="reference internal" href="ex-rail/EX-RAIL-reference.html#ex-rail-functions"&gt;&lt;span class="std std-ref"&gt;EX-RAIL Functions&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;At the time of writing, we are currently at v4.2.37 of the &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt; development release, and these updates are continuing multiple times a week as we find/fix bugs and refine the software.&lt;/p&gt;
 &lt;p&gt;Here are some more highlights of what’s been done since the last news update:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -93,7 +96,7 @@
 &lt;/section&gt;
 </content>
     <link href="https://dcc-ex.com/news/posts/20230327.html" rel="alternate"/>
-    <summary>We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go. Amongst other things, this has resulted in one potentially “breaking” change for users of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt;’s capability to run sequences/routes on startup.</summary>
+    <summary>We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go.</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <category term="ex-ioexpander" label="ex-ioexpander"/>
     <category term="exrail" label="exrail"/>
@@ -408,13 +411,13 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
   </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20201001.html</id>
-    <title>DCC++ VS DCC-EX? [Oct 2020]</title>
+    <title>DCC++ VS DCC-EX?</title>
     <updated>2020-10-01T00:00:00+00:00</updated>
     <author>
       <name>Fred Decker</name>
     </author>
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
-&lt;section id="dcc-vs-dcc-ex-oct-2020"&gt;
+&lt;section id="dcc-vs-dcc-ex"&gt;
 
 &lt;p&gt;Everything you loved is still there…&lt;/p&gt;
 &lt;p&gt;First, we want to stress that we didn’t break anything!&lt;/p&gt;
