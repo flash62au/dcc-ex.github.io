@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-06-27T10:25:21.987627+00:00</updated>
+  <updated>2023-06-28T22:54:39.293254+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
