@@ -608,18 +608,24 @@
 <p><strong>Antivirus Software</strong> <br /> You <em>may</em> need to turn off your antivirus software before you try to install. <br /> Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.</p>
 </div>
 <ul class="simple">
-<li><p>Download the <a class="reference internal" href="../../download/ex-commandstation.html#ex-installer"><span class="std std-ref">EX-Installer</span></a> app <br /> depending on your computer’s operating system. <br /> <br /></p></li>
+<li><p>Download the <a class="reference internal" href="../../download/ex-commandstation.html#ex-installer"><span class="std std-ref">EX-Installer</span></a> app. <br /> <br /></p></li>
 <li><p>For <strong>Microsoft Windows</strong>:</p>
 <ul>
 <li><p>Open the Windows <em>File Manager</em></p></li>
-<li><p>Find the folder in which the <strong>EX-Installer-Win64.exe</strong> was saved. <br /> Generally this will default to downloading to the <em>downloads</em> folder but your browser may be configured differently.</p></li>
-<li><p><strong>Run</strong> <code class="docutils literal notranslate"><span class="pre">EX-Installer-Win64.exe</span></code> <br /> <br /> Note: depending on the configuration of your computer the ‘.exe’ may or may not appear. This is not of concern. <br /> <br /></p></li>
+<li><p>Find the folder in which the <strong>EX-Installer-Win64.exe</strong> or <strong>EX-Installer-Win32.exe</strong> was saved. <br /> Generally this will default to downloading to the <em>downloads</em> folder but your browser may be configured differently.</p></li>
+<li><p><strong>Run</strong> <code class="docutils literal notranslate"><span class="pre">EX-Installer-Win64.exe</span></code> or <strong>EX-Installer-Win32.exe</strong> or <strong>EX-Installer-Win32.exe</strong> <br /> <br /> Note: depending on the configuration of your computer the ‘.exe’ may or may not appear. This is not of concern. <br /> <br /></p></li>
 </ul>
 </li>
-<li><p>For <strong>Mac OS or Linux</strong>:</p>
+<li><p>For <strong>Apple macOS</strong>:</p>
 <ul>
-<li><p>Open a terminal window and navigate to that folder.</p></li>
-<li><p><strong>Run the installer with</strong> the following command: <code class="docutils literal notranslate"><span class="pre">./exInstaller</span></code> <br /> <br /></p></li>
+<li><p>Open a terminal window and navigate to that folder</p></li>
+<li><p><strong>Run the installer with</strong> the following command: <code class="docutils literal notranslate"><span class="pre">./EX-Installer-macOS</span></code> <br /> <br /></p></li>
+</ul>
+</li>
+<li><p>For <strong>Linux</strong>:</p>
+<ul>
+<li><p>Open a terminal window and navigate to that folder</p></li>
+<li><p><strong>Run the installer with</strong> the following command: <code class="docutils literal notranslate"><span class="pre">./EX-Installer-Linux64</span></code> <br /> <br /></p></li>
 </ul>
 </li>
 </ul>
@@ -770,13 +776,18 @@
 <p><span class="caption-number">Figure 28 </span><span class="caption-text">EX-Installer - Configure WiFi - Access Point</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
+<div class="note-float-right admonition note">
+<p class="admonition-title">Note</p>
+<p>If possible choose a channel that is unused (or least used) by other WiFi networks around your location. There are numerious phone apps that can help you determine which channels are being used by other networks <br />
+For Android, ‘Wifi Analyzer’ is one that works.  For iOS ‘Netspot’ is suitable (you don’t need to purchase WiPry device they mention.)</p>
+</div>
 <p>If <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">my</span> <span class="pre">EX-CommandStation</span> <span class="pre">as</span> <span class="pre">an</span> <span class="pre">Access</span> <span class="pre">Point</span></code> is selected, two additional options are presented:</p>
 <ul class="simple">
 <li><p>WiFi Password</p></li>
 <li><p>WiFi Channel</p></li>
 </ul>
 <p><strong>WiFi Password</strong> is optional.  <br /> <strong>We recommend you leave this field blank.</strong> <br /> If this field is left blank the password will default to “PASS_xxxxx” where ‘xxxxx’ will be the same as the SSID <em>name</em> that will be automatically configured.</p>
-<p><strong>WiFi Channel</strong> can be any value from 1-11. <br /> If possible choose a channel that is unused (or least used) by other WiFi networks around your location.</p>
+<p><strong>WiFi Channel</strong> can be any value from 1-11.</p>
 </div></blockquote>
 <p><strong>Connect my EX-CommandStation to my existing wireless network</strong></p>
 <blockquote>
