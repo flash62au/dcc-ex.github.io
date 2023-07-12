@@ -578,18 +578,19 @@
 <ul>
 <li><p><a class="reference internal" href="#motor-driver" id="id27">Motor Driver</a></p></li>
 <li><p><a class="reference internal" href="#optional-display" id="id28">Optional Display</a></p></li>
-<li><p><a class="reference internal" href="#i-have-ethernet" id="id29">I have Ethernet</a></p></li>
-<li><p><a class="reference internal" href="#set-track-modes" id="id30">Set track modes</a></p></li>
-<li><p><a class="reference internal" href="#advanced-config" id="id31">Advanced Config</a></p></li>
+<li><p><a class="reference internal" href="#wifi" id="id29">WiFi</a></p></li>
+<li><p><a class="reference internal" href="#i-have-ethernet" id="id30">I have Ethernet</a></p></li>
+<li><p><a class="reference internal" href="#set-track-modes" id="id31">Set track modes</a></p></li>
+<li><p><a class="reference internal" href="#advanced-config" id="id32">Advanced Config</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#iii-advanced-configuration-screen" id="id32">iii) ‘Advanced Configuration’ screen</a></p></li>
-<li><p><a class="reference internal" href="#iv-compile-and-load-screen" id="id33">iv) ‘Compile and Load’ screen</a></p></li>
+<li><p><a class="reference internal" href="#iii-advanced-configuration-screen" id="id33">iii) ‘Advanced Configuration’ screen</a></p></li>
+<li><p><a class="reference internal" href="#iv-compile-and-load-screen" id="id34">iv) ‘Compile and Load’ screen</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#next-steps-test-your-setup" id="id34">Next Steps - Test your setup</a></p></li>
+<li><p><a class="reference internal" href="#next-steps-test-your-setup" id="id35">Next Steps - Test your setup</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -824,8 +825,9 @@
 <li><p>OLED 128 x 32</p></li>
 <li><p>OLED 128 x 64</p></li>
 </ul>
+</section>
 <section id="wifi">
-<h6>WiFi<a class="headerlink" href="#wifi" title="Permalink to this heading"></a></h6>
+<h5><a class="toc-backref" href="#id29" role="doc-backlink">WiFi</a><a class="headerlink" href="#wifi" title="Permalink to this heading"></a></h5>
 <p>If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">have</span> <span class="pre">WiFi</span></code> option, which will present you with additional options.</p>
 <p>You can configure the WiFi for <strong>EX-CommandStation</strong> two ways:</p>
 <ul class="simple">
@@ -842,8 +844,8 @@
 </figure>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
-<p>If possible choose a channel that is unused (or least used) by other WiFi networks around your location. There are numerious phone apps that can help you determine which channels are being used by other networks <br />
-For Android, ‘Wifi Analyzer’ is one that works.  For iOS ‘Netspot’ is suitable <span class="dcc-ex-text-size-60pct">(you don’t need to purchase WiPry device they mention)</span>.</p>
+<p>If possible, choose a channel that is unused (or least used) by other WiFi networks around your location. <br />
+There are numerious phone apps that can help you determine which channels are being used by other networks. For Android, <em>‘Wifi Analyzer’</em> is one that works.  For iOS <em>‘Netspot’</em> is suitable <span class="dcc-ex-text-size-60pct">(you don’t need to purchase WiPry device they mention)</span>.</p>
 </div>
 <p>If <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">my</span> <span class="pre">EX-CommandStation</span> <span class="pre">as</span> <span class="pre">an</span> <span class="pre">Access</span> <span class="pre">Point</span></code> is selected, two additional options are presented:</p>
 <ul class="simple">
@@ -869,16 +871,19 @@ For Android, ‘Wifi Analyzer’ is one that works.  For iOS ‘Netspot’ is su
 <p>Both are required, though it is possible, but unlikely, that the WiFi Password for your network is blank. If so, leave the field blank.</p>
 <p><em>Wifi SSID</em> is the name of your home network.</p>
 <p><em>WiFi Password</em> is the password for your home network.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the <a class="reference internal" href="../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">WiFi Configuration</span></a> page for more detailed information on the the WiFi options.</p>
+</div>
 </div></blockquote>
 </section>
-</section>
 <section id="i-have-ethernet">
-<h5><a class="toc-backref" href="#id29" role="doc-backlink">I have Ethernet</a><a class="headerlink" href="#i-have-ethernet" title="Permalink to this heading"></a></h5>
+<h5><a class="toc-backref" href="#id30" role="doc-backlink">I have Ethernet</a><a class="headerlink" href="#i-have-ethernet" title="Permalink to this heading"></a></h5>
 <p>If you have installed and Ethernet board, select this option.</p>
 <p>Note that it is not possible to have both WiFi and Ethernet enabled at the same time.</p>
 </section>
 <section id="set-track-modes">
-<h5><a class="toc-backref" href="#id30" role="doc-backlink">Set track modes</a><a class="headerlink" href="#set-track-modes" title="Permalink to this heading"></a></h5>
+<h5><a class="toc-backref" href="#id31" role="doc-backlink">Set track modes</a><a class="headerlink" href="#set-track-modes" title="Permalink to this heading"></a></h5>
 <figure class="align-center" id="id13">
 <a class="reference internal image-reference" href="../_images/ex_cs_configure_set_track_mode_options.png"><img alt="EX-Installer - EX-CommandStation - Configure Wifi - Station Mode" src="../_images/ex_cs_configure_set_track_mode_options.png" style="width: 355.2px; height: 167.4px;" /></a>
 <figcaption>
@@ -896,7 +901,7 @@ For Android, ‘Wifi Analyzer’ is one that works.  For iOS ‘Netspot’ is su
 <p>By default track (channel) <strong>A</strong> will default to <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> and Track (channel) <strong>B</strong> to <code class="docutils literal notranslate"><span class="pre">PROG</span></code>.</p>
 </section>
 <section id="advanced-config">
-<h5><a class="toc-backref" href="#id31" role="doc-backlink">Advanced Config</a><a class="headerlink" href="#advanced-config" title="Permalink to this heading"></a></h5>
+<h5><a class="toc-backref" href="#id32" role="doc-backlink">Advanced Config</a><a class="headerlink" href="#advanced-config" title="Permalink to this heading"></a></h5>
 <figure class="align-center" id="id14">
 <a class="reference internal image-reference" href="../_images/ex_cs_configure_advanced_config.png"><img alt="EX-Installer - EX-CommandStation - Configure Wifi - Station Mode" src="../_images/ex_cs_configure_advanced_config.png" style="width: 417.59999999999997px; height: 31.799999999999997px;" /></a>
 <figcaption>
@@ -910,7 +915,7 @@ For Android, ‘Wifi Analyzer’ is one that works.  For iOS ‘Netspot’ is su
 </section>
 </section>
 <section id="iii-advanced-configuration-screen">
-<h4><a class="toc-backref" href="#id32" role="doc-backlink">iii) ‘Advanced Configuration’ screen</a><a class="headerlink" href="#iii-advanced-configuration-screen" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id33" role="doc-backlink">iii) ‘Advanced Configuration’ screen</a><a class="headerlink" href="#iii-advanced-configuration-screen" title="Permalink to this heading"></a></h4>
 <div class="warning-float-right admonition warning">
 <p class="admonition-title">Warning</p>
 <p>EX-Installer creates then maintains a folder (&lt;home&gt;\ex-installer) to hold the information it needs. <span class="dcc-ex-red-bold">Do not directly modify anything in this folder</span> as it may be overwritten or deleted by the installer at any time.</p>
@@ -927,7 +932,7 @@ For Android, ‘Wifi Analyzer’ is one that works.  For iOS ‘Netspot’ is su
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 <section id="iv-compile-and-load-screen">
-<h4><a class="toc-backref" href="#id33" role="doc-backlink">iv) ‘Compile and Load’ screen</a><a class="headerlink" href="#iv-compile-and-load-screen" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id34" role="doc-backlink">iv) ‘Compile and Load’ screen</a><a class="headerlink" href="#iv-compile-and-load-screen" title="Permalink to this heading"></a></h4>
 <figure class="align-left" id="id16">
 <a class="reference internal image-reference" href="../_images/ex_cs_load.png"><img alt="EX-Installer - Load" src="../_images/ex_cs_load.png" style="width: 320.0px; height: 252.4px;" /></a>
 <figcaption>
@@ -944,7 +949,7 @@ For Android, ‘Wifi Analyzer’ is one that works.  For iOS ‘Netspot’ is su
 </section>
 <hr class="docutils" />
 <section id="next-steps-test-your-setup">
-<h2><a class="toc-backref" href="#id34" role="doc-backlink">Next Steps - Test your setup</a><a class="headerlink" href="#next-steps-test-your-setup" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id35" role="doc-backlink">Next Steps - Test your setup</a><a class="headerlink" href="#next-steps-test-your-setup" title="Permalink to this heading"></a></h2>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
 <p>The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.</p>
