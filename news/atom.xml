@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-08-05T21:44:46.097965+00:00</updated>
+  <updated>2023-08-05T21:56:51.376873+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
@@ -95,8 +95,9 @@
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="no-support-planned-for-the-uno-r4-or-giga"&gt;
 
-&lt;p&gt;Like you, we get excited when a new product is announced and can’t wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the &lt;strong&gt;Uno R4&lt;/strong&gt; and &lt;strong&gt;Giga&lt;/strong&gt; are advancements to the Arduino platform, and are great products, &lt;strong&gt;DCC-EX&lt;/strong&gt; has no plans to support them at this time. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DCC-EX&lt;/strong&gt; has no plans to support for the Uno R4 or Giga boards. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.&lt;/p&gt;
 &lt;p&gt;Firstly it is worth noting that while the DCC-EX team is not working on it, you are free to work with the team on a port and we will provide you with support and help if you feel up to the task.&lt;/p&gt;
+&lt;p&gt;Like you, we get excited when a new product is announced and can’t wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the &lt;strong&gt;Uno R4&lt;/strong&gt; and &lt;strong&gt;Giga&lt;/strong&gt; are advancements to the Arduino platform, and are great products, &lt;strong&gt;DCC-EX&lt;/strong&gt; has no plans to support them at this time.&lt;/p&gt;
 &lt;p&gt;It is unfortunate (for us) that Arduino chose to carry on the “Uno” name with the Uno R4 board. The “R4” designator would create the impression that this is just “rev 4” of the old Uno Rev3. We all know from experience with versions of things that 4 comes after 3 and so this is just a faster, better Uno, right? Not quite. At least the new Giga was not called the Mega R4, though at $73 US, it is cost prohibitive for a command station.&lt;/p&gt;
 &lt;p&gt;The Uno R4 is about as similar to the old Uno as a PC is to a Mac. It is the same size and has the same orientation of GPIO for attaching shields, but uses a completely different microcontroller (2 actually), from completely different manufacturers, using completely different architectures.&lt;/p&gt;
 &lt;p&gt;It is one thing to run a blink sketch on these new boards, but a completely different task trying to port software as involved at the hardware level as the EX-CommandStation. The R4 uses a different core library with limited support since many libraries still have to be rewritten. So it will take some time for support to build.&lt;/p&gt;
@@ -105,7 +106,7 @@
 &lt;/section&gt;
 </content>
     <link href="https://dcc-ex.com/news/posts/20230728.html" rel="alternate"/>
-    <summary>Like you, we get excited when a new product is announced and can’t wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the Uno R4 and Giga are advancements to the Arduino platform, and are great products, DCC-EX has no plans to support them at this time. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.</summary>
+    <summary>DCC-EX has no plans to support for the Uno R4 or Giga boards. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.</summary>
     <category term="dcc-ex" label="dcc-ex"/>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <category term="giga" label="giga"/>
