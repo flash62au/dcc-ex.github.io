@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
+<meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Posts tagged uno &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Version 5 is here! &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -13,7 +16,7 @@
       <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/news/tag/uno.html" />
+    <link rel="canonical" href="https://dcc-ex.com/news/posts/20230804.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -49,7 +52,7 @@
   rel="alternate"
   type="application/atom+xml"
   href="../../news/atom.xml"
-  title="Posts tagged uno"
+  title="DCC-EX News"
 />
 
 
@@ -541,10 +544,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Posts tagged uno</li>
+      <li class="breadcrumb-item active">Version 5 is here!</li>
   
     
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/news/posts/20230804.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -554,113 +558,94 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
+<a class="image-product-logo-float-right reference internal image-reference" href="../../_images/product-logo-news.png"><img alt="DCC-EX News" class="image-product-logo-float-right" src="../../_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /></a>
+<section id="version-5-is-here">
+<h1>Version 5 is here!<a class="headerlink" href="#version-5-is-here" title="Permalink to this heading"></a></h1>
+<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Yep, that’s right, the much anticipated <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> version 5 release is here at last! This is a huge release, adding significant new features like <span class="ex-suffix">TrackManager</span>, enhancing existing capabilities, introducting new and enhanced I/O support, along with other associated products such as <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span>, <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>, and <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span>.</p>
+<p>We highly recommend upgrading to version 5 to take advantage of the improvements we’ve made, and especially for those users who are using our new <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span>, as we’ve improved how it deals with overloads and inrush current amongst other enhancements.</p>
+<p>To get your hands on this latest release, select <code class="docutils literal notranslate"><span class="pre">Latest</span> <span class="pre">Production</span></code> when running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> (see <a class="reference internal" href="../../ex-installer/installing.html#download-and-run-ex-installer"><span class="std std-ref">Download and Run EX-Installer</span></a>), or you can download it manually by following the directions in <a class="reference internal" href="../../download/ex-commandstation.html#latest-ex-commandstation-official-release"><span class="std std-ref">Latest EX-CommandStation Official Release</span></a>.</p>
+<p>We’ve outlined the key updates below but this is not an exhaustive list.</p>
+<p><a class="reference external" href="../../news/posts/20230806.html"><img alt="EX-MotorShield8874" class="image-min-width-144" src="../../_images/new_in_version_5.png" style="width: 240.0px; height: 48.0px;" /></a></p>
+<section id="ex-commandstation-features-fixes-and-enhancements">
+<h2>EX-CommandStation features, fixes, and enhancements<a class="headerlink" href="#ex-commandstation-features-fixes-and-enhancements" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><span class="ex-suffix">TrackManager</span> - Run both DC and DCC trains from the same controller and switch your tracks between DC and DCC modes live, see <a class="reference internal" href="../../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p></li>
+<li><p>Beta support for new, 32 bit microcontrollers including ESP32 Wroom and some STMicroelectronics Nucleo, see <a class="reference internal" href="../../reference/hardware/microcontrollers/microcontrollers.html"><span class="doc">Under Development: Microcontrollers</span></a></p></li>
+<li><p>Extensive optimisation of HIGHMEM useage to free up PROGMEM below the 64kb and increase the useful life of the AVR Mega2560 platform</p></li>
+<li><p>Add option to disable programming to allow limited platforms such as the Arduino Uno to run limited <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> scripts</p></li>
+<li><p>Add support for our new fast clock <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span>, see <a class="reference internal" href="../../ex-fastclock/index.html"><span class="doc">EX-FastClock</span></a></p></li>
+<li><p>Add support for our new I/O expander <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span>, see <a class="reference internal" href="../../ex-ioexpander/index.html"><span class="doc">EX-IOExpander</span></a></p></li>
+<li><p>Add support for our new turntable controller <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>, see <a class="reference internal" href="../../ex-turntable/index.html"><span class="doc">EX-Turntable</span></a></p></li>
+<li><p>Add support for duinoNodes, see <a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/duinonodes.html"><span class="doc">Lew’s Duino Gear duinoNodes</span></a></p></li>
+<li><p>Add support for a rotary encoder, see <a class="reference internal" href="../../ex-turntable/test-and-tune.html#controlling-ex-turntable-with-a-rotary-encoder"><span class="std std-ref">Controlling EX-Turntable with a rotary encoder</span></a></p></li>
+<li><p>Add support for PCF8575 and PCA/TCA9555 GPIO devices</p></li>
+<li><p>Enhanced overcurrent detection, including enhancing the behaviour to deal with inrush current issues</p></li>
+<li><p>Moved startup of the HAL earlier in the boot sequence</p></li>
+<li><p>Improved performance for ADC (analogue to digital) reads</p></li>
+<li><p>Enhancements to I<sup>2</sup>C bus retries and timeouts</p></li>
+<li><p>Support for I<sup>2</sup>C multiplexers to help with devices with static or limited address ranges</p></li>
+<li><p>Support for multiple I<sup>2</sup>C displays</p></li>
+<li><p>Improved handling of conflicting I<sup>2</sup>C addresses and Vpin allocations</p></li>
+<li><p>Enhanced DFPlayer error handling</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">&lt;JG&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;JI&gt;</span></code> for multi-track gauges to support <span class="ex-suffix">TrackManager</span></p></li>
+<li><p>Improved stability for the VL53L0X ToF sensor</p></li>
+<li><p>Bugfix for signals being inverted (active high was actually active low and vice versa)</p></li>
+<li><p>Bugfix for Ethernet allowing a static IP address to be set</p></li>
+</ul>
+</section>
+<section id="exrail-enhancements">
+<h2>EXRAIL enhancements<a class="headerlink" href="#exrail-enhancements" title="Permalink to this heading"></a></h2>
+<p>For details on these changes and new commands, refer to our new, consolidated <a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html"><span class="doc">EX-RAIL Command Reference</span></a>.</p>
+<ul class="simple">
+<li><p><strong>BREAKING CHANGE</strong> Removed implicit <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> from myAutomation.h, simply add <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> to the beginning of the file to restore this, see <a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html#scripts-sequences-types-and-control"><span class="std std-ref">Scripts/Sequences - Types and Control</span></a></p></li>
+<li><p>Enhance <code class="docutils literal notranslate"><span class="pre">SPEED</span></code> command to respond to external direction changes</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">DCC_SIGNAL</span></code> command to control DCC Accessory based signals</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">VIRTUAL_SIGNAL</span></code> command to enable user-defined signal sequences</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">ONGREEN</span></code>, <code class="docutils literal notranslate"><span class="pre">ONAMBER</span></code>, and <code class="docutils literal notranslate"><span class="pre">ONRED</span></code> signal event handlers to respond to signal changes</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">TURNOUTL</span></code> command to enable using a linear DCC address for DCC Accessory turnouts</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">MOVETT</span></code> command to enable controlling an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">IFRE</span></code> command to test the position of a rotary encoder</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">ONCHANGE</span></code> event handler to respond to a position change of a rotary encoder</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">ONCLOCKTIME</span></code> and <code class="docutils literal notranslate"><span class="pre">ONCLOCKMINS</span></code> event handlers to respond to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span> times</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">IFLOCO</span></code> command to test if the provided loco ID is used in the sequence</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">FORGET</span></code> command to drop the provided loco ID from reminder tables</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">SET_TRACK</span></code> command to configure <span class="ex-suffix">TrackManager</span> in sequences</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">SERIAL4</span></code>, <code class="docutils literal notranslate"><span class="pre">SERIAL5</span></code>, and <code class="docutils literal notranslate"><span class="pre">SERIAL6</span></code> to support newer microcontrollers with more/different interfaces</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">SCREEN</span></code> command to display messages on multiple displays</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">POWERON</span></code> and <code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> commands to control track power</p></li>
+</ul>
+</section>
+<section id="website-enhancements">
+<h2>Website enhancements<a class="headerlink" href="#website-enhancements" title="Permalink to this heading"></a></h2>
+<p>As always, we are continuing to ensure our website is updated, and endeavour to make it easier to use and find information.</p>
+<img alt="Dark mode icon" class="align-right" src="../../_images/dark_mode.png" />
+<p>The big change is that you can now choose “dark mode” by clicking the icon in bottom right corner.</p>
+</section>
+</section>
 
-<div class="section ablog__collection">
-  <h1>
+<div class="section ablog__blog_comments">
+  
+  
+
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
     
-      Posts tagged
+    
+    <a href="20230728.html">
       
-    uno
-    
-  </h1>
-  
-  
-  <div class="section ablog-post">
-    <h2 class="ablog-post-title">
-      <a href="../posts/20230728.html">No support planned for the Uno R4 or Giga</a>
-    </h2>
-    <ul class="ablog-archive">
-      <li>
-        
-        
-        <i class="fa fa-calendar"></i>
-        
-        28 July 2023
-        
-      </li>
+      <i class="fa fa-arrow-circle-left"></i>
       
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
+      <span>No support planned for the Uno R4 or Giga</span>
+    </a>
     
-    <i class="fa-fw fa fa-user"></i>
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
     
-    </span>
-  
-  
-  <a href="../author/fred-frightrisk.html">Fred (FrightRisk)</a>
-  
-  
-  
-</li>
-
-
-
-
-<li id="ablog-sidebar-item category ablog__category">
-  <span>
-    
-    <i class="fa-fw fa fa-folder-open"></i>
-    
-    </span>
-  
-  
-  <a href="../category/news.html">News</a>
-  
-  
-  
-</li>
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
-    </span>
-  
-  
-  <a href="dcc-ex.html">dcc-ex</a>
-  
-  
-  
-  
-  
-  <a href="giga.html">giga</a>
-  
-  
-  
-  
-  
-  <a href="#">uno</a>
-  
-  
-  
-  
-  
-  <a href="ex-commandstation.html">ex-commandstation</a>
-  
-  
-  
-  
-  
-  <a href="news.html">news</a>
-  
-  
-  
-</li>
-
-
-    </ul>
-    <div class="ablog-post-excerpt docutils container">
-<p>Like you, we get excited when a new product is announced and can’t wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the <strong>Uno R4</strong> and <strong>Giga</strong> are advancements to the Arduino platform, and are great products, <strong>DCC-EX</strong> has no plans to support them at this time. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.</p>
+  </span>
 </div>
 
-    <p class="ablog-post-expand"><a href="../posts/20230728.html"><em>Read more ...</em></a></p>
-    <hr/>
-  </div>
   
   
 </div>
