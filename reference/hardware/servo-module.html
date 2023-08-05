@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/hardware/servo-module.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../_static/design-tabs.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
+        <script src="../../_static/dark_mode_js/default_dark.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -373,6 +378,7 @@
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/teensy.html">Teensy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -469,12 +475,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -576,7 +577,7 @@
 </ul>
 </nav>
 </aside>
-<p>To connect a servo module to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you first need to get a module, based on the PCA9685 chip.</p>
+<p>To connect a servo module to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>These are widely available from eBay, Amazon, etc. for a few dollars.</p>
 <p>Note the pin connectors along the left side of the module - these are where you connect to the
@@ -588,7 +589,7 @@ sure that the wire colours match the colours of the pins, i.e. yellow to yellow,
 consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
 <p>Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:</p>
 <a class="reference internal image-reference" href="../../_images/ArduinoMegaServo.png"><img alt="PCA9685 Servo Module" src="../../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
-<p>In <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
+<p>In <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
 <p>Once you’ve made all of the connections, apply power to the Arduino.</p>
 <p>Then, in the Serial Monitor, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it isn’t (by some fluke) already in that position.</p>
 <p>Enter <cite>&lt;D SERVO 100 110&gt;</cite> and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.</p>
@@ -609,7 +610,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <section id="controlling-servos-for-turnouts">
 <h3>Controlling servos for turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Permalink to this heading"></a></h3>
 <p>The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in <a class="reference internal" href="../glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../glossary.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout within the CommandStation.</p>
-<p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, turnouts are defined with the following syntax:</p>
+<p>As per the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference, turnouts are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -642,9 +643,9 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 </section>
 <section id="controlling-servos-for-animations">
 <h3>Controlling servos for animations<a class="headerlink" href="#controlling-servos-for-animations" title="Permalink to this heading"></a></h3>
-<p>The SERVO and SERVO2 directives allow for servos to be used in various automations within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
-<p>Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../glossary.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> automations.</p>
-<p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, these are defined with the following syntax:</p>
+<p>The SERVO and SERVO2 directives allow for servos to be used in various automations within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>.</p>
+<p>Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../glossary.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> automations.</p>
+<p>As per the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference, these are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="p">)</span>
 <span class="n">SERVO2</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span>
 </pre></div>
@@ -720,8 +721,8 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 </section>
 <section id="using-these-with-ex-rail">
 <h3>Using these with EX-RAIL<a class="headerlink" href="#using-these-with-ex-rail" title="Permalink to this heading"></a></h3>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> includes the <code class="docutils literal notranslate"><span class="pre">FADE(vpin,</span> <span class="pre">value,</span> <span class="pre">ms)</span></code> command which can is used to adjust the LED’s brightness to the provided value over the time specified in milliseconds.</p>
-<p>The example below simulates a camp fire by continuously varying the LED brightness for random delay times, and this starts automatically when the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> starts by using the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> directive.</p>
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> includes the <code class="docutils literal notranslate"><span class="pre">FADE(vpin,</span> <span class="pre">value,</span> <span class="pre">ms)</span></code> command which can is used to adjust the LED’s brightness to the provided value over the time specified in milliseconds.</p>
+<p>The example below simulates a camp fire by continuously varying the LED brightness for random delay times, and this starts automatically when the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> starts by using the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> directive.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SEQUENCE(3)
    AUTOSTART
    FADE(101, 100, 50)   DELAYRANDOM(200,800) // Use an Amber or Red LED
