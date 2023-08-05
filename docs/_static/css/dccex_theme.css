@@ -448,10 +448,6 @@ html[data-theme='dark'] .admonition-todo p.admonition-title {
   background: #ca6105 !important;
 }
 
-html[data-theme='dark'] .sidebar-title {
-  background: #002735 !important;
-}
-
 /* *************************************** */
 
 .menuselection {
@@ -612,6 +608,7 @@ nav#on-this-page {
 /* sidebars */
 .rst-content .sidebar {
   padding: 12px 24px 12px 24px !important;
+  border-radius: 10px;
 }
 
 html[data-theme='dark'] .rst-content .sidebar {
@@ -619,6 +616,13 @@ html[data-theme='dark'] .rst-content .sidebar {
   border:#000000ff !important;
 }
 
+.sidebar-title {
+  border-radius: 10px;
+}
+
+html[data-theme='dark'] .sidebar-title {
+  background: #002735 !important;
+}
 
 /* news */
 section#dcc-ex-model-railroading aside p.sidebar-title {	
