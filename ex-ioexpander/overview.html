@@ -31,7 +31,7 @@
         <script src="../_static/design-tabs.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
-        <script src="../_static/dark_mode_js/default_dark.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
         <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -431,6 +431,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -606,6 +607,7 @@
 <section id="introduction">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span> is an additional microcontroller utilised to expand the I/O port capability of an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and connecting via I<sup>2</sup>C.</p>
+<p>It can be used to increase the number of available pins on your command station or run devices/objects at a greater distance away from it without having to run a lot of wires back to the command station. This is accomplished by using just two I<sup>2</sup>C bus wires to connect to one or many micro controllers running the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span> software.</p>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span> can be used for various different functions depending on the microcontroller in use:</p>
 <ul class="simple">
 <li><p>Reading from digital input pins</p></li>
@@ -678,21 +680,21 @@
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/select_product.png"><img alt="EX-Installer - Select Product" src="../_images/select_product.png" style="width: 320.8px; height: 265.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 130 </span><span class="caption-text">EX-Installer - Product Screen</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 124 </span><span class="caption-text">EX-Installer - Product Screen</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>We always recommend selecting the latest available version for <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span> unless advised otherwise, but note you will only see Development versions while it remains in Alpha testing.</p>
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../_images/select_io_version.png"><img alt="EX-Installer - Select Version" src="../_images/select_io_version.png" style="width: 320.8px; height: 265.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 131 </span><span class="caption-text">EX-Installer - Product Screen</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 125 </span><span class="caption-text">EX-Installer - Product Screen</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Once the version has been selected, you will be able to configure the necessary options.</p>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../_images/ex_io-expander.png"><img alt="EX-Installer - Configure EX-IOExpander" src="../_images/ex_io-expander.png" style="width: 320.8px; height: 265.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 132 </span><span class="caption-text">EX-Installer - EX-IOExpander configuration</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 126 </span><span class="caption-text">EX-Installer - EX-IOExpander configuration</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Continue through the rest of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> process to load the software on to your device.</p>
