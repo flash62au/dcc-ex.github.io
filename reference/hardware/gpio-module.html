@@ -571,7 +571,7 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#interrupts" id="id1">Interrupts</a></p></li>
+<li><p><a class="reference internal" href="#interrupts" id="id5">Interrupts</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -592,23 +592,43 @@ associate the pin with a <span class="ex-prefix">EX</span><span class="ex-suffix
 be configured as an input.</p>
 <p>A typical GPIO Expander, for which <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is pre-configured, is the MCP23017.  An
 example board (from PiHut) is shown here.</p>
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/MCP23017_module.jpg"><img alt="MCP23017 Module (PiHut)" src="../../_images/MCP23017_module.jpg" style="width: 320.0px; height: 262.40000000000003px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 121 </span><span class="caption-text">MCP23017 Module (PiHut)</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>It has a Grove connector on the bottom-left side, for which a compatible converter cable is provided.  It also has
 five connector pads on the top-right side, to which pins or wires may be soldered.
 Along the top-left and bottom-right edges are the sixteen GPIO pins, and two Vcc and two GND pins.</p>
 <p>Here is another module, from DFRobot:</p>
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/DFrobot_mcp23017.jpg"><img alt="MCP23017 Module (DFRobot)" src="../../_images/DFrobot_mcp23017.jpg" style="width: 451.20000000000005px; height: 300.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 122 </span><span class="caption-text">MCP23017 Module (DFRobot)</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>This module has a row of three pin headers associated with each I/O pin; this allows
 each sensor to have its own GND, VCC and signal pin connection, so we can use three-way
 ribbon connectors for each sensor or output.  At the far left of the board are the
 I<sup>2</sup>C connector pins; there is also what appears to be a Grove connector at the right side of the board.</p>
 <p>An example of circuit connections for a module is shown below:</p>
+<figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/ArduinoMega_MCP23017.png"><img alt="MCP23017 module connections" src="../../_images/ArduinoMega_MCP23017.png" style="width: 603.0px; height: 441.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 123 </span><span class="caption-text">MCP23017 module connections</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>This diagram also shows an infra-red sensor (3-pin device) connected to GPIO0 of the
 MCP23017, and a push-button (2-pin) connected to GPIO1.</p>
 <p>Also generally available is the MCP23017 in IC form (28-pin DIL package).  This can be mounted on
 a breadboard for use, as shown below, or on stripboard if you want a more permanent solution.</p>
+<figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../../_images/ArduinoMega_MCP23017_breadboard.png"><img alt="MCP23017 on a Breadboard" src="../../_images/ArduinoMega_MCP23017_breadboard.png" style="width: 619.1999999999999px; height: 508.5px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 124 </span><span class="caption-text">MCP23017 on a Breadboard</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>Pins 15-17 of the MCP23017 allow selection of the I<sup>2</sup>C address.  If all three pins are connected
 to ground (as shown in the diagram with cyan wires) then the address will be 0x20.
 In <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, the sixteen GPIO pins on MCP23017 address 0x20 are accessed using pin numbers
@@ -619,7 +639,7 @@ the input pin is switched to LOW level and a message <cite>&lt;Q 165&gt;</cite> 
 pin is active.  When the switch is released, the input pin is pulled back to HIGH and a message
 <cite>&lt;q 165&gt;</cite> is generated to indicate that the pin is inactive.</p>
 <section id="interrupts">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Interrupts</a><a class="headerlink" href="#interrupts" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Interrupts</a><a class="headerlink" href="#interrupts" title="Permalink to this heading"></a></h2>
 <p>Many I<sup>2</sup>C GPIO Expander boards provide pin connections labelled INT, INTA, INTB etc.  These are used by the
 expander chip to notify the microcontroller that one or more inputs have changed state.</p>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports the use of these pins.  On controllers with INTA and INTB, the two pins should be connected together
