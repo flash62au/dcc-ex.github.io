@@ -375,10 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="microcontrollers/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -751,7 +751,7 @@
 <h2><a class="toc-backref" href="#id13" role="doc-backlink">Configuring Additional Displays</a><a class="headerlink" href="#configuring-additional-displays" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../../news/posts/20230806.html"><img alt="EX-MotorShield8874" class="image-min-width-144" src="../../_images/new_in_version_5.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Apart from the main status display (display ‘0’), <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> allows definition of many more additional displays which can be any mix of LCD and OLED I<sup>2</sup>C displays. These displays can show all manner of output, including using <code class="docutils literal notranslate"><span class="pre">SCREEN()</span></code> commands issued from within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> scripts. Here is an OLED showing train departure times on a station building:</p>
-<a class="reference internal image-reference" href="../../_images/polar_express_oled.jpg"><img alt="OLED showing train departure times" src="../../_images/polar_express_oled.jpg" style="width: 302.40000000000003px; height: 302.40000000000003px;" /></a>
+<a class="reference internal image-reference" href="../../_images/polar_express_oled.jpg"><img alt="OLED showing train departure times" src="../../_images/polar_express_oled.jpg" style="width: 366.0px; height: 366.0px;" /></a>
 <p>In order to configure additional displays, you will need to add lines to “myHal.cpp” in order to create the displays when the command station is running. Below we configure an additional OLED display as display #1, and an LCD as display #2:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a 128x32 OLED display device as display number 1</span>
 <span class="c1">// (line 0 is written by EX-RAIL &#39;SCREEN(1, 0, &quot;text&quot;)&#39;).</span>
