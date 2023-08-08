@@ -2,16 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-08-07T07:47:14.000956+00:00</updated>
+  <updated>2023-08-08T07:03:29.959379+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
   <entry>
-    <id>https://dcc-ex.com/news/posts/20230804.html</id>
+    <id>https://dcc-ex.com/news/posts/20230807.html</id>
     <title>Version 5 is here!</title>
-    <updated>2023-08-04T00:00:00+00:00</updated>
+    <updated>2023-08-07T00:00:00+00:00</updated>
     <author>
-      <name>flash62au</name>
+      <name>peteGSX</name>
     </author>
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="version-5-is-here"&gt;
@@ -84,12 +84,12 @@
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230804.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230807.html" rel="alternate"/>
     <summary>&lt;span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;"&gt;New in version 5 &lt;/span&gt; Yep, that’s right, the much anticipated &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; version 5 release is here at last! This is a huge release, adding significant new features like &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt;, enhancing existing capabilities, introducting new and enhanced I/O support, along with other associated products such as &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;, &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;, and &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;.</summary>
     <category term="new-in-version-5" label="new-in-version-5"/>
     <category term="news" label="news"/>
     <category term="version-5" label="version-5"/>
-    <published>2023-08-04T00:00:00+00:00</published>
+    <published>2023-08-07T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20230728.html</id>
