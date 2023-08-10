@@ -612,13 +612,13 @@
 <dt><strong>This is a summary, for a detailed command, see…</strong></dt><dd><p><a class="reference internal" href="command-reference.html"><span class="doc">Command Reference</span></a></p>
 </dd>
 </dl>
-<p>This page describes all the DCC-EX commands that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports.</p>
+<p>This page describes all the <a class="reference internal" href="../glossary.html"><span class="doc">DCC-EX Native Commands</span></a> that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports.</p>
 <section id="conventions-used-on-this-page">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> - All DCC-EX commands are surrounded by these characters to indicate the beginning and end, these must always be included</p></li>
 <li><p>First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code>, or <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
-<li><p>CAPITALISED words - These are parameters referdepro to as keywords, and should be specified as directed, eg. <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)</p></li>
+<li><p>CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, eg. <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)</p></li>
 <li><p>lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space ” “, eg. <code class="docutils literal notranslate"><span class="pre">cab</span></code></p></li>
 <li><p>Square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> - Parameters within square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> are optional and may be omitted, and if specifying these parameters, do not include the square brackets themselves</p></li>
 <li><p>| - Use of the | character means you need to provide one of the provided options only, for example <code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> becomes either <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">MAIN&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code></p></li>
@@ -644,7 +644,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">G&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;JG&gt;</span></code> - <strong>Request max current</strong> <br /></p>
 <blockquote>
 <div><p><em>Parameters:</em>  N/A</p>
-<p><em>Response:</em> <br /> repeated for each Channel/Track: <code class="docutils literal notranslate"><span class="pre">&lt;j</span> <span class="pre">IG</span> <span class="pre">track</span> <span class="pre">currentmax&gt;</span></code> <br /> &gt; <strong>track:</strong>  channel/track <br /> &gt; <strong>currentmax:</strong> current in milliamps</p>
+<p><em>Response:</em> <br /> repeated for each Channel/Track: <code class="docutils literal notranslate"><span class="pre">&lt;j</span> <span class="pre">G</span> <span class="pre">track</span> <span class="pre">currentmax&gt;</span></code> <br /> &gt; <strong>track:</strong>  channel/track <br /> &gt; <strong>currentmax:</strong> current in milliamps</p>
 <p><em>Version Introduced: 4.2.19</em></p>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[track]&gt;</span></code> - <strong>Turns power on and off to the MAIN and PROG tracks together or independently. Also allows joining the MAIN and PROG tracks together.</strong></p>
@@ -661,15 +661,6 @@
 <hr class="docutils" />
 <section id="cab-loco-commands">
 <h3><a class="toc-backref" href="#id4" role="doc-backlink">Cab (Loco) Commands</a><a class="headerlink" href="#cab-loco-commands" title="Permalink to this heading"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code> - <strong>Decoder Functions - Legacy command.</strong></p>
-<blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>byte1 byte2:</strong> DCC function bytes as sent to decoders (up to F28)</p>
-<p><em>Response:</em> <br />  Success: nothing <br />  Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
-<p><em>Notes:</em></p>
-<blockquote>
-<div><p>Used by the sniffer</p>
-</div></blockquote>
-</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code> - <strong>Emergency Stop</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> N/A</p>
@@ -708,7 +699,8 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - <strong>Set Cab (Loco) Speed</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speed:</strong> 0-127 <br /> &gt; <strong>dir:</strong> one of <br />  - 1=forward  <br />  - 0=reverse</p>
-<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  - reverse - 2-127 = speed 1-126, 0 = stop  <br />  - forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte <br /> <br /> <em>Version Introduced: 4.1.1</em></p>
+<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  - reverse - 2-127 = speed 1-126, 0 = stop  <br />  - forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte</p>
+<p><em>Version Introduced: 4.1.1</em></p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br />
@@ -723,7 +715,7 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">state&gt;</span></code> - <strong>Turns loco decoder functions ON and OFF</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>funct:</strong> 0-28 (F29-F68 (Support for the RCN-212 Functions) <br /> &gt; <strong>state:</strong>  <br />  - 1=on  <br />  - 0=off</p>
-<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  - reverse - 2-127 = speed 1-126, 0 = stop  <br />  - forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte</p>
+<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> refer to the &lt;t &gt; command above for details</p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>Setting requests are transmitted directly to mobile loco decoder. <br />
@@ -731,11 +723,20 @@ Current state of loco functions (as known by commands issued since power on) is 
 The command station knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2. <br /></p>
 </div></blockquote>
 </div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code> - <strong>Decoder Functions - Legacy command.</strong> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span></p>
+<blockquote>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>byte1 byte2:</strong> DCC function bytes as sent to decoders (up to F28)</p>
+<p><em>Response:</em> <br />  Success: nothing <br />  Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
+<p><em>Notes:</em></p>
+<blockquote>
+<div><p>Used by the sniffer</p>
+</div></blockquote>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">reg</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - <strong>Set Cab (Loco) Speed - Legacy command</strong> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span></p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>reg:</strong> not used <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speed:</strong> 0-127 <br /> &gt; <strong>dir:</strong> one of  <br />  - 1=forward  <br />  - 0=reverse</p>
 <p><em>Response:</em> <br />
-The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>reg:</strong> redundant. Not used. <br /> &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  - reverse - 2-127 = speed 1-126, 0 = stop  <br />  - forward - 130-255 = speed 1-126,  128 = stop <br /> FunctMap: individual function states represented by the the bits in a byte <br /> <br />
+The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> refer to the &lt;t &gt; command above for details <br />
 Legacy response: <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">reg</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - do not rely on this response</p>
 <p><em>Version Deprecated: 4.1.1</em></p>
 <p><em>Notes:</em></p>
@@ -841,7 +842,7 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">onOff&gt;</span></code> - <strong>Verify/Read bit of CV with guessed value</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>bit:</strong> bit to verify in the CV <br /> &gt; <strong>onOff:</strong> one of <br />  - 1=on  <br />  - 0=off</p>
-<p><em>Response:</em> ???</p>
+<p><em>Response:</em> <br /> Response (successful): 0 | 1 <br /> Response (fail): <strong>&lt;V -1&gt;</strong></p>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> - <strong>Verify/Read of CV with guessed value</strong></p>
 <blockquote>
