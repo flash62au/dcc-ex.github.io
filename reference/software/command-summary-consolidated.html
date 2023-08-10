@@ -816,12 +816,12 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">Writing CVs - Program on the main</a><a class="headerlink" href="#writing-cvs-program-on-the-main" title="Permalink to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">address</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value&gt;</span></code> - <strong>Write CV bit on main track</strong></p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>address:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>bit:</strong> ???  <br /> &gt; <strong>value:</strong> value to change the CV to <br /> <br /></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>address:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>bit:</strong> ???  <br /> &gt; <strong>value:</strong> value to change the CV to</p>
 <p><em>Response:</em> ???</p>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">address</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> - <strong>Write CV on main track</strong></p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>address:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong> value to change the CV to <br /> <br /></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>address:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong> value to change the CV to</p>
 <p><em>Response:</em> N/A</p>
 </div></blockquote>
 </section>
@@ -998,14 +998,14 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 |_| ID=2,PC=267,LOCO=0 ,SPEED=0F |BR|
 |_| ID=1,PC=228,LOCO=0 ,SPEED=0F |BR|
 |_| RED[110] |BR|
-|_| RED[113] *&gt;</strong> <br /></p>
+|_| RED[113] *&gt;</strong></p>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">ROUTES&gt;</span></code> - <strong>Request the Routes &amp; Automations control list in wiThrottle Protocol format.</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> N/A</p>
 <p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESUME&gt;</span></code> - <strong>Resumes ALL EX-RAIL automation actvites, and resumes all locos at the same speed at which they were paused.</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESUME&gt;</span></code> - <strong>Resumes ALL EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> N/A <br />
 <em>Response:</em> N/A</p>
@@ -1055,7 +1055,7 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> unique Id for the servo <br /> &gt; <strong>vpin:</strong> vpin to which the servo is attached <br /> &gt; <strong>thrownPos:</strong> position for the servo when thrown <br /> &gt; <strong>closedPos:</strong> position for the servo when closed <br /> &gt; <strong>profile:</strong> one of <br />  - 0=Instant,  <br />  - 1=Fast (0.5 sec),  <br />  - 2=Medium (1 sec),  <br />  - 3=Slow (2 sec) and  <br />  - 4=Bounce (subject to revision).</p>
 <p><em>Response:</em> <br /> Successful: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br /> Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
-<p><em>Notes:</em> <br /></p>
+<p><em>Notes:</em></p>
 <blockquote>
 <div><p>The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. <br />
 Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).</p>
@@ -1120,8 +1120,8 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id&gt;</span></code> - <strong>Deletes definition of sensor</strong></p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Sensor (0-32767)
-<em>Response:</em> ???</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Sensor (0-32767)</p>
+<p><em>Response:</em> ???</p>
 </div></blockquote>
 </section>
 <hr class="docutils" />
@@ -1172,7 +1172,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <h3><a class="toc-backref" href="#id22" role="doc-backlink">Configuring the EX-CommandStation - Diagnostic programming commands</a><a class="headerlink" href="#configuring-the-ex-commandstation-diagnostic-programming-commands" title="Permalink to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code> - <strong>Override 250mA prog track limit while idle</strong></p>
 <blockquote>
-<div><p><em>Parameters:</em> N/A
+<div><p><em>Parameters:</em> N/A <br />
 <em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
