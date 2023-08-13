@@ -569,7 +569,7 @@
 <li><p><a class="reference internal" href="#conventions-used-on-this-page" id="id2">Conventions used on this page</a></p></li>
 <li><p><a class="reference internal" href="#controlling-the-ex-commandstation" id="id3">Controlling the EX-CommandStation</a></p>
 <ul>
-<li><p><a class="reference internal" href="#power-management" id="id4">Power management</a></p></li>
+<li><p><a class="reference internal" href="#power-management" id="id4">Power Management</a></p></li>
 <li><p><a class="reference internal" href="#track-manager" id="id5">Track Manager</a></p></li>
 <li><p><a class="reference internal" href="#cab-loco-commands" id="id6">Cab (Loco) Commands</a></p></li>
 <li><p><a class="reference internal" href="#roster-commands" id="id7">Roster Commands</a></p></li>
@@ -626,11 +626,12 @@
 <section id="controlling-the-ex-commandstation">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Controlling the EX-CommandStation</a><a class="headerlink" href="#controlling-the-ex-commandstation" title="Permalink to this heading"></a></h2>
 <section id="power-management">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Power management</a><a class="headerlink" href="#power-management" title="Permalink to this heading"></a></h3>
-<p>Also see <a class="reference internal" href="#system-information">System Information</a> for retrieve command station power information:</p>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Power Management</a><a class="headerlink" href="#power-management" title="Permalink to this heading"></a></h3>
+<p>Also see <a class="reference internal" href="#system-information">System Information</a> for retrieve command station power information.</p>
 <p><hr class="hr-dashed" /></p>
-<section id="onoff-track-turns-power-on-and-off-to-the-main-and-prog-tracks-together-or-independently-also-allows-joining-the-main-and-prog-tracks-together">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[track]&gt;</span></code> - <strong>Turns power on and off to the MAIN and PROG tracks together or independently. Also allows joining the MAIN and PROG tracks together.</strong><a class="headerlink" href="#onoff-track-turns-power-on-and-off-to-the-main-and-prog-tracks-together-or-independently-also-allows-joining-the-main-and-prog-tracks-together" title="Permalink to this heading"></a></h4>
+<section id="onoff-track-turns-power-on-and-off-to-the-main-and-prog-tracks-together-or-independently">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[track]&gt;</span></code> - <strong>Turns power on and off to the MAIN and PROG tracks together or independently.</strong><a class="headerlink" href="#onoff-track-turns-power-on-and-off-to-the-main-and-prog-tracks-together-or-independently" title="Permalink to this heading"></a></h4>
+<p>Also allows joining the MAIN and PROG tracks together.</p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>onOff:</strong> one of <br />  - 1 = on <br />  - 0 = off <br /> &gt; <strong>track:</strong> one of <br />  - blank = Both Main and Programming Tracks  <br />  - MAIN = Main track  <br />  - PROG = Programming Track  <br />  - JOIN = Join the Main and Programming tracks temporarily <br /></p>
 <p><em>Response:</em>  N/A</p>
@@ -648,7 +649,9 @@
 <blockquote>
 <div><p><em>Response:</em> N/A</p>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">I&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;JI&gt;</span></code> - <strong>Request current status</strong></p>
+</section>
+<section id="j-i-ji-request-current-status">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">I&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;JI&gt;</span></code> - <strong>Request current status</strong><a class="headerlink" href="#j-i-ji-request-current-status" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><em>Response:</em> Repeated for each Channel/Track: <code class="docutils literal notranslate"><span class="pre">&lt;j</span> <span class="pre">I</span> <span class="pre">track</span> <span class="pre">current&gt;</span></code> <br /> &gt; <strong>track:</strong>  channel/track <br /> &gt; <strong>current:</strong> current in milliamps</p>
 <blockquote>
@@ -672,11 +675,15 @@
 <h3><a class="toc-backref" href="#id5" role="doc-backlink">Track Manager</a><a class="headerlink" href="#track-manager" title="Permalink to this heading"></a></h3>
 <p>Note:  Previously referred to as ‘DC-District’.</p>
 <p><hr class="hr-dashed" /></p>
-<section id="trackletter-mode-cab-configure-track-manager-note-since-only-one-channel-can-be-prog-changing-a-second-channel-to-prog-will-force-the-other-to-off">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">mode</span> <span class="pre">[cab]&gt;</span></code> - <strong>Configure Track Manager Note: since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF</strong><a class="headerlink" href="#trackletter-mode-cab-configure-track-manager-note-since-only-one-channel-can-be-prog-changing-a-second-channel-to-prog-will-force-the-other-to-off" title="Permalink to this heading"></a></h4>
+<section id="trackletter-mode-cab-configure-track-manager">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">mode</span> <span class="pre">[cab]&gt;</span></code> - <strong>Configure Track Manager</strong><a class="headerlink" href="#trackletter-mode-cab-configure-track-manager" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>trackletter:</strong> ‘A’ through ‘H’ represent one of the outputs of the/a motor shield. <br /> &gt; <strong>mode:</strong> one of  <br />  - MAIN <br />  - PROG <br />  - DC <br />  - DCX = DC reversed polarity <br />  - OFF (DCX is DC with reversed polarity) <br /> &gt; <strong>id:</strong> the cab ID. <em>Required when specifying DC or DCX</em></p>
 <p><em>Response:</em> <br /> (for each track/channel that has changed) <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">state</span> <span class="pre">cab&gt;</span></code> <br /> <br /> &gt; <strong>trackletter:</strong> A-H <br /> &gt; <strong>state:</strong>  PROG, MAIN DC, DCX <br /> &gt; <strong>cab:</strong> cab(loco) equivalent to a fake DCC Address</p>
+<p><em>Notes:</em></p>
+<blockquote>
+<div><p>since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF**</p>
+</div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -997,7 +1004,8 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <div><p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">noCabs&gt;</span></code> <br /> &gt; <strong>noCabs:</strong> maximum number of Cabs(Locos) supported by the command station</p>
 <p><em>Notes:</em></p>
 <blockquote>
-<div><p>This will display the number of available cab slots. This will typically be <strong>&lt;# 20&gt;</strong>, <strong>&lt;# 30&gt;</strong>, or <strong>&lt;# 50&gt;</strong> depending on how much memory your EX‑CommandStation has available.  <br /> This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing MAX_LOCOS in “DCC.h”, knowing that each new slot will take approximately 8 bytes of memory. The <strong>&lt;D RAM&gt;</strong> command will display the amount of free memory. If you fill the available slots, the “Forget Locos” command (<strong>&lt;- [CAB]&gt;</strong>) will free up unused locos. Currently there is no automatic purging of unused locos.</p>
+<div><p>This will display the number of available cab slots. This will typically be <strong>&lt;# 20&gt;</strong>, <strong>&lt;# 30&gt;</strong>, or <strong>&lt;# 50&gt;</strong> depending on how much memory your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> has available.</p>
+<p>This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing MAX_LOCOS in “DCC.h”, knowing that each new slot will take approximately 8 bytes of memory. The <strong>&lt;D RAM&gt;</strong> command will display the amount of free memory. If you fill the available slots, the “Forget Locos” command (<strong>&lt;- [CAB]&gt;</strong>) will free up unused locos. Currently there is no automatic purging of unused locos.</p>
 </div></blockquote>
 </div></blockquote>
 </section>
@@ -1130,12 +1138,15 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="pause-pauses-all-ex-rail-automation-activities-including-sending-an-e-stop-to-all-locos">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">PAUSE&gt;</span></code> - <strong>Pauses ALL EX-RAIL automation activities, including sending an E-STOP to all locos.</strong><a class="headerlink" href="#pause-pauses-all-ex-rail-automation-activities-including-sending-an-e-stop-to-all-locos" title="Permalink to this heading"></a></h4>
+<section id="pause-pauses-all-ex-rail-automation-activities">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">PAUSE&gt;</span></code> - <strong>Pauses ALL EX-RAIL automation activities</strong><a class="headerlink" href="#pause-pauses-all-ex-rail-automation-activities" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p><em>Response:</em> N/A</p>
+<div><p>Including sending an E-STOP to all locos.</p>
+<p><em>Response:</em> N/A</p>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> - <strong>Request EX-RAIL running task information.</strong></p>
+</section>
+<section id="request-ex-rail-running-task-information">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> - <strong>Request EX-RAIL running task information.</strong><a class="headerlink" href="#request-ex-rail-running-task-information" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><em>Response:</em> <br /> &gt; <strong>&lt;* EXRAIL STATUS |BR|
 |_| ID=0,PC=189,LOCO=0 ,SPEED=0F |BR|
@@ -1147,14 +1158,15 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="routes-request-the-routes-automations-control-list-in-withrottle-protocol-format">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">ROUTES&gt;</span></code> - <strong>Request the Routes &amp; Automations control list in wiThrottle Protocol format.</strong><a class="headerlink" href="#routes-request-the-routes-automations-control-list-in-withrottle-protocol-format" title="Permalink to this heading"></a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">ROUTES&gt;</span></code> - <strong>Request the Routes &amp; Automations control list in wiThrottle Protocol format</strong><a class="headerlink" href="#routes-request-the-routes-automations-control-list-in-withrottle-protocol-format" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="resume-resumes-all-ex-rail-automation-activities-and-resumes-all-locos-at-the-same-speed-at-which-they-were-paused">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESUME&gt;</span></code> - <strong>Resumes ALL EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.</strong><a class="headerlink" href="#resume-resumes-all-ex-rail-automation-activities-and-resumes-all-locos-at-the-same-speed-at-which-they-were-paused" title="Permalink to this heading"></a></h4>
+<section id="resume-resumes-all-ex-rail-automation-activities">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESUME&gt;</span></code> - <strong>Resumes ALL EX-RAIL automation activities</strong><a class="headerlink" href="#resume-resumes-all-ex-rail-automation-activities" title="Permalink to this heading"></a></h4>
+<p>Also resumes all locos at the same speed at which they were paused.</p>
 <blockquote>
 <div><p><em>Parameters:</em> N/A <br />
 <em>Response:</em> N/A</p>
@@ -1177,8 +1189,9 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="d-exrail-state-when-the-commandstation-is-connected-to-a-serial-monitor-ex-rail-script-logging-can-be-enabled-or-disabled">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EXRAIL</span> <span class="pre">state&gt;</span></code> - <strong>When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled</strong><a class="headerlink" href="#d-exrail-state-when-the-commandstation-is-connected-to-a-serial-monitor-ex-rail-script-logging-can-be-enabled-or-disabled" title="Permalink to this heading"></a></h4>
+<section id="d-exrail-state-enable-or-disbale-ex-rail-script-logging">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EXRAIL</span> <span class="pre">state&gt;</span></code> - <strong>Enable or disbale EX-RAIL script logging</strong><a class="headerlink" href="#d-exrail-state-enable-or-disbale-ex-rail-script-logging" title="Permalink to this heading"></a></h4>
+<p>When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled</p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />  - ON <br />  - OFF</p>
 <p><em>Response:</em> N/A</p>
@@ -1400,8 +1413,8 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="d-ack-retry-x-adjust-ack-retries-to-number-x-default-is-2">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">x&gt;</span></code> - <strong>Adjust ACK retries to number x (default is 2)</strong><a class="headerlink" href="#d-ack-retry-x-adjust-ack-retries-to-number-x-default-is-2" title="Permalink to this heading"></a></h4>
+<section id="d-ack-retry-x-adjust-ack-retries">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">x&gt;</span></code> - <strong>Adjust ACK retries</strong><a class="headerlink" href="#d-ack-retry-x-adjust-ack-retries" title="Permalink to this heading"></a></h4>
 <p>When reading/writing CVs, the program will try again upon failure.  The default is <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">2&gt;</span></code>, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">2&gt;</span></code>.</p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>x:</strong> Number of times to retry</p>
@@ -1413,8 +1426,8 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="d-progboost-override-250ma-prog-track-limit-while-idle">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code> - <strong>Override 250mA prog track limit while idle</strong><a class="headerlink" href="#d-progboost-override-250ma-prog-track-limit-while-idle" title="Permalink to this heading"></a></h4>
+<section id="d-progboost-override-prog-track-limit-while-idle">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code> - <strong>Override prog track limit while idle</strong><a class="headerlink" href="#d-progboost-override-prog-track-limit-while-idle" title="Permalink to this heading"></a></h4>
 <p>By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.</p>
 <blockquote>
 <div><p><em>Response:</em> N/A</p>
@@ -1505,7 +1518,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="t-id-deletes-a-turnout-by-id">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code> - <strong>Deletes a turnout by Id.</strong><a class="headerlink" href="#t-id-deletes-a-turnout-by-id" title="Permalink to this heading"></a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code> - <strong>Deletes a turnout by Id</strong><a class="headerlink" href="#t-id-deletes-a-turnout-by-id" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> unique Id for the servod</p>
 <p><em>Response:</em> <br /> Successful: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br /> Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code>  (Id does not exist)</p>
@@ -1513,7 +1526,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="d-servo-vpin-value-profile-set-servo-position-to-value-on-pin-vpin">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code> - <strong>Set servo position to value on pin vpin.</strong><a class="headerlink" href="#d-servo-vpin-value-profile-set-servo-position-to-value-on-pin-vpin" title="Permalink to this heading"></a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code> - <strong>Set servo position to value on pin vpin</strong><a class="headerlink" href="#d-servo-vpin-value-profile-set-servo-position-to-value-on-pin-vpin" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>vpin:</strong> vpin to which the servo is attached <br /> &gt; <strong>value:</strong>  position to mve the servo to <br /> &gt; <strong>profile:</strong>  one of <br />  - 0 = instant <br />  - 1 = fast <br />  - 2 = medium <br />  - 3 = slow <br />  - 4 = bounce</p>
 <p><em>Response:</em> N/A</p>
