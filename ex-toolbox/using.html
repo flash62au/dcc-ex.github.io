@@ -833,7 +833,7 @@ Internal storage <code class="docutils literal notranslate"><span class="pre">/A
 <hr class="docutils" />
 <section id="connecting-via-usb">
 <h2><a class="toc-backref" href="#id20" role="doc-backlink">Connecting via USB</a><a class="headerlink" href="#connecting-via-usb" title="Permalink to this heading"></a></h2>
-<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> can’t normally connect to an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via USB, however it is possible to temporary create a USB to IP connection on you PC using tools like <em>socat</em> or <em>SerialToIPGUI</em> (for windows).</p>
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> can’t normally connect to an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via USB, however it is possible to temporarily create a USB to IP connection on you PC using tools like <em>socat</em> or <em>SerialToIPGUI</em> (for windows).</p>
 <p>Using <em>socat</em> in linux:</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">socat</span> <span class="pre">TCP4-LISTEN:2560</span> <span class="pre">/dev/ttyUSB0,b115200,raw,echo=0</span></code></p>
@@ -857,9 +857,8 @@ i.e. ‘COM12’ in theDevice Manager becomes ‘/dev/ttyS11’</p>
 <p><span class="caption-number">Figure 134 </span><span class="caption-text">SerialToIPGUI</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>enter the port of ‘2560’ and click <span class="guilabel">Start</span></p>
-</div></blockquote>
 <p>Once started, open <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span>, enter the IP address of your PC and the port of ‘2560’ then click <span class="guilabel">connect</span>.</p>
+</div></blockquote>
 <p>Downloads</p>
 <blockquote>
 <div><ul class="simple">
