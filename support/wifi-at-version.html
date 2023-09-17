@@ -684,7 +684,7 @@
 <p>Once you have successfully loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
 <ol class="arabic simple">
 <li><p>click back through the pages of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> till you get to the ‘Select your Device’ screen</p></li>
-<li><p>Click on the <span class="guilabel">View device monitor</span> button <br /> A new window will open lot of text will appear</p></li>
+<li><p>Click on the <span class="guilabel">View device monitor</span> button <br /> A new window will open and a lot of text will appear</p></li>
 <li><p>you need to look for a line that will have a section highlighted in green</p></li>
 </ol>
 <p>e.g. <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
@@ -696,7 +696,7 @@
 <p>If you loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software using the Arduino, once you have successfully loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
 <ol class="arabic simple">
 <li><p>select <strong>Tools</strong> -&gt; <strong>Serial monitor</strong> from the menus</p></li>
-<li><p>A new pane will open at the bottom of the IDE window will open lot of text will appear</p></li>
+<li><p>A new pane will open at the bottom of the IDE window will open and a lot of text will appear</p></li>
 <li><p>you need to look for a line similar to the following</p></li>
 </ol>
 <p>e.g. <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
@@ -717,11 +717,12 @@
 <h5>Checking with a USB Serial Adapter<a class="headerlink" href="#checking-with-a-usb-serial-adapter" title="Permalink to this heading"></a></h5>
 <ol class="arabic simple">
 <li><p>Connect the ESP01 to the serial adapter</p></li>
-<li><p>plug the serial adapter it the PC</p></li>
-<li><p>open the Arduino IDE</p></li>
-<li><p>select <strong>Tools</strong> -&gt; <strong>Serial monitor</strong> from the menus</p></li>
-<li><p>A new pane will open at the bottom of the IDE window will open lot of text will appear</p></li>
-<li><p>Enter the command <code class="docutils literal notranslate"><span class="pre">&lt;+GMR&gt;</span></code> and click <span class="guilabel">Send</span>.</p></li>
+<li><p>Plug the serial adapter it the PC</p></li>
+<li><p>oOpen the Arduino IDE</p></li>
+<li><p>Select <strong>Tools</strong> -&gt; <strong>Serial monitor</strong> from the menus</p></li>
+<li><p>Select baud: <code class="docutils literal notranslate"><span class="pre">115200</span></code> and <code class="docutils literal notranslate"><span class="pre">Both</span> <span class="pre">NL</span> <span class="pre">&amp;</span> <span class="pre">CR</span></code></p></li>
+<li><p>A new pane will open at the bottom of the IDE window will open</p></li>
+<li><p>Enter the command <code class="docutils literal notranslate"><span class="pre">AT+GMR</span></code> and click <span class="guilabel">Send</span>.</p></li>
 </ol>
 <p>It will reply with something like <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
 <p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.</p>
