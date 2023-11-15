@@ -601,7 +601,7 @@
 <li><p><a class="reference internal" href="#step-4-connect-your-computer" id="id10">Step 4.  Connect your computer</a></p></li>
 <li><p><a class="reference internal" href="#step-5-flash-with-esptool" id="id11">Step 5. Flash with esptool</a></p></li>
 <li><p><a class="reference internal" href="#step-6-check-that-flash-was-successful" id="id12">Step 6. Check that flash was successful</a></p></li>
-<li><p><a class="reference internal" href="#step-7-connect-to-arduino" id="id13">Step 7. Connect to Arduino</a></p></li>
+<li><p><a class="reference internal" href="#step-7-prepare-your-ex-commandstation" id="id13">Step 7. Prepare your EX-CommandStation</a></p></li>
 </ul>
 </li>
 </ul>
@@ -626,6 +626,7 @@
 </section>
 <section id="how-to">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">How To</a><a class="headerlink" href="#how-to" title="Permalink to this heading"></a></h2>
+<p><hr class="hr-dashed" /></p>
 <section id="step-1-get-esptool">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">Step 1. Get esptool</a><a class="headerlink" href="#step-1-get-esptool" title="Permalink to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">esptool</span></code> can be download separately, but the easiest way to get it is to use our <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> which will automatically download it if you select the appropriate options.</p>
@@ -666,11 +667,13 @@ Mac: <br />
 Linux: <br />
 <code class="docutils literal notranslate"><span class="pre">~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py</span></code></p>
 </div></blockquote>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="step-2-get-the-1-7-4-as-a-whole-image">
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">Step 2. Get the 1.7.4 as a whole image</a><a class="headerlink" href="#step-2-get-the-1-7-4-as-a-whole-image" title="Permalink to this heading"></a></h3>
 <p>2.1 Open <a class="reference external" href="https://cdn.discordapp.com/attachments/735194734611398676/1171788863539261461/ESP8266_1MB_AT1_7.bin?ex=655df46b&amp;is=654b7f6b&amp;hm=dae2e165ba51eef1808caa5462e2b2a7887c1e2bc7b47f0bb1f933fe6cda83c7&amp;">https://cdn.discordapp.com/attachments/735194734611398676/1171788863539261461/ESP8266_1MB_AT1_7.bin?ex=655df46b&amp;is=654b7f6b&amp;hm=dae2e165ba51eef1808caa5462e2b2a7887c1e2bc7b47f0bb1f933fe6cda83c7&amp;</a></p>
 <p>This should give you a file called <code class="docutils literal notranslate"><span class="pre">ESP8266_1MB_AT1_7.bin</span></code> size 1MB md5sum b3019e7e85bdc0878324118b8e002236</p>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="step-3-prepare-the-hardware">
 <h3><a class="toc-backref" href="#id9" role="doc-backlink">Step 3. Prepare the hardware</a><a class="headerlink" href="#step-3-prepare-the-hardware" title="Permalink to this heading"></a></h3>
@@ -693,6 +696,7 @@ Linux: <br />
 </figcaption>
 </figure>
 </div></blockquote>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="step-4-connect-your-computer">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">Step 4.  Connect your computer</a><a class="headerlink" href="#step-4-connect-your-computer" title="Permalink to this heading"></a></h3>
@@ -705,26 +709,49 @@ Linux: <br />
 <p>This should first produce gibberish and then “ready”.</p>
 </div></blockquote>
 <p>4.5 Close the device monitor and installer (important).</p>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="step-5-flash-with-esptool">
 <h3><a class="toc-backref" href="#id11" role="doc-backlink">Step 5. Flash with esptool</a><a class="headerlink" href="#step-5-flash-with-esptool" title="Permalink to this heading"></a></h3>
-<dl>
-<dt>5.1 Prepare the long command line. <br /></dt><dd><p>For <code class="docutils literal notranslate"><span class="pre">ESPTOOL</span></code> and <code class="docutils literal notranslate"><span class="pre">PORTNAME</span></code> insert values from the steps above</p>
+<p>5.1 open a command prompted</p>
+<blockquote>
+<div><p>For Windows PCs</p>
+<blockquote>
+<div><ul>
+<li><p>click <span class="guilabel">Start Menu</span></p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">cmd</span></code> and press the <span class="guilabel">Enter</span> key</p></li>
+<li><p>go to the folder you downloaded the <code class="docutils literal notranslate"><span class="pre">ESP8266_1MB_AT1_7.bin</span></code> file to (normally ‘dDownloads’) by entering:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">c:</span></code>
+<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">\user\&lt;username&gt;\downloads</span></code>   replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> with you username on the PC</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>For iOS and Linux</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>???</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>5.2 Prepare the long command line. (byt don’t press <span class="guilabel">Enter</span> yet)</p>
+<blockquote>
+<div><p>For <code class="docutils literal notranslate"><span class="pre">ESPTOOL</span></code> and <code class="docutils literal notranslate"><span class="pre">PORTNAME</span></code> insert values from the steps above</p>
 <p><code class="docutils literal notranslate"><span class="pre">ESPTOOL</span> <span class="pre">--baud</span> <span class="pre">38400</span> <span class="pre">--port</span> <span class="pre">PORTNAME</span> <span class="pre">write_flash</span> <span class="pre">--erase-all</span> <span class="pre">--flash_freq</span> <span class="pre">40m</span> <span class="pre">--flash_mode</span> <span class="pre">dout</span> <span class="pre">--flash_size</span> <span class="pre">1MB</span> <span class="pre">0x0</span> <span class="pre">ESP8266_1MB_AT1_7.bin</span></code></p>
 <p>For Example for Windows PCs : (if the Arduino is connected on COM3) <br />
 <code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;userName&gt;\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool</span> <span class="pre">--baud</span> <span class="pre">38400</span> <span class="pre">--port</span> <span class="pre">COM3</span> <span class="pre">write_flash</span> <span class="pre">--erase-all</span> <span class="pre">--flash_freq</span> <span class="pre">40m</span> <span class="pre">--flash_mode</span> <span class="pre">dout</span> <span class="pre">--flash_size</span> <span class="pre">1MB</span> <span class="pre">0x0</span> <span class="pre">ESP8266_1MB_AT1_7.bin</span></code> <br />
 Note: that <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> needs to be replaced with ‘your’ user name on the PC.</p>
 <p>If the program is python (iOS or Linux) you need to prepend python3 like this: (If the Arduino is connect on /dev/ttyUSB0) <br />
 <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py</span>&#160; <span class="pre">--baud</span> <span class="pre">38400</span> <span class="pre">--port</span> <span class="pre">/dev/ttyUSB0</span> <span class="pre">write_flash</span> <span class="pre">--erase-all</span> <span class="pre">--flash_freq</span> <span class="pre">40m</span> <span class="pre">--flash_mode</span> <span class="pre">dout</span> <span class="pre">--flash_size</span> <span class="pre">1MB</span> <span class="pre">0x0</span> <span class="pre">ESP8266_1MB_AT1_7.bin</span></code></p>
-</dd>
-</dl>
-<p>5.2 Locate the Reset and GPIO0 pads on the ESP8266.</p>
+</div></blockquote>
+<p>5.3 Locate the Reset and GPIO0 pads on the ESP8266.</p>
 <blockquote>
 <div><p>The <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> pad is the fourth pad from the bottom on the right, next to the “P” in “ESP-12F”.  <br />
 The <code class="docutils literal notranslate"><span class="pre">Reset</span></code> pad is the top pad on the left, closest to the resister labelled “R6”.</p>
 </div></blockquote>
-<p>5.3 Press enter on the above command line. You should see “connecting” and dots and dashes.</p>
-<p>5.4 Take one GND jumper and HOLD (keep holding) to <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> pad</p>
+<p>5.4 Press enter on the above command line. You should see “connecting” and dots and dashes.</p>
+<p>5.5 Take one GND jumper and HOLD (keep holding) to <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> pad</p>
 <blockquote>
 <div><p>Note: The GPIO0 pin is the fourth pin from the bottom on the right, next to the “P” in “ESP-12F”. See picture below.</p>
 <figure class="align-default" id="id2">
@@ -734,11 +761,12 @@ The <code class="docutils literal notranslate"><span class="pre">Reset</span></c
 </figcaption>
 </figure>
 </div></blockquote>
-<p>5.5 Take other GND jumper and touch <code class="docutils literal notranslate"><span class="pre">Reset</span></code> pad (While still holding the other jumper to <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> pad)</p>
+<p>5.6 Take other GND jumper and touch <code class="docutils literal notranslate"><span class="pre">Reset</span></code> pad (While still holding the other jumper to <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> pad)</p>
 <blockquote>
 <div><p>The <code class="docutils literal notranslate"><span class="pre">Reset</span></code> pad is the top pad on the left, closest to the resister labelled “R6”.</p>
 </div></blockquote>
-<p>5.6 Now you should see text and “Writing….(xx %)”. Keep holding the <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> jumper until you see “Hash of data verified”.</p>
+<p>5.7 Now you should see text and “Writing….(xx %)”. Keep holding the <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> jumper until you see “Hash of data verified”.</p>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="step-6-check-that-flash-was-successful">
 <h3><a class="toc-backref" href="#id12" role="doc-backlink">Step 6. Check that flash was successful</a><a class="headerlink" href="#step-6-check-that-flash-was-successful" title="Permalink to this heading"></a></h3>
@@ -746,10 +774,13 @@ The <code class="docutils literal notranslate"><span class="pre">Reset</span></c
 <p>6.2 Type AT+GMR and <span class="guilabel">Send`</span></p>
 <p>6.2 Your shield should answer with the new 1.7.4 version number.</p>
 </section>
-<section id="step-7-connect-to-arduino">
-<h3><a class="toc-backref" href="#id13" role="doc-backlink">Step 7. Connect to Arduino</a><a class="headerlink" href="#step-7-connect-to-arduino" title="Permalink to this heading"></a></h3>
-<p>7.1 Remove TX-TX and RX-RX jumpers</p>
-<p>7.2 Connect the TX to RX and RX to TX pins as per the initial assembly instructions for the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p>
+<section id="step-7-prepare-your-ex-commandstation">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Step 7. Prepare your EX-CommandStation</a><a class="headerlink" href="#step-7-prepare-your-ex-commandstation" title="Permalink to this heading"></a></h3>
+<p>7.1. Disconnect the Arduino Mega from the PC</p>
+<p>7.2 Remove Arduino <code class="docutils literal notranslate"><span class="pre">RST</span></code> (Reset) to <code class="docutils literal notranslate"><span class="pre">GND</span></code> jumper</p>
+<p>7.3 Remove TX-TX and RX-RX jumpers</p>
+<p>7.4 Assemble your EX-CommandStation setup including the Motor Shield and WiFi shield</p>
+<p>7.5 Connect the TX to RX and RX to TX pins as per the initial assembly instructions for the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Esp TX -&gt; arduino RX1</p></li>
@@ -763,8 +794,9 @@ The <code class="docutils literal notranslate"><span class="pre">Reset</span></c
 </figcaption>
 </figure>
 </div></blockquote>
-<p>7.3 Remove Arduino Reset jumper</p>
-<p>You should now be able to assemble your EX-CommandStation setup, and if all went well it should work.</p>
+<p>7.6 If you have not already done so, run the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> and configure your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> to use the WiFi shield. <br /> Note: this is not necessary if it was done before you started flashing the WiFi firmware.  i.e. Flashing the firmware <em>does not</em> upset the software you loaded on the Arduino.</p>
+<hr class="docutils" />
+<p>You should now be able to set your EX-CommandStation to use, and if all went well it should work.</p>
 </section>
 </section>
 </section>
