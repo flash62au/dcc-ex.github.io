@@ -744,19 +744,24 @@ Linux: <br />
 <li><p>Click the Launchpad icon  in the Dock, type Terminal in the search field, then click Terminal or <br /> In the Finder , open the /Applications/Utilities folder, then double-click Terminal.</p></li>
 <li><p>go to the folder you downloaded the <code class="docutils literal notranslate"><span class="pre">ESP8266_1MB_AT1_7.bin</span></code> file to by entering:</p>
 <blockquote>
-<div><p>???</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~\Downloads</span></code> <span class="guilabel">Enter</span></p>
 </div></blockquote>
 </li>
 </ul>
 </div></blockquote>
 <p>For Linux</p>
 <blockquote>
-<div><ul class="simple">
-<li><p>???</p></li>
+<div><ul>
+<li><p>On Ubuntu, you can hit <code class="docutils literal notranslate"><span class="pre">ctrl+alt+T</span></code> together to open a terminal. <br /> Or right-click anywhere on the desktop and select <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">in</span> <span class="pre">Terminal</span></code> which will open the terminal with the desktop folder selected. <br /> Or press the <span class="guilabel">Windows`</span> key and type <code class="docutils literal notranslate"><span class="pre">terminal</span></code></p></li>
+<li><p>go to the folder you downloaded the <code class="docutils literal notranslate"><span class="pre">ESP8266_1MB_AT1_7.bin</span></code> file to by entering:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~\Downloads</span></code> <span class="guilabel">Enter</span></p>
+</div></blockquote>
+</li>
 </ul>
 </div></blockquote>
 </div></blockquote>
-<p>5.2 Prepare the long command line. (but don’t press <span class="guilabel">Enter</span> yet)</p>
+<p>5.2 Prepare the long command line. (but <strong>don’t</strong> press <span class="guilabel">Enter</span> yet)</p>
 <blockquote>
 <div><p>For <code class="docutils literal notranslate"><span class="pre">ESPTOOL</span></code> and <code class="docutils literal notranslate"><span class="pre">PORTNAME</span></code> insert values from the steps above</p>
 <p><code class="docutils literal notranslate"><span class="pre">ESPTOOL</span> <span class="pre">--baud</span> <span class="pre">38400</span> <span class="pre">--port</span> <span class="pre">PORTNAME</span> <span class="pre">write_flash</span> <span class="pre">--erase-all</span> <span class="pre">--flash_freq</span> <span class="pre">40m</span> <span class="pre">--flash_mode</span> <span class="pre">dout</span> <span class="pre">--flash_size</span> <span class="pre">1MB</span> <span class="pre">0x0</span> <span class="pre">ESP8266_1MB_AT1_7.bin</span></code></p>
