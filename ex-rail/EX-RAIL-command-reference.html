@@ -533,6 +533,12 @@
 <p class="caption" role="heading"><span class="caption-text">External References</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../external-references/index.html">Articles and Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external-references/standards.html">Standards &amp; technical references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/accessories/index.html">DCC-EX Third Party Suppliers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers-full-cs.html">Full Command Stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers-cases.html">Cases / Enclosures</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">The DCC-EX Project</span></p>
 <ul>
@@ -952,7 +958,7 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <li><p><a class="reference internal" href="#ifrandom-percent-runs-commands-in-if-block-a-random-percentage-of-the-time" id="id69"><code class="docutils literal notranslate"><span class="pre">IFRANDOM(</span> <span class="pre">percent</span> <span class="pre">)</span></code> - Runs commands in IF block a random percentage of the time</a></p></li>
 <li><p><a class="reference internal" href="#route-caption-id-caption-dynamically-change-the-label-of-the-route-button" id="id70"><code class="docutils literal notranslate"><span class="pre">ROUTE_CAPTION(</span> <span class="pre">id,</span> <span class="pre">caption</span> <span class="pre">)</span></code> - dynamically change the label of the Route button</a></p></li>
 <li><p><a class="reference internal" href="#route-active-id-caption-dynamically-activate-a-route" id="id71"><code class="docutils literal notranslate"><span class="pre">ROUTE_ACTIVE(</span> <span class="pre">id,</span> <span class="pre">caption</span> <span class="pre">)</span></code> - dynamically activate a Route</a></p></li>
-<li><p><a class="reference internal" href="#route-caption-id-caption-dynamically-deactivate-a-route" id="id72"><code class="docutils literal notranslate"><span class="pre">ROUTE_CAPTION(</span> <span class="pre">id,</span> <span class="pre">caption</span> <span class="pre">)</span></code> - dynamically deactivate a Route</a></p></li>
+<li><p><a class="reference internal" href="#route-inactive-id-caption-dynamically-deactivate-a-route" id="id72"><code class="docutils literal notranslate"><span class="pre">ROUTE_INACTIVE(</span> <span class="pre">id,</span> <span class="pre">caption</span> <span class="pre">)</span></code> - dynamically deactivate a Route</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
@@ -1203,8 +1209,8 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="route-caption-id-caption-dynamically-deactivate-a-route">
-<h4><a class="toc-backref" href="#id72" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROUTE_CAPTION(</span> <span class="pre">id,</span> <span class="pre">caption</span> <span class="pre">)</span></code> - dynamically deactivate a Route</a><a class="headerlink" href="#route-caption-id-caption-dynamically-deactivate-a-route" title="Permalink to this heading"></a></h4>
+<section id="route-inactive-id-caption-dynamically-deactivate-a-route">
+<h4><a class="toc-backref" href="#id72" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROUTE_INACTIVE(</span> <span class="pre">id,</span> <span class="pre">caption</span> <span class="pre">)</span></code> - dynamically deactivate a Route</a><a class="headerlink" href="#route-inactive-id-caption-dynamically-deactivate-a-route" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><strong>Not available in the current production release.</strong></p>
 <p>Dynamically flag a Route as inactive.</p>
@@ -2370,8 +2376,34 @@ DONE
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Create a HAL device in myAutomation.h rather than needing to use myHal.cpp</p>
 <details class="summary-for-example-click-to-show">
-<summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define a Mega2560 based EX-IOExpander device starting at Vpin 800 at the default address of 0x65</span>
-<span class="n">HAL</span><span class="p">(</span><span class="n">EXIOExpander</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">62</span><span class="p">,</span><span class="w"> </span><span class="mh">0x65</span><span class="p">)</span>
+<summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Defining and Setting up Devices like OLED &amp; LCD displays on a I2C bus</span>
+<span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
+<span class="w"> </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_HALDisplay.h&quot;</span><span class="c1">  // Auxiliary display devices (LCD/OLED) {Type, Screen#, address, density}</span>
+<span class="c1">// Create a 20x2 LCD display devices as display# number 0, Change display# as needed</span>
+<span class="w"> </span><span class="n">HAL</span><span class="p">(</span><span class="n">HALDisplay</span><span class="o">&lt;</span><span class="n">LiquidCrystal_I2C</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1">// LCD with 20 Char &amp; 2 lines</span>
+<span class="c1">// Create a 20x4 LCD display devices as display number 0</span>
+<span class="w"> </span><span class="n">HAL</span><span class="p">(</span><span class="n">HALDisplay</span><span class="o">&lt;</span><span class="n">LiquidCrystal_I2C</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="c1">// LCD with 20 Char &amp; 4 lines</span>
+
+<span class="c1">// Create various OLED display devices as Screen# number 0, Change Screen# number as needed</span>
+<span class="w"> </span><span class="n">HAL</span><span class="p">(</span><span class="n">HALDisplay</span><span class="o">&lt;</span><span class="n">OLED</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3c</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span><span class="w"> </span><span class="c1">// OLED 0.96&quot; display</span>
+<span class="w"> </span><span class="n">HAL</span><span class="p">(</span><span class="n">HALDisplay</span><span class="o">&lt;</span><span class="n">OLED</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3c</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">)</span><span class="w"> </span><span class="c1">// OLED 0.96&quot; display</span>
+<span class="w"> </span><span class="n">HAL</span><span class="p">(</span><span class="n">HALDisplay</span><span class="o">&lt;</span><span class="n">OLED</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3c</span><span class="p">,</span><span class="w"> </span><span class="mi">132</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">)</span><span class="w"> </span><span class="c1">// OLED 1.3&quot; display</span>
+
+<span class="c1">// PCA9685 Servo Signal Boards 3 &amp; 4</span>
+<span class="c1">// Create Two more Servo controller numbered (132-147) &amp; (148-163) etc., on I2C addr 0x42 &amp; Ox43 &amp; 0x44 etc</span>
+<span class="c1">// Number of VPINs=16 numbered (132-147) I2C address of module=0x42</span>
+<span class="w">  </span><span class="n">HAL</span><span class="p">(</span><span class="n">PCA9685</span><span class="p">,</span><span class="w"> </span><span class="mi">133</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x42</span><span class="p">)</span><span class="w"> </span><span class="c1">// Must Solder A1 and uncomment this line</span>
+<span class="c1">// Number of VPINs=16 numbered (148-163) I2C address of module=0x43</span>
+<span class="w">  </span><span class="n">HAL</span><span class="p">(</span><span class="n">PCA9685</span><span class="p">,</span><span class="w"> </span><span class="mi">148</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x43</span><span class="p">)</span><span class="w"> </span><span class="c1">// Must Solder A0 &amp; A1 and uncomment this line</span>
+
+<span class="c1">// EX-IO Expanders</span>
+<span class="c1">// Define a Mega2560 based EX-IOExpander device starting at Vpin 800 at the default address of 0x65</span>
+<span class="w">  </span><span class="n">HAL</span><span class="p">(</span><span class="n">EXIOExpander</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">62</span><span class="p">,</span><span class="w"> </span><span class="mh">0x65</span><span class="p">)</span>
+
+<span class="c1">// DFPlayer mini MP3 Sound player</span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="c1">// MP3 sound player</span>
+<span class="c1">// Define a Mega2560 based DFPLayer device with vpin id of 1500 with 20 sound files connected on Serial1</span>
+<span class="w">  </span><span class="n">HAL</span><span class="p">(</span><span class="n">DFPlayer</span><span class="p">,</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">Serial1</span><span class="p">)</span><span class="w"> </span><span class="c1">// create device 1500, 20 files, on Mega Tx1 Rx1, D18, D19  1K Ohm on D18</span>
 </pre></div>
 </div>
 </details></div></blockquote>
@@ -2418,7 +2450,7 @@ DONE
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fc8a7e78c70>
+    <jinja2.runtime.BlockReference object at 0x7feb48e0f7c0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
