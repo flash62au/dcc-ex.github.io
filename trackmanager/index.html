@@ -633,7 +633,7 @@
 <ul>
 <li><p><a class="reference internal" href="#dcc-ex-command-station-with-ex-rail-trackmanager" id="id19">DCC-EX Command Station with EX-RAIL &amp; TrackManager</a></p></li>
 <li><p><a class="reference internal" href="#modular-layouts" id="id20">Modular Layouts</a></p></li>
-<li><p><a class="reference internal" href="#using-the-new-trackmanager-function-commands-you-can-run-the-any-layout-as" id="id21">Using the New TrackManager Function commands you can run the any layout as</a></p></li>
+<li><p><a class="reference internal" href="#combinations-of-modes" id="id21">Combinations of Modes</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#exrail-additional-examples" id="id22">EXRAIL additional examples</a></p>
@@ -839,30 +839,31 @@ DONE
 See the third Engine Driver Throttle image ‘Districts A thru B with [Set] buttons at the end.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>example:
 
-  AUTOMATION(500, &quot;Districts A MAIN _ B PROG Default&quot;)// Reset Default back to DCC Main &amp; PROG
-    SET_TRACK(A,MAIN) PRINT(&quot;Default Districts Tracks MAIN A &amp; PROG B&quot;)
-    SET_TRACK(B,PROG)
-  DONE
-  AUTOMATION(501, &quot;District A MAIN&quot;)   // Alternate DCC Main track A
-    SET_TRACK(A,MAIN) PRINT(&quot;District A MAIN&quot;)
-  DONE
-  AUTOMATION(502, &quot;District A PROG&quot;)   // Alternate DCC PROG track A
-    SET_TRACK(A,PROG) PRINT(&quot;District A PROG&quot;)
-  DONE
-  AUTOMATION(503, &quot;District A DC&quot;)     // Alternate DC track A with loco ID 1
-    SETLOCO(1)
-    SET_TRACK(A,DC) PRINT(&quot;District A DC&quot;)
-  DONE
-    AUTOMATION(504, &quot;District A DCX&quot;)    // Alternate DCX track A Changed to Opposite Polarity
-    SETLOCO(1)
-    SET_TRACK(A,DCX) PRINT(&quot;District A DCX Opposite Polarity&quot;) // Track A Opposite Polarity DC
-  DONE
-  AUTOMATION(505, &quot;District A NONE&quot;)    // A Track disabled
-    SET_TRACK(A, NONE) PRINT (&quot;District A disabled&quot;)
-  DONE
+AUTOMATION(500, &quot;Districts A MAIN _ B PROG Default&quot;)// Reset Default back to DCC Main &amp; PROG
+  SET_TRACK(A,MAIN) PRINT(&quot;Default Districts Tracks MAIN A &amp; PROG B&quot;)
+  SET_TRACK(B,PROG)
+DONE
+AUTOMATION(501, &quot;District A MAIN&quot;)   // Alternate DCC Main track A
+  SET_TRACK(A,MAIN) PRINT(&quot;District A MAIN&quot;)
+DONE
+AUTOMATION(502, &quot;District A PROG&quot;)   // Alternate DCC PROG track A
+  SET_TRACK(A,PROG) PRINT(&quot;District A PROG&quot;)
+DONE
+AUTOMATION(503, &quot;District A DC&quot;)     // Alternate DC track A with loco ID 1
+  SETLOCO(1)
+  SET_TRACK(A,DC) PRINT(&quot;District A DC&quot;)
+DONE
+  AUTOMATION(504, &quot;District A DCX&quot;)    // Alternate DCX track A Changed to Opposite Polarity
+  SETLOCO(1)
+  SET_TRACK(A,DCX) PRINT(&quot;District A DCX Opposite Polarity&quot;) // Track A Opposite Polarity DC
+DONE
+AUTOMATION(505, &quot;District A NONE&quot;)    // A Track disabled
+  SET_TRACK(A, NONE) PRINT (&quot;District A disabled&quot;)
+DONE
+
+Copy and repeat AUTOMATION(506-510, District B mode) and create any additional combinations or tracks C - H as you add more motor boards.
 </pre></div>
 </div>
-<p>Copy and repeat AUTOMATION(506-510, District B  mode) and create any additional combinations or tracks C - H as you add more motor boards.</p>
 </section>
 <section id="complex-automations">
 <h5>Complex Automations<a class="headerlink" href="#complex-automations" title="Permalink to this heading"></a></h5>
@@ -920,8 +921,9 @@ Track A and Track B with sidings;</p>
 </ul>
 <p>DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.</p>
 </section>
-<section id="using-the-new-trackmanager-function-commands-you-can-run-the-any-layout-as">
-<h3><a class="toc-backref" href="#id21" role="doc-backlink">Using the New TrackManager Function commands you can run the any layout as</a><a class="headerlink" href="#using-the-new-trackmanager-function-commands-you-can-run-the-any-layout-as" title="Permalink to this heading"></a></h3>
+<section id="combinations-of-modes">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Combinations of Modes</a><a class="headerlink" href="#combinations-of-modes" title="Permalink to this heading"></a></h3>
+<p>Using the New TrackManager Function commands you can run the any layout as:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Track A &amp; Track B
   MAIN &amp; PROG    (Use JOIN function for a Programming track to make a MagicTrack)
   MAIN &amp; MAIN
@@ -1048,7 +1050,7 @@ or any combination with up to 8 separate dual insulated tracks/districts from A 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f9a62610850>
+    <jinja2.runtime.BlockReference object at 0x7f189f5892a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
