@@ -7,11 +7,14 @@
 Donate to Our Project
 **********************
 
-.. sidebar::
+|FORCE-BREAK|
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+.. sidebar::
+   :class: sidebar-on-this-page
+
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 How We Use Donations
 ======================

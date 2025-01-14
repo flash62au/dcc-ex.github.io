@@ -1,22 +1,29 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
 .. include:: /include/include-ex-cs.rst
+
 |EX-CS-LOGO|
    
-****************
-Advanced Options
-****************
+**********************
+DIY - Advanced Options
+**********************
 
-|tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button2|
+|SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button-small|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
+   .. contents:: On this page
       :depth: 1
       :local:
 
-These pages describe the major supported hardware options for building a |EX-CS|, along with some guidance for some of the unsupported options. They are primarily targeted at |tinkerer-text| and |engineer-text| level.  However there are some options that are suitable for a |conductor-text|.  If however, you identify as a |conductor-text| and only wish to install the recommended hardware we suggest that you look at the simplified :doc:`/ex-commandstation/get-started/index` page.
+These pages describe the major supported hardware options for building a |EX-CS|, along with some guidance for some of the unsupported options. 
 
+This information is primarily targeted at |tinkerer-text| and |engineer-text| level.  However there are some options that are suitable for a |conductor-text|.  
+
+If however, you identify as a |conductor-text| and only wish to install the recommended hardware we suggest that you look at the simplified :doc:`/ex-commandstation/index` page.
+
+|HR-DASHED|
 
 Steps to Build an EX-CommandStation
 ===================================
@@ -46,15 +53,16 @@ There are several different supported microcontrollers you can use as your |EX-C
 
 The Arduino Mega2560 is by far the simplest option and is well proven with many users choosing this option.
 
-Whilst the Uno and Nano options are fairly popular and also relatively simple, there are limitations due to the lack of available RAM available, and therefore some features (such as WiFi and EX-RAIL) are limited.
+Whilst the Uno and Nano options are fairly popular and also relatively simple, there are limitations due to the lack of available RAM available, and therefore some features (such as WiFi and |EX-R|) are limited.
 
 The other item of specific note is the Mega2560 + WiFi which, while appearing a good alternative to a standard Mega2560, suffers from quality control issues, and numerous users have had poor experiences getting this to function correctly. While this option is supported, it is definitely *buyer beware!*
 
 .. toctree::
   :maxdepth: 2
   
-  supported-microcontrollers/index
+  /reference/hardware/microcontroller-boards
 
+----
 
 Motor Drivers
 =============
@@ -68,19 +76,29 @@ However, if you need more current than these can provide, then you need to consi
   
   /reference/hardware/motor-boards
 
+----
+
 Connection Options
 ==================
 
-How you connect to your |EX-CS| is going to depend entirely on your personal choices of how you wish to interact with it. Are you a JMRI user? Do you only want to use wireless hand-held throttles?
+How you connect to your |EX-CS| is going to depend entirely on your personal choices of how you wish to interact with it. 
 
-To facilitate a variety of these choices, there are four ways to connect: direct via USB, WiFi, Ethernet, and/or Bluetooth.
+* Are you a |JMRI| user? 
+* Do you only want to use wireless hand-held throttles?
+
+To facilitate a variety of these choices, there are four ways to connect: 
+
+.. contents:: Connection Options
+    :depth: 1
+    :local:
+    :class: in-this-section
 
 Depending on your platform choice for your |EX-CS|, the connectivity options aren't mutually exclusive, and you can use multiple methods.
 
 Direct Connection (USB)
 -----------------------
 
-If you are a JMRI user, then a direct USB connection is all you need. JMRI will connect to your |EX-CS| via the USB port, and you won't require any other connection method to be available.
+If you are a |JMRI| user, then a direct USB connection is all you need. |JMRI| will connect to your |EX-CS| via the USB port, and you won't require any other connection method to be available.
 
 Note for Uno and Nano users, this is your only option for connectivity as mentioned in :ref:`ex-commandstation/advanced-setup/index:microcontrollers`.
 
@@ -119,6 +137,8 @@ Bluetooth
   
   /reference/hardware/bluetooth
 
+----
+
 LCD/OLED Screens
 ================
 
@@ -128,20 +148,23 @@ These can display various items such as the version, IP address (if using WiFi o
 
 refer to :doc:`/reference/hardware/i2c-displays`
 
+----
+
 Installation options
 ====================
 
-Depending on your comfort level with using different software and computers in general, there are two options for installing the |EX-CS| software, both of which should be within the reach of |conductor-text| level users.
+Depending on your 'Level' with using different software and computers in general, there are two options for installing the |EX-CS| software, both of which should be within the reach of |conductor-text| level users.
 
-The simplest option, requiring only a simple download, is to use |EX-I|. There are limitations on what options you can select using this method, so if you are using any options that require configuration beyond what's prompted for during the install process, you will need to use the Arduino IDE instead.
+The simplest option, requiring only a simple download, is to use |EX-I|. There are limitations on what options you can select using this method, so if you are using any options that require configuration beyond what's prompted for during the install process, you will need to use the |Arduino IDE| instead.
 
-The Arduino IDE requires some software to be installed on your computer, however due to the flexibility this provides can be a better alternative than |EX-I|.
+The |Arduino IDE| requires some software to be installed on your computer, however due to the flexibility this provides can be a better alternative than |EX-I|.
 
 .. toctree::
   :maxdepth: 2
   
   installation-options/index
 
+----
 
 Startup Configuration
 =====================
@@ -155,6 +178,8 @@ However, there are occasions when the startup configuration does need modificati
   
   startup-config
 
+----
+
 Throttle (Controller) Options
 =============================
 
@@ -167,6 +192,7 @@ These tend to be aimed more at the |tinkerer-text| and |engineer-text| levels.
   
   controllers
 
+----
 
 DCC-EX Commands
 ===============
@@ -175,13 +201,12 @@ DCC-EX Commands
   :maxdepth: 1
 
   Native Commands Summary </reference/software/command-summary-consolidated>
-  Native Commands Details </reference/software/command-reference>
+
+----
 
 Features under development
 ==========================
 
-|NOT-IN-PROD-VERSION|
-  
 We always have new features under development for |EX-CS| and |EX-R|, and as these features get incorporated into the development branch of the software, we will endeavour to keep these documented in our development pages.
 
 Remember that these features will continue to change and evolve as bugs are found and fixed, and better ways of doing things are discovered, so it's best to keep up to date with any discussions via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_ |EXTERNAL-LINK|.

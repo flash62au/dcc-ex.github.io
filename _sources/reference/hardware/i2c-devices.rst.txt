@@ -7,9 +7,10 @@
 I2C Devices
 ***********
 
-|tinkerer| |engineer| |support-button|
+|SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 1
@@ -18,21 +19,21 @@ I2C Devices
 With the advent of the Hardware Abstraction Layer (HAL), |EX-CS| now has the capability for software
 support for new I/O devices to be added without any change to the base software.  By I/O
 devices I mean the things that are controlled through Displays, Sensors, Outputs and Turnouts (and 
-more recently by commands in EX-RAIL too).  Motor shields are not included in the HAL at present.
+more recently by commands in EXRAIL too).  Motor shields are not included in the HAL at present.
 
 As a consequence of this, it is much easier to write a device driver for a new device, without the risk of
 breaking |EX-CS| for other users.  There are various drivers already available for you to use:
 
 * |I2C|-connected Displays (LCD, OLED);
-* |NEW-IN-V5| support for :ref:`multiple LCD/OLED displays <reference/hardware/i2c-displays:configuring additional displays>`;
+* support for :ref:`multiple LCD/OLED displays <reference/hardware/i2c-displays:configuring additional displays>`;
 * |I2C|-connected GPIO Expanders (MCP23017, MPC23008, PCF8574);
 * |I2C|-connected Servo Controller (PCA9685);
 * |I2C|-connected laser proximity detector (Time-of-Flight) (VL53L0X);
 * |I2C|-connected Analogue input modules (ADS111x);
-* |NEW-IN-V5| :doc:`/reference/hardware/i2c-multiplexers` support (TCA9547, TCA9548);
+* :doc:`/reference/hardware/i2c-multiplexers` support (TCA9547, TCA9548);
 * Serial-port-connected DFPlayer MP3 player;
 * Ultrasound proximity detector (HC-SR04);
-* |NEW-IN-V5| :doc:`/ex-ioexpander/index`
+* :doc:`/ex-ioexpander/index`
 
 and others.
 
@@ -109,8 +110,6 @@ One device notably uses software to configure the |I2C| address - the VL53L01 Ti
 Extending Addressing with Multiplexer Support
 =============================================
 
-|NEW-IN-V5-LOGO-SMALL|
-
 There are a number of |I2C| devices on the market that can only ever use one pre-defined |I2C| address, and with devices such as the MCP23017 I/O expander there are only eight addresses available for use, limiting the ability to add more devices. Further to this, there are devices with address conflicts that also cannot be overcome easily.
 
 To alleviate these issues, it is possible to use an |I2C| multiplexer which essentially takes the single |I2C| bus of the |EX-CS| and splits it into typically 4 or 8 more entirely independent sub-buses. This allows multiple devices with conflicting addresses to be used by placing the conflicting ones on separate sub-buses of the multiplexer. You can even use multiple |I2C| multiplexers for very complex IO needs.
@@ -157,7 +156,7 @@ The position of the |I2C| pins depends on what controller module you are using:
 
    Arduino Mega/Uno |I2C| pins
 
-Some motor shields come with header pins for the |I2C| connections, for example the Arduino motor shield and the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.
+Some motor shields come with header pins for the |I2C| connections, for example the |Standard motor driver| and the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.
 
 .. figure:: /_static/images/i2c/deek_robot.jpg
    :alt: Motor shield |I2C| pins
@@ -173,7 +172,7 @@ The next image shows an Arduino Mega and Deekrobot motor shield mounted in a 3D-
 
    Motor Shield |I2C| pins
 
-|I2C| devices are all effectively connected in parallel to the bus.  If you only have one device, you can just run a four-wire connector between the pins on the Arduino, or on the motor shield, if you have one, to the device.  Be sure to check that you connect SDA to SDA, SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each device!  
+|I2C| devices are all effectively connected in parallel to the bus.  If you only have one device, you can just run a four-wire connector between the pins on the Arduino, or on the |motor shield|, if you have one, to the device.  Be sure to check that you connect SDA to SDA, SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each device!  
 
 .. figure:: /_static/images/i2c/ArduinoMegaOLED.png
    :alt: Arduino Mega with OLED Display

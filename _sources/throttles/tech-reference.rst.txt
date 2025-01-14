@@ -10,12 +10,13 @@ Technical Reference for Throttle Developers
 |engineer|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 3
-    :local:
+   .. contents:: On this page
+      :depth: 3
+      :local:
 
-This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS| using the |DCC-EX Native Protocol|, not the WiThrottle protocol.
+This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS| using the |DCC-EX Native Protocol|, not the |WITHROTTLE PROTOCOL|.
 
 This page should be read in conjunction with the :doc:`/reference/developers/api` in order to understand how to send and parse |DCC-EX| API commands correctly, and ignore any irrelevant commands.
 
@@ -51,13 +52,12 @@ These are the *key* broadcast responses that should be understood:
 - ``<r address>`` - When a loco address is read on the programming track, the address is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:reading/writing configuration variables (cvs) - programming track`)
 - ``<l cabid slot speed/dir func>`` - When throttles send loco commands, this is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:cab (loco) commands`)
 
-These broadcast responses should be understood if your controller deals with turnouts/points and sensors.
+These broadcast responses should be understood if your controller deals with turnouts/points and sensors:
+
 - ``<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>`` - When turnouts are closed/thrown, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:turnouts/points`)
 - ``<[q|Q] id>`` - When sensors are deactivated/activated, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:sensors`)
-
-|NOT-IN-PROD-VERSION|
-
-There are now turntable/traverser ``<i id position moving>`` broadcast responses if the new turntable/traverser objects are implemented (see :ref:`reference/software/command-summary-consolidated:turntables/traversers`).
+- ``<m "text">`` - **New in 5.4.0** - A message can be sent to all throttles using |EX-R| (see :ref:`MESSAGE( "msg" ) - Writes a message to all clients <exrail_message>`)
+- ``<i id position moving>`` - **New in 5.4.0** - Broadcasts if the new turntable/traverser objects are implemented (see :ref:`reference/software/command-summary-consolidated:turntables/traversers`).
 
 Working with track power states
 -------------------------------
@@ -158,7 +158,7 @@ Obtaining loco (cab) status
 Turnouts/Points
 ^^^^^^^^^^^^^^^
 
-The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (e.g. T123), and having a list helps the throttle UI build a suitable set of buttons.
+The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an |EX-R| script. A turnout description is much more user friendly than the identifier (e.g. T123), and having a list helps the throttle UI build a suitable set of buttons.
 
 ``<JT>`` - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.
 
@@ -175,7 +175,7 @@ The conventional turnout definition commands and the ``<H>`` responses do not co
   * ``<jT 17 C "">`` - Indicates turnout description not defined, and state is closed.
   * ``<jT 17 X>`` - Indicates turnout unknown (or possibly hidden.)
 
-.. note:: It is still the throttles responsibility to monitor the status broadcasts. Also note that turnouts marked in EX-RAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
+.. note:: It is still the throttles responsibility to monitor the status broadcasts. Also note that turnouts marked in EXRAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
 
 .. note:: *Note from the author:* The existing broadcast is messy and needs cleaning up, however, I'm not keen on dynamically created/deleted turnouts so I have no intention of providing a command that indicates the turnout list has been updated since the throttle started.
   - Chris Harlow
@@ -183,7 +183,7 @@ The conventional turnout definition commands and the ``<H>`` responses do not co
 Automations/Routes
 ^^^^^^^^^^^^^^^^^^
 
-A throttle needs to know which EX-RAIL Automations and Routes it can show the user.
+A throttle needs to know which EXRAIL Automations and Routes it can show the user.
 
 ``<JA>`` - Returns a list of Automations/Routes.
 
@@ -198,15 +198,40 @@ A throttle needs to know which EX-RAIL Automations and Routes it can show the us
   * ``<jA 13 R "description">`` - Returns the description for ID 13, and that it is a route.
   * ``<jA 13 A "description">`` - Returns the description for ID 13, and that it is an automation.
   * ``<jA 13 X>`` - Indicates ID 13 is not found.
+  
+|NEW-IN-V5-4|
+
+Route states can now also be broadcast via |EX-R|, allowing throttles to respond when they are active/inactive or hidden. Throttle developers should now respond to (or ignore if not implemented) the ``<jB ...>`` broadcasts.
+
+This broadcast is in the format:
+
+``<jB id param>`` where:
+
+- `id` is the ID of the route or automation (obtained via the ``<JA>`` commands above)
+- `param` is one of the following:
+
+  - 0 - indicates the route/automation is currently inactive
+  - 1 - indicates the route/automation is currently active
+  - 2 - indicates the route/automation should be hidden/unavailable
+  - "text" - some text that should be display to the user
+
+  Example broadcasts:
+
+  * ``<jB 13 0>`` - indicates route/automation ID 13 is inactive
+  * ``<jB 13 1>`` - indicates route/automation ID 13 is active
+  * ``<jB 13 2>`` - indicates route/automation ID 13 should be hidden
+  * ``<jB 13 "Route 13">`` - indicates route/automation ID 13's label/description should be set to "Route 13"
+
+To see how these are implemented in |EX-R|, refer to :ref:`exrail/exrail-command-reference:flow control`.
 
 What's the difference?
 ~~~~~~~~~~~~~~~~~~~~~~
 
-A **ROUTE** is just a call to an EX-RAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EX-RAIL function, but is not expecting to know the loco ID.
+A **ROUTE** is just a call to an EXRAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EXRAIL function, but is not expecting to know the loco ID.
 
 * A route can be triggered by sending, for example, ``</START 13>``. 
 
-An **AUTOMATION** is a handoff of the last accessed loco ID to an EX-RAIL AUTOMATION which would typically drive the loco away.
+An **AUTOMATION** is a handoff of the last accessed loco ID to an EXRAIL AUTOMATION which would typically drive the loco away.
 
 * An automation expects a start command with a cab ID, for example ``</START 13 3>``.
 
@@ -224,12 +249,12 @@ Roster Information
 
   Example response:
 
-  * ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">`` - Returns the defined description "Thomas" with each defined function's name. Refer to the EX-RAIL ROSTER command for function map format.
+  * ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">`` - Returns the defined description "Thomas" with each defined function's name. Refer to the EXRAIL ROSTER command for function map format.
 
 Turntables/Traversers
 ^^^^^^^^^^^^^^^^^^^^^
 
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 A new feature has been added to support control of turntables/traversers from throttles, including the ability for throttles to "draw" turntable positions as defined to support graphical operation. If |EX-R| commands are used to define turntables and their associated positions, a description for the turntable as well as each position is able to be defined.
 

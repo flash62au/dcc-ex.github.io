@@ -6,32 +6,26 @@
 
 |EX-I-LOGO|
 
-************
+************************************************
 EX-Installer
-************
+************************************************
 
-|force-break|
+|SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
-.. rst-class:: dcclink-right
+If... 
 
-   :ref:`Download Ex-Installer Now <download/ex-commandstation:ex-Installer>`
+* You have DIY assembled your |EX-CS| hardware you need to load our software onto it make is usable.
 
-|conductor| |tinkerer| |engineer| |support-button|
+* You purchased an |EX-CSB1| you wish to reload our software to enable additional features.
 
-|force-break|
+Then, to make it as simple as possible, we have created the |EX-I| program.
 
-.. note:: 
-
-  The recent issue with the Arduino CLI update has now been resolved. |BR| |EX-I| *is ready to use again.*
-
-Once you have assembled your |EX-CS| hardware you need to load our software onto it make is usable.  
-
-To make it as simple as possible we have created the |EX-I| app.
+To use the |EX-I| program click 'Next' or follow these links:
 
 .. toctree::
     :maxdepth: 1
 
-    installing
+    Using EX-Installer <installing>
     testing
     Managing config files <managing-config-files>
 

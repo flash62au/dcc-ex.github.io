@@ -40,15 +40,15 @@ We added many new functions such as:
 * Programming track turned on automatically when programming and off when finished
 * User add-on functions (intercept commands to route to your own routines)
 * Much simpler Function (F0-28) command
-* EX-RAIL Automation and/or accessory control
+* |EX-R| Automation and/or accessory control
 * HAL - Hardware abstraction layer to make adding new types of hardware simple
 * Extended functions up to 68
 * Better turnout/point handling
 * Servo support
 * Built-in |WiThrottle Server| to directly support |WiThrottle Protocol| based throttles
 * Built-in support for the LCN node based accessory bus
-* Support for more motor controllers
-* Easy to create motor definition for motor controllers not in our current list
+* Support for more motor drivers
+* Easy to create motor definition for motor drivers not in our current list
 * LCD and OLED display support
 * WiFi, Ethernet, and Bluetooth support
 * An easy to use Installer
@@ -57,7 +57,7 @@ We added many new functions such as:
 * New |DCC-EX| features added to |JMRI| like a current monitor display
 * Custom add-ons for |Engine Driver| including Routes and Automations on buttons
 * 28 speed step support in addition to 128
-* Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window
+* Extensive logs and diagnostics in a serial monitor or the |JMRI| DCC++ log window
 * Created many new commands
 * Developed a new browser based throttle (:doc:`EX-WebThrottle </ex-webthrottle/index>`)
 * New "DriveAway" feature to be able to recognise a loco on a siding used as a programming track and drive off of onto the main track
@@ -109,7 +109,7 @@ We not only are working on a RailCom cutout within the Command Station, but are 
 Automation
 ----------
 
-|EX-R| (Extended Railroad Automation Interface for Layouts) brings new capability to the world of automation. You don't have to be a programmer to write a script that tells a train to start moving forward at a set speed until some action (like reaching a sensor) occurs! We will be providing a document and tutorial on EX-RAIL once Beta testing is complete. This will be an open-ended project, since who knows what things people will come up with that they want to automate! It will be easy to extend the commands to handle whatever your imagination can dream of.
+|EX-R| (Extended Railroad Automation Interface for Layouts) brings new capability to the world of automation. You don't have to be a programmer to write a script that tells a train to start moving forward at a set speed until some action (like reaching a sensor) occurs! We will be providing a document and tutorial on EXRAIL once Beta testing is complete. This will be an open-ended project, since who knows what things people will come up with that they want to automate! It will be easy to extend the commands to handle whatever your imagination can dream of.
 
 The bottom line
 ---------------

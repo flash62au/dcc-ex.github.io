@@ -7,13 +7,14 @@
 Assembly & Setup
 ****************
 
-|tinkerer| |engineer| |support-button| |githublink-ex-turntable-button2|
+|SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 3
-    :local:
+   .. contents:: On this page
+      :depth: 3
+      :local:
 
 Assembly
 ========
@@ -369,7 +370,7 @@ Installing with the Arduino IDE
 
   Further to this, note that you will need to end up with two separate folders; one containing the |EX-CS| software as per  :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the |EX-TT| software. The |EX-TT| software is not a component of |EX-CS| or vice versa, and as such they should not exist in the same folder.
 
-We recommend using |EX-I| to install |EX-TT| as outlined above, however you can use the Arduino IDE to load the software onto the Arduino manually.
+We recommend using |EX-I| to install |EX-TT| as outlined above, however you can use the |Arduino IDE| to load the software onto the Arduino manually.
 
 As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-CS| folder, and neither should reside in the other (the |EX-TT| software is required in the next step):
 
@@ -377,7 +378,7 @@ As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-CS
   :alt: Two folders
   :scale: 60%
 
-The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
+The process here is the same as installing CommandStation-EX via the |Arduino IDE| which you can find on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
 
 When you get to the point of opening the sketch, ensure you open the EX-Turntable sketch:
 
@@ -542,15 +543,13 @@ Note there is no point in checking the driver at this stage as |EX-TT| is not co
 New development functionality and changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NOT-IN-PROD-VERSION|
-
 If you are using the new developmental features for turntables and traversers available from development version 5.1.5 and on, there is one key change to the above.
 
 You must remove any reference to including "IO_EXTurntable.h" as this file no longer exists, and the device driver is included automatically.
 
 To create your turntable device in "myAutomation.h", you are still required to create a device driver first with the `HAL()` command, followed by the `EXTT_TURNTABLE()` command:
 
-.. code-block:: 
+.. code-block:: cpp
 
   HAL(EXTurntable, vpin, 1, i2c_address)
   EXTT_TURNTABLE(id, vpin, home [, "description"])
@@ -603,6 +602,6 @@ Now you're ready!
 
 At this point, you should have a fully assembled |EX-TT| with the software loaded, a default configuration, and the device driver installed and configured in your CommandStation.
 
-In addition, |EX-TT| should be connected to your CommandStation ready to test, tune your turntable positions, and configure EX-RAIL ready for use on your layout.
+In addition, |EX-TT| should be connected to your CommandStation ready to test, tune your turntable positions, and configure EXRAIL ready for use on your layout.
 
-Click the "next" button to get cracking!
+Click the 'Next' button to get cracking!

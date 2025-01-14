@@ -7,19 +7,20 @@
 WiFi Connection
 ***************
 
-|tinkerer| |engineer| |support-button|
+|SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
-This page describes all the supported WiFi options of the |EX-CS|.  If you identify as an a |conductor-text| and have installed only the recommended hardware we suggest that you look at the guide on the :doc:`/ex-commandstation/get-started/wifi-setup` page.
+This page describes all the supported WiFi options of the |EX-CS|.  If you identify as an a |conductor-text| and have installed only the recommended hardware we suggest that you look at the guide on the :doc:`/ex-commandstation/diy/wifi-setup` page.
 
 ----
 
-The purpose of this WiFi solution is for connecting up to 5 WiFi Throttles DIRECTLY to the |EX-CS|, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like |JMRI|, you can :doc:`skip ahead to the next page </ex-commandstation/get-started/installer>`.
+The purpose of this WiFi solution is for connecting up to 5 WiFi Throttles DIRECTLY to the |EX-CS|, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like |JMRI|, you can :doc:`skip ahead to the next page </ex-commandstation/installer-diy>`.
 
 There are many ways to add WiFi to your Command Station. We will cover four supported methods here.
 
@@ -80,7 +81,7 @@ What you will need (for WiFi)
 
 **Either:**
 
-* A |EX-CS| - Command Station (CS) made from a **Mega** and an **Arduino Motor Shield**
+* A |EX-CS| - Command Station (CS) made from a **Mega** and a |standard Motor Driver|
 * One of the above WiFi boards
 * Two (2) Male to Female Jumpers (plus 3 more if you are using an ESP-01 or 01s)
 
@@ -102,9 +103,9 @@ Install the Software
 
 If you already have the Command Station software running and are just adding WiFi, there is nothing further you need to do if you want to use the |EX-CS| as an Access Point (AP) and connect a |WiThrottle Protocol| compatible CAB (|Engine Driver|). The next time you power up the Command Station, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
-.. note:: LOGIN PASSWORD - If you use |Access Point Mode|, you must connect your throttle to the DCCEX network, not your home network. The |Access Point| will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your Command Station to a computer running a serial monitor. Please click on the "WiFi Configuration" link above for more detailed instruction.
+.. note:: LOGIN PASSWORD - If you use |Access Point Mode|, you must connect your throttle to the DCCEX network, not your home network. The |Access Point| will be called DCCEX_abcdef and the password will be PASS_abcdef, where "abcdef" is the last 6 characters of the ESP MAC address. Just look at the list of available networks on your phone and you can see this information. It is also shown in the boot log if you connect your Command Station to a computer running a |serial monitor|. Please click on the "WiFi Configuration" link above for more detailed instruction.
 
 If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads </download/ex-commandstation>` to load firmware onto the Command Station.
 
-.. note:: You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and looking at the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ |EXTERNAL-LINK| .Skip to the "The ESP-01S - The WiFi Connection" section
+.. note:: You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and looking at the startup log for the Command Station in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ |EXTERNAL-LINK| .Skip to the "The ESP-01S - The WiFi Connection" section
    

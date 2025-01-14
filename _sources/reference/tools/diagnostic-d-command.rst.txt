@@ -7,13 +7,14 @@
 Diagnostics ``<D>`` Command
 ****************************
 
-|tinkerer| |engineer| |support-button|
+|SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 These commands either enable diagnostics or allow settings to be changed. There are a number of diagnostic facilities under the  ``<D>`` command, most are harmless but caution is advised.
 
@@ -35,7 +36,7 @@ The following commands turn ON(1) or OFF(0) various diagnostic traces
 
 ``<D ACK ON|OFF>`` trace DCC ACK processing when reading/writing on the prog track. See :doc:`diagnostic-d-ack-command`.
 
-``<D CMD ON|OFF>`` trace received JMRI commands.
+``<D CMD ON|OFF>`` trace received |JMRI| commands.
 
 ``<D WIFI ON|OFF>`` trace WiFi protocol AT command conversation between Arduino and WiFi hardware.
 

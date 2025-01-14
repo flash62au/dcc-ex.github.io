@@ -1,17 +1,17 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
+
 |EX-CS-LOGO|
 
 *****************************************************
 Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD
 *****************************************************
 
-|tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button2|
-
-|NEW-IN-V5|
+|SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button-small|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 2
@@ -64,7 +64,7 @@ Further to this, the NUCLEO series of development boards also provide Arduino Un
 
 All of the NUCLEO series being considered as a future |DCC-EX| platform have a great deal more RAM (128KB to 256KB vs 8KB for a Mega), double or more FLASH (512KB to 2MB) for program storage, and much faster CPU speed (100 to 180Mhz vs 16Mhz) than the current AVR-based UNO and Mega.
 
-With those attributes comes the potential to support much larger EX-RAIL scripts, more WiThrottle connections, and many new features.
+With those attributes comes the potential to support much larger |EX-R| scripts, more WiThrottle connections, and many new features.
 
 NUCLEO-F411RE and NUCLEO-F446RE
 -------------------------------
@@ -81,7 +81,7 @@ The NUCLEO-F446RE is the same Nucleo-64 size as the F411RE, but with a faster pr
 
 A good summary if the F446RE is available on the `arm MBED Nucleo-F446RE <https://os.mbed.com/platforms/st-nucleo-f446re/>`_ |EXTERNAL-LINK| page.
 
-Both the F411RE and F446RE are supported in the Arduino IDE.
+Both the F411RE and F446RE are supported in the |Arduino IDE|.
 
 NUCLEO-F412ZG, NUCLEO-F446ZE and NUCLEO-F429ZI
 ----------------------------------------------
@@ -98,12 +98,12 @@ The F429ZI has the same large footprint, however it has the added benefit of onb
 
 .. note:: 
 
-  While the F429ZI is supported by the Arduino IDE, the F412ZG and F446ZE cannot be selected as build targets from within the Arduino IDE at present, and you will need to request the variant files and get some support from the |DCC-EX| dev team via Discord. The plan is to submit the F412ZG and F446ZE variant files to the STM32duino GitHub repo for inclusion once they are validated and debugged.
+  While the F429ZI is supported by the |Arduino IDE|, the F412ZG and F446ZE cannot be selected as build targets from within the Arduino IDE at present, and you will need to request the variant files and get some support from the |DCC-EX| dev team via Discord. The plan is to submit the F412ZG and F446ZE variant files to the STM32duino GitHub repo for inclusion once they are validated and debugged.
 
 Install the STLink drivers for Windows
 --------------------------------------
 
-When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the serial monitor in either PlatformIO or the Arduino IDE.
+When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the |serial monitor| in either VSC or the |Arduino IDE|.
 
 .. note:: 
 
@@ -129,7 +129,7 @@ Right click the "stlink_winusb_install.bat" file and select "Run as administrato
   :alt: Run as admin
   :scale: 50%
 
-Click "Next" to install the drivers, and you should see this summary screen to confirm the drivers installed successfully:
+Click 'Next' to install the drivers, and you should see this summary screen to confirm the drivers installed successfully:
 
 .. image:: /_static/images/nucleo/driver-install2.png
   :alt: Drivers installed
@@ -140,7 +140,7 @@ You can now plug your NUCLEO device in and proceed with upgrading the debugger f
 Upgrade the debugger firmware
 -----------------------------
 
-During testing, it was noted with certain USB chipsets on Windows 11 that serial responses via the USB debugger port would stop being received by the serial monitor, even though the device continued to operate normally. The recommendation to resolve this issue is to upgrade the debugger firmware.
+During testing, it was noted with certain USB chipsets on Windows 11 that serial responses via the USB debugger port would stop being received by the |serial monitor|, even though the device continued to operate normally. The recommendation to resolve this issue is to upgrade the debugger firmware.
 
 We recommend you upgrade the debugger firmware regardless if you experience this issue or not.
 
@@ -185,7 +185,7 @@ At this point, after clicking "OK" the software should display the new version o
 Adding NUCLEO support to the Arduino IDE
 ----------------------------------------
 
-In order to compile for the STM32 NUCLEO platforms, you will need to add the boards to the Arduino IDE.
+In order to compile for the STM32 NUCLEO platforms, you will need to add the boards to the |Arduino IDE|.
 
 To do this, navigate to "File" -> "Preferences" and add this URL to the "Additional Boards Manager URLs" list:
 
@@ -201,7 +201,7 @@ You will then need to navigate to "Tools" -> "Board" -> "Boards Manager", search
   :alt: Arduino STM32 board install
   :scale: 50%
 
-Once this has been performed, the NUCLEO devices should be available to be selected in the Arduino IDE.
+Once this has been performed, the NUCLEO devices should be available to be selected in the |Arduino IDE|.
 
 Adding NUCLEO support to VS Code/PlatformIO
 -------------------------------------------
@@ -244,7 +244,7 @@ Here is the NUCLEO-F411RE with on the left a genuine Arduino Motor Shield R3 ins
   :alt: STM Nucleo-F411RE with genuine Arduino Motor Shield R3 installed
   :scale: 30%
 
-.. image:: /_static/images/motorboards/ex_motorshield8874_nucleo_f411.jpg
+.. image:: /_static/images/motorboards/ex_motorshield8874_nucleo_f411.png
   :alt: STM Nucleo-F411RE with DCC-EX EX-MotorShield8874 installed
   :scale: 17%
 
@@ -314,19 +314,19 @@ ESP32-WROOM-32 boards tested
 
 The ESP32 development boards that have been tested include the WeMos D1 R32/ESPDUINO-32, the GRobotronics ESP32 DEVKIT V1, the OLIMEX ESP32 DEVKIT LIPO, and the LILYGO® TTGO T-Energy T18 V3.0 ESP32-WROVER-E development board. Note that although the last one is an ESP32-WROVER-E board, not the WROOM, it does appear to work for one user, but more testing is required.
 
-.. image:: /_static/images/esp32/espduino-32.jpg
+.. image:: /_static/images/esp32/espduino-32.png
   :alt: WeMos D1 R32/ESPDUINO-32 UNO form factor
   :scale: 25%
 
-.. image:: /_static/images/esp32/grobotronics-esp32-devkit-v1.jpeg
+.. image:: /_static/images/esp32/grobotronics-esp32-devkit-v1.png
   :alt: GRobotronics ESP32 DEVKIT V1
   :scale: 15%
 
-.. image:: /_static/images/esp32/olimex-esp32-devkit-lipo.jpeg
+.. image:: /_static/images/esp32/olimex-esp32-devkit-lipo.png
   :alt: Olimex ESP32 Devkit LiPo
   :scale: 25%
 
-.. image:: /_static/images/esp32/liligo-t18-v3-esp32-wrover.jpg
+.. image:: /_static/images/esp32/liligo-t18-v3-esp32-wrover.png
   :alt: LILYGO® TTGO T-Energy T18 V3.0 ESP32-WROVER-E
   :scale: 15%
 
@@ -336,7 +336,7 @@ WeMos D1 R32/ESPDUINO-32 board
 The recommended hardware for now is the WeMos D1 R32, also referred to as the ESPDUINO-32.
 This consists of an `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>`_ |EXTERNAL-LINK| module mounted on a UNO form factor board with UNO R3 style connectors. Pictured here:
 
-.. image:: /_static/images/esp32/espduino-32.jpg
+.. image:: /_static/images/esp32/espduino-32.png
   :alt: ESPDUINO-32 UNO form factor
   :scale: 50%
 
@@ -369,10 +369,10 @@ From top to bottom the pins are: `IO0`, `5V` (incorrectly labelled `IOREF` on th
 
 Using an Arduino Motor Shield R3 or clone
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To avoid damaging the ESP32's analog inputs, the `IOREF` pin on must be bent outwards or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the `3.3v` pin to `IOREF` on the motor shield itself.
+To avoid damaging the ESP32's analog inputs, the `IOREF` pin on must be bent outwards or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the `3.3v` pin to `IOREF` on the |motor shield| itself.
 
 For DCC current sensing bend or cut the `A0` and `A1` pins because by default they are connected to `GPIO2` and `GPIO4` on the ESP32 which are not useable at the same time as WiFi.
-Instead, on the top of the Motor Shield connect `A0` to `A2` and `A1` to `A3` via jumpers. This will then automatically work when you select STANDARD_MOTOR_SHIELD as the MotorShield in config.h because the definition is in place when ESP32 is selected as the build target.
+Instead, on the top of the |motor shield| connect `A0` to `A2` and `A1` to `A3` via jumpers. This will then automatically work when you select STANDARD_MOTOR_SHIELD as the MotorShield in config.h because the definition is in place when ESP32 is selected as the build target.
 
 .. image:: /_static/images/esp32/espduino-32-motor-shield-fritzing.png
   :alt: MotorShield configuration for ESP32
@@ -390,12 +390,12 @@ Finally, the ESP32 needs more testing and development of a |DCC-EX| |I2C| non-bl
 WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers
 ---------------------------------------------------------------
 
-When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the serial monitor in either PlatformIO or the Arduino IDE.
+When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the |serial monitor| in either PlatformIO or the |Arduino IDE|.
 
 Adding ESP32 support to the Arduino IDE
 ----------------------------------------
 
-In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the Arduino IDE.
+In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the |Arduino IDE|.
 
 To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_ |EXTERNAL-LINK|.
 
@@ -458,7 +458,7 @@ The USB CDC driver code for Arduino SAMD core implementation seems broken as it 
 
 You will need to edit some code in the Arduino Core library for SAMD to fix this temporarily. Where the file to be fixed resides depends on the particular SAMD21 board you have, the OS and development environment you are using.
 
-When running Arduino IDE: look for the file USBCore.cpp in one of these locations, in this case for the Arduino Zero:
+When running |Arduino IDE|: look for the file USBCore.cpp in one of these locations, in this case for the Arduino Zero:
 
 - Windows: C:\\Users\\____\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.13\\cores\\arduino\\USB\\USBCore.cpp
 - MacOS: ~/Library/Arduino15/packages/arduino/hardware/samd/1.8.13/cores/arduino/USB/USBCore.cpp
@@ -485,7 +485,7 @@ And replace it with:
 For boards such as the Sparfun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the Sparkfun directories for the appropriate USBCore.cpp file to alter, for example:
 
 - For PlatformIO this is: .platformio/packages/framework-arduino-samd/cores/arduino/USB/USBCore.cpp
-- For Arduino IDE this is: Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp
+- For |Arduino IDE| this is: Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp
 
 .. note::
   You will need to do this every time the SAMD Arduino core code is updated unless our fix has been incorporated. We will change our documentation to reflect is if/when it happens.

@@ -7,9 +7,10 @@
 Startup Configuration
 **********************
 
-|tinkerer| |engineer| |support-button|
+|SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 2
@@ -22,7 +23,7 @@ To automatically run commands at start up, you can create a new file called `myS
 How you create the file will depend on how you load the |EX-CS| software onto your Arduino.
 
 * By using |EX-I|
-* By using the Arduino IDE
+* By using the |Arduino IDE|
 
 ----
 
@@ -42,12 +43,12 @@ For example, in Microsoft Windows:
 * The file will open in the 'Notepad' app
 * Enter the commands you need to perform.  For Example:
 
-.. code-block:: none
+.. code-block:: cpp
   
   SETUP("<1>");  // Turn track power on at startup
 
 * Select :menuselection:`File --> Exit`.  |BR| It will ask you the save the file.  Click ``Save``
-* You now need to upload the software using the |EX-I| just the same as you originally did ( :doc:`/ex-commandstation/get-started/installer`)
+* You now need to upload the software using the |EX-I| just the same as you originally did ( :doc:`/ex-commandstation/installer-diy`)
 
 See examples and information below for adding multiple instructions to `mySetup.h`.
 
@@ -58,8 +59,15 @@ If you need to change the `mySetup.h` later, simply find the file you created ab
 If you are using the Arduino IDE
 ================================
 
-This will need to be done in the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, so first make sure you have followed these steps to load up the |Arduino IDE|.
 
+.. important:: 
+
+   A word of caution on using the |Arduino IDE| to install the software:
+
+   While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT** for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
+
+   The |EX-I| will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
 
 Create a new tab
 ----------------
@@ -75,7 +83,7 @@ First you will need to add a new file, just like the :ref:`config.h file <ex-com
 Creating the mySetup.h file
 ---------------------------
 
-At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``mySetup.h`` (case sensitive, so upper case S in setup) and click ``OK`` to create the new file.
+At the bottom of the |Arduino IDE| window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``mySetup.h`` (case sensitive, so upper case S in setup) and click ``OK`` to create the new file.
 
 .. figure:: /_static/images/arduino-ide/arduino_ide_mysetup.jpg
    :alt: Arduino IDE New Tab
@@ -88,13 +96,13 @@ Adding in the startup commands
 
 Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the following command each time your Command Station starts up: 
 
-.. code-block:: none
+.. code-block:: cpp
 
    <D ACK MIN 2600>
 
 Then you would need to enter into the `mySetup.h` file:
 
-.. code-block:: none
+.. code-block:: cpp
 
    SETUP("<D ACK MIN 2600>");
 
@@ -105,7 +113,7 @@ Adding in more than one startup command
 
 If you need to have multiple commands run at start up, you will need to enter each additional command on a new line, so a longer ``mySetup.h`` file could look like:
 
-.. code-block:: none
+.. code-block:: cpp
 
    SETUP("<D ACK MAX 9200>"); // Set ACK detection to allow pulses up to 9200uS
    SETUP("<D ACK LIMIT 60>"); // 60mA is the default
@@ -129,6 +137,6 @@ Automatically Turning Track Power on at Startup
 
 Adding this line to `mySetup.h` will cause the track power to turn on automatically when the |EX-CS| powers up.
 
-.. code-block:: none
+.. code-block:: cpp
   
   SETUP("<1>");  // Turn track power on at startup

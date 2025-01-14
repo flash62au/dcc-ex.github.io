@@ -7,7 +7,13 @@ Train Driver
 
 |conductor| |tinkerer| |engineer|
 
-`Get it on the Apple App Store <https://apps.apple.com/au/app/train-driver/id1558334503>`_ |EXTERNAL-LINK|
+
+.. image:: /_static/images/throttles/icon_ios.png
+   :alt: iOS Logo
+   :scale: 30%
+   :align: left 
+   
+`Get it on the Apple App Store <https://apps.apple.com/au/app/train-driver/id1558334503>`_
 
 Train Driver is a multi protocol model train mobile controller
 
@@ -20,7 +26,7 @@ Following protocols are supported:
 
 - SRCP including MFX extension
 - Z21 from Fleischmann / Roco
-- |wiThrottle Protocol| commands as used e.g. in JMRI or DCC-EX
+- |wiThrottle Protocol| commands as used e.g. in |JMRI| or DCC-EX
 - |DCC-EX Native Commands|
 
 In order to control a locomotive, the app must be connected to a control center. A small red point flashes at the bottom right of the symbol. Now the locomotive can be set. Again a small red point flashes at the bottom right of the symbol.

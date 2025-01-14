@@ -17,9 +17,9 @@
 DCC-EX Releases 5amp EX-MotorShield8874
 =======================================
 
-DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the |EX-MS|, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.
+|DCC-EX|, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the |EX-MS|, providing dual 5 amp |DCC| and |DC PWM| (pulse width modulation) output for |DCC-EX| |EX-CS|.
 
-The |EX-MS| addresses the needs of DCC-EX users wanting to run multiple locos, across multiple power districts without requiring expensive DCC boosters. A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.
+The |EX-MS| addresses the needs of |DCC-EX| users wanting to run multiple locos, across multiple power districts without requiring expensive DCC boosters. A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.
 
 The |EX-MS| is the first offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire. DCC-EX hardware lead Paul Antoine says "the open source vision for hardware designs from the DCC-EX community means individual users can order small batch manufacturing of all DCC-EX endorsed designs for themselves, friends and fellow club members. Or they have the choice to buy the same quality of product from licensed local resellers in their countries of origin.”
 
@@ -45,6 +45,6 @@ Entrepreneurs wanting to offer commercial quantities to their local communities 
 
 EX-MotorShield8874 is available immediately for purchase in the EU, USA and Canada via Semify's Tindie store (https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/) starting at $US34.90 each, and in Australia, New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders @ milleng.com.au) for $AU55, plus shipping. It will also be available shortly in the UK through Chesterfield Model Making & Miniature Electronics (https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/), for £29.99 plus shipping. Expect further announcements re local availability in the US through DCC-EX directly and Smart Hobby LLC, with other countries to follow.
 
-Design files and initial hardware documentation are at: https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874 and installation details at: https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html
+Design files and initial hardware documentation are at: https://github.com/DCC-EX/EX-Motorshield8874 and installation details at: https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html
 
 DCC-EX Website will have further documentation for the EX-MotorShield8874, and extended support in software will be included in the upcoming EX-CommandStation v5.0 release scheduled for late May 2023.

@@ -7,13 +7,14 @@
 ReStructuredText Basics
 ***********************
 
-|conductor| |tinkerer| |engineer|
+|SUITABLE| |conductor| |tinkerer| |engineer|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 4
-    :local:
+   .. contents:: On this page
+      :depth: 4
+      :local:
 
 This page aims to describe the basics of using ReStructuredText for the |DCC-EX| documentation/website to enhance the basic text.
 
@@ -53,9 +54,9 @@ Sphinx cross-references are used for internal links in the different pages. This
 
   ::
 
-    :ref:`Internal - Same page`
+    :ref:`Internal - Different Page Heading`
 
-    :ref:`some other text to appear in the page <Internal - Same page>`
+    :ref:`some other text to appear in the page <Internal - Different Page Heading>`
 
 Internal - To a Different Page
 ------------------------------
@@ -427,7 +428,7 @@ You can hide notes or searchable placeholders by putting placing the text on a l
 
 At this point, go to GitHub and issue a pull request for your branch to be pulled into the sphinx branch. Once it's merged in by one of the admins, your changes will go live!
 
-----
+|HR-HEAVY|
 
 Next steps - Style Guide
 ========================

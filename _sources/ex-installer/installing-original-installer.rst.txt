@@ -12,7 +12,7 @@
 Using the Installer (Windows x32, MacOS or Linux)
 *************************************************
 
-|tinkerer| |engineer| |support-button| |githublink-ex-installer-button2|
+|SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-installer-button-small|
 
 .. warning::
 
@@ -24,13 +24,14 @@ Using the Installer (Windows x32, MacOS or Linux)
 
 .. warning:: 
 
-  Please be advised that our installer currently does not work reliably on Linux or macOS which is a known issue.
+  Please be advised that our |EX-I| currently does not work reliably on Linux or macOS which is a known issue.
 
-  For Linux users we recommend using the Arduino IDE. You can find instructions on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
+  For Linux users we recommend using the |Arduino IDE|. You can find instructions on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
 
   We hope to have a new version available soon.
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 2
@@ -43,7 +44,7 @@ Requirements (for installing)
 * a |EX-CS|
 
   * Arduino Mega or Arduino Uno 
-  * Motor shield
+  * Motor Driver
   * optional WiFi shield or ethernet shield
   * optional LCD or oLED display
   
@@ -51,7 +52,7 @@ Requirements (for installing)
 
 .. sidebar:: **USB Cable**
    
-   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the Arduino IDE) are using the same USB port.
+   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the |Arduino IDE|) are using the same USB port.
 
 1. Getting Ready 
 ================
@@ -129,7 +130,7 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 
 1. Select your **Command Station Type** |BR| This should (almost always) be **'Command Station EX'**
 2. Select your **Arduino Board Type**
-3. Select your **Motor Shield** |BR|
+3. Select your **Motor Driver** |BR|
 4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took note of earlier
 5. Check the checkbox for your networking method if you have a Network Shield or WiFi Shield installed
 6. Check the checkbox for your display type if using an LCD or OLED display
@@ -175,7 +176,7 @@ If you have an Ethernet shield and check this box, you will see options to chang
 
 * **Host Name** - If your Ethernet Board supports it, this name can be used in addition to the IP address.\ 
 
-* **Server Port** - This is the communication port our internal |WiThrottle server| uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use |JMRI|.\ 
+* **Server Port** - This is the communication port our internal |WiThrottle server| uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because |JMRI| also uses that port should you ever want to use |JMRI|.\ 
 
 * **MAC Address** - This is the unique identifier for your Ethernet Shield. We recommend leaving this setting as is. If you ever have more than one Ethernet shield on your network and there is a conflict, you can change this setting.
 
@@ -233,7 +234,7 @@ Once you have configured your options, press this button to compile all the sour
 
    If you have any difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
-----
+|HR-HEAVY|
 
 Next Steps - Test your setup
 ============================

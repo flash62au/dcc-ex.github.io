@@ -1,13 +1,14 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
+
 |EX-CS-LOGO|
 
-*******************
-Arduino Mega Setup
-*******************
+**************************
+Arduino Mega (Recommended)
+**************************
 
-|conductor|
+|SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
 Why do we recommend the Mega?
 -----------------------------
@@ -18,7 +19,7 @@ Why do we recommend the Mega?
 * The mega is only modestly more expensive than an Uno, with clones available for less than $10 USD.
 * See the special note about the Mega+WiFi board below for a board that has the microcontroller and WiFi already on one board.
 
-See the :doc:`/ex-commandstation/get-started/assembly` page for information on setting up this microcontroller.
+See the :doc:`/ex-commandstation/diy/assembly` page for information on setting up this microcontroller.
 
 .. figure:: /_static/images/microcontrollers/mega.png
    :alt: Arduino Mega Microcontroller
@@ -52,4 +53,4 @@ As these microprocessors are not plug compatible with the shields you will need 
 
 .. warning:: 
 
-   Note that if you purchase a 3.3v version of the Arduino Pro Mini you may need make wiring changes to your motor shield to protect the microcontroller as many of the aftermarket version of this board come with a know wiring fault.
+   Note that if you purchase a 3.3v version of the Arduino Pro Mini you may need make wiring changes to your |motor shield| to protect the microcontroller as many of the aftermarket version of this board come with a know wiring fault.

@@ -5,9 +5,10 @@
 WiThrottle
 **********
 
-|conductor| |tinkerer| |engineer|
+|SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 2
@@ -32,8 +33,8 @@ Features
 =========
 
 * Supports WiThrottle Protocol
-* Connects to JMRI
-* Connects to |EX-CS| if not using JMRI
+* Connects to |JMRI|
+* Connects to |EX-CS| if not using |JMRI|
 * Connects via WiFi
 
 .. _withrottle-screenshots:
@@ -55,25 +56,25 @@ Requirements
 
 * A |EX-CS| (Mega based for WiFi)
 * An iOS Cell Phone or Tablet
-* A WiFi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
+* A WiFi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup </ex-commandstation/diy/wifi-setup>`
 
 .. _withrottle-operation:
 
 Operation
 ==========
 
-To use WiFi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
+To use WiFi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/diy/wifi-setup>` section.
 
 * Open the network settings on your phone
-* Change to same network of the PC that JMRI is on
+* Change to same network of the PC that |JMRI| is on
 * Start the |WiThrottle| App
 * |WiThrottle| will try to find the |WiThrottle Server| on the |EX-CS|
 * If you are using |Access Point Mode| 
 
   * It should find the |WiThrottle Server| in |JMRI| and automatically connect to it
 
-.. warning:: 
-   :class: warning-float-right
+.. important:: 
+   :class: important-float-right
 
    |wiThrottle Lite| (the free version) does not have the ``Track Power`` function. You will either need to purchase the full version, or you can :doc:`add a startup command </ex-commandstation/advanced-setup/startup-config>`. 
 

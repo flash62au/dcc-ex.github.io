@@ -6,13 +6,14 @@
 VL53L0X Time of Flight Sensor
 *****************************
 
-|tinkerer| |engineer| |support-button|
+|SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Time of Flight (or ToF) sensors can provide a more reliable and accurate sensor than traditional IR sensors as they are not susceptible to interference from different and varying lighting conditions.
 
@@ -172,28 +173,28 @@ If you are using |JMRi| and require these to be available as sensors, then they 
 
 To create sensors for our examples above, the commands would be as shown below, and for simplicity we keep the sensor ID the same as the vpin ID in use.
 
-.. code-block:: 
+.. code-block:: cpp
 
   <S 4000 4000 0>
   <S 4003 4003 0>
 
 With these definitions, when an object comes within 200mm of the sensors, a ``<Q id>`` message will be sent to all defined serial ports with the appropriate sensor ID:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <Q 4000>
   <Q 4003>
 
 Conversely, when an object moves more than 250mm from the sensors, a ``<q id>`` message will be sent instead:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <q 4000>
   <q 4003>
 
 To ensure sensors are defined at startup, refer to :doc:`/ex-commandstation/advanced-setup/startup-config`.
 
-EX-RAIL integration
+EXRAIL integration
 ===================
 
 |EX-R| enables utilising these devices as both digital and analogue sensors.
@@ -202,22 +203,22 @@ Using the standard digital sensor commands (AT, AFTER, ATTIMEOUT, IF, IFNOT, IFT
 
 For example:
 
-.. code-block:: 
+.. code-block:: cpp
 
   AT(4000)        // Will trigger when an object is within 200mm
   AFTER(4003)     // Will trigger 0.5s after an object moves 250mm away
 
-.. todo:: `LOW - VL53L0X <https://github.com/DCC-EX/dcc-ex.github.io/issues/447>`_ |EXTERNAL-LINK| - validate VL53L0X works with EX-RAIL's analogue sensor commands ATGTE, ATLT, IFGTE, IFLT
+.. todo:: `LOW - VL53L0X <https://github.com/DCC-EX/dcc-ex.github.io/issues/447>`_ |EXTERNAL-LINK| - validate VL53L0X works with EXRAIL's analogue sensor commands ATGTE, ATLT, IFGTE, IFLT
 
 .. note:: 
 
-  Using a VL53L0X with EX-RAIL's analogue sensor commands has not been validated, this may not work.
+  Using a VL53L0X with EXRAIL's analogue sensor commands has not been validated, this may not work.
 
 With |EX-R|, you can also use the analogue sensor commands (ATGTE, ATLT, IFGTE, IFLT) to have automation based on the actual distance from the sensor, rather than it operating like a simple on/off switch.
 
 For example:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ATGTE(4000, 150)    // Will trigger when an object is 150mm or further away from the sensor
   ATLT(4003, 100)     // Will trigger when an object is less than 100mm away

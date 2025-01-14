@@ -5,14 +5,20 @@
 Engine Driver
 *************
 
-|conductor| |tinkerer| |engineer| |support-button|
+|SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 2
       :local:
 
+.. image:: /_static/images/throttles/icon_android.png
+   :alt: Android Logo
+   :scale: 30%
+   :align: left
+   
 .. image:: /_static/images/throttles/engine_driver_logo.png
    :alt: Android Logo
    :scale: 60%
@@ -20,7 +26,7 @@ Engine Driver
 
 **Engine Driver** (ED) is an Android App that uses the |WiThrottle Protocol| *or* the |DCC-EX Native Commands| to connect directly to the |EX-CS| via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the |WiThrottle Protocol|. 
 
-If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
+If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/diy/wifi-setup>`.
 
 If you wish to connect Engine Driver to |JMRI|, you need to start the |WiThrottle Server| and (optionally [#]_) the Web Server in JMRI on the computer running |JMRI|. The |JMRI| computer must be connected to the |EX-CS| using a USB cable. 
 
@@ -63,7 +69,7 @@ Standard Features (all WiThrottle servers)
 EX-CommandStation Specific or Advantageous Features
 ===================================================
 
-* DCC-EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons
+* DCC-EX EXRAIL Automation {Handoff}, Route {Set} and EXRAIL Command function buttons
 * Able to select local images for roster locos
 * New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with |EX-CS|
 

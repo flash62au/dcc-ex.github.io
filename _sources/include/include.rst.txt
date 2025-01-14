@@ -1,57 +1,6 @@
 .. meta::
   :keywords: DCC-EX DCC DCC++ EX DCC++EX 
 ..
-.. |DCC-EX| raw:: html
-
-  <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span>
-..
-.. |EX-CS| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>
-..
-.. |EX-WT| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span>
-..
-.. |EX-R| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>
-..
-.. |EX-I| raw:: html
-   
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span>
-..
-.. |EX-TT| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>
-..
-.. |EX-FC| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span>
-..
-.. |EX-DCCI| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;DCCInspector</span>
-..
-.. |EX-IO| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span>
-..
-.. |EX-TB| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span>
-..
-.. |EX-MS| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span>
-..
-.. |BSC| raw:: html
-
-  <span class="ex-suffix">BaseStationClassic (DCC++)</span>
-..
-.. |TM| raw:: html
-
-  <span class="ex-suffix">TrackManager</span>
 ..
 .. |br| raw:: html
 
@@ -79,7 +28,7 @@
 ..
 .. |NOT-IN-PROD-VERSION| raw:: html
    
-  <span style="color:red">This feature is not available in the current 'Production' version</span>
+  <span style="color:red">This feature is not available in the current 'Production' version</span> <br /> It is available in the 'development' (DEVEL) releases.
 ..
 .. |NEW-IN-V5| raw:: html
 
@@ -97,6 +46,11 @@
 ..
 .. ................................................
 ..
+.. |EX-PLACEHOLDER| image:: /_static/images/logos/placeholder.png
+      :alt: Dummy Placeholder
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. |EX-CS-LOGO| image:: /_static/images/logos/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
       :scale: 40%
@@ -112,8 +66,8 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
-.. |EX-R-LOGO| image:: /_static/images/logos/product-logo-ex-rail.png
-      :alt: EX-RAIL
+.. |EX-R-LOGO| image:: /_static/images/logos/product-logo-exrail.png
+      :alt: EXRAIL
       :scale: 40%
       :class: image-product-logo-float-right
 ..
@@ -194,6 +148,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |EX-SUPPLIERS-LOGO| image:: /_static/images/logos/product-logo-suppliers.png
+      :alt: DCC-EX Suppliers
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. |TRACKMANAGER-LOGO| image:: /_static/images/logos/product-logo-trackmanager.png
       :alt: DCC-EX Track Manager
       :scale: 40%
@@ -213,13 +172,21 @@
 ..
 .. ...............................................
 ..
+.. |EX-R-FULL| raw:: html
+
+  <span class="ex-prefix">EX</span><span class="ex-suffix">tended </span>
+  <span class="ex-prefix">R</span><span class="ex-suffix">ailroad</span>
+  <span class="ex-prefix">A</span><span class="ex-suffix">utomation</span>
+  <span class="ex-prefix">I</span><span class="ex-suffix">nstruction</span>
+  <span class="ex-prefix">L</span><span class="ex-suffix">anguage</span>
+..
 .. |Motor Driver| replace::
 
-    :doc:`Motor Driver </reference/glossary>`
+    :doc:`Motor Driver </reference/hardware/motor-boards>`
 ..
 .. |JMRI| replace::
 
-    :doc:`JMRI </reference/glossary>`
+    :doc:`JMRI </throttles/software/jmri>`
 ..   
 .. |Engine Driver| replace::
 
@@ -237,37 +204,33 @@
 
     :doc:`wiThrottle Lite </throttles/software/withrottle>`
 ..
+.. |ThrottleCard| replace::
+
+    :doc:`ThrottleCard </throttles/software/throttlecard>`
+..
 .. |wiThrottle Protocol| replace::
 
-    :doc:`wiThrottle Protocol </reference/glossary>`
+    :doc:`wiThrottle Protocol </reference/software/withrottle-vs-native-commands>`
 ..
 .. |wiThrottle Server| replace::
 
-    :doc:`wiThrottle Server </reference/glossary>`
-..
-.. |Native Protocol| replace::
-
-    :doc:`Native DCC-EX Protocol </reference/glossary>`
-..
-.. |Native DCC-EX Protocol| replace::
-
-    :doc:`Native DCC-EX Protocol </reference/glossary>`
+    :doc:`wiThrottle Server </reference/software/withrottle-vs-native-commands>`
 ..
 .. |Access Point| replace::
 
-    :doc:`Access Point (AP) </reference/glossary>`
+    :doc:`Access Point (AP) </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 ..
 .. |Access Point Mode| replace::
 
-    :doc:`Access Point (AP) Mode </reference/glossary>`
+    :doc:`Access Point (AP) Mode </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 ..
 .. |Station Mode| replace::
 
-    :doc:`Station (STA) Mode  </reference/glossary>`
+    :doc:`Station (STA) Mode  </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 ..
 .. |Arduino IDE| replace::
 
-    :doc:`Arduino IDE </reference/glossary>`
+    :doc:`Arduino IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 ..
 .. |VSC| replace::
 
@@ -275,11 +238,55 @@
 ..
 .. |DCC-EX Native Commands| replace::
    
-    :doc:`DCC-EX Native Commands </reference/glossary>`
+    :doc:`DCC-EX Native Commands </reference/software/withrottle-vs-native-commands>`
 ..
 .. |DCC-EX Native Protocol| replace::
    
-    :doc:`DCC-EX Native Protocol </reference/glossary>`
+    :doc:`DCC-EX Native Protocol </reference/software/withrottle-vs-native-commands>`
+..
+.. |DC PWM| replace::
+   
+    :doc:`DC PWM </reference/hardware/dcc-vs-dc>`
+..
+.. |DC| replace::
+   
+    :doc:`DC </reference/hardware/dcc-vs-dc>`
+..
+.. |DCC| replace::
+   
+    :doc:`DCC </reference/hardware/dcc-vs-dc>`
+..
+.. |Serial Monitor| replace::
+   
+    :doc:`Serial Monitor </reference/tools/serial-monitor>`
+..
+.. |IDE Serial Monitor| replace::
+   
+    :ref:`Arduino IDE Serial Monitor <reference/tools/serial-monitor:connect with the arduino ide serial monitor>`
+..
+.. |Device Monitor| replace::
+   
+    :ref:`EX-Installer Device Monitor <ex-installer/testing:using the ex-installer device monitor>`
+..
+.. |STANDARD MOTOR DRIVER| replace::
+   
+    :abbr:`Standard Motor Driver (Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.)`
+..
+.. |MOTOR DRIVER| replace::
+   
+    :abbr:`Motor Driver (also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board')`
+..
+.. |MOTOR SHIELD| replace::
+   
+    :abbr:`Motor Shield (also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board')`
+..
+.. |DIY| replace::
+   
+    :abbr:`DIY (Do-it-yourself)`
+..
+.. |RTR| replace::
+   
+    :abbr:`RTR (Ready-to-run / plug-and-play)`
 ..
 .. |hr-dashed| raw:: html
 
@@ -288,38 +295,4 @@
 .. |hr-heavy| raw:: html
 
    <hr class="hr-heavy" />
-..
-.. ...............................................
-..
-.. |githublink-ex-turntable| raw:: html
-
-   <a class="githublink" href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help">Bug/Feature/Support Requests</a>
-..
-.. |githublink-ex-turntable-button| raw:: html
-
-   <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 196px; height: 40px;" /></a>
-..
-.. |githublink-ex-dccinspector-button| raw:: html
-
-   <a href="https://github.com/DCC-EX/DCCInspector-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
-..
-.. |githublink-ex-webthrottle-button| raw:: html
-
-   <a href="https://github.com/DCC-EX/WebThrottle-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
-..
-.. |githublink-ex-installer-button| raw:: html
-
-  <a href="https://github.com/DCC-EX/EX-Installer/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
-..
-.. |githublink-ex-commandstation-button| raw:: html
-
-  <a href="https://github.com/DCC-EX/CommandStation-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
-..
-.. |githublink-ex-ioexpander-button| raw:: html
-
-  <a href="https://github.com/DCC-EX/EX-IOExpander/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
-..
-.. |githublink-ex-fastclock-button| raw:: html
-
-  <a href="https://github.com/DCC-EX/EX-FastClock/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
 ..
