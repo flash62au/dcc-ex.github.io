@@ -685,7 +685,6 @@
 <p>The voltage provided to “External Power” is the voltage required to operate the turnouts/points, and will depend on the brand/model. Absolute maximum for the L293D is 36V DC.</p>
 <p>Here is an example <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> macro that will configure a virtual turnout, setting the correct pins for the two turnouts to operate correctly:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define PULSE 10    </span><span class="c1">// Set the duration of the pulse to 10ms</span>
-
 <span class="cp">#define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc)</span>
 <span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">desc</span><span class="p">)</span>
 <span class="n">DONE</span>
@@ -713,7 +712,6 @@
 <p>The voltage provided to “External Power” is the voltage required to operate the turnouts/points, and will depend on the brand/model. Absolute maximum for the L293D is 36V DC.</p>
 <p>Here is an example <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> macro that will configure a virtual turnout, setting the correct pins for the two turnouts to operate correctly (note it is identical to the single coil version, but renamed):</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define PULSE 10    </span><span class="c1">// Set the duration of the pulse to 10ms</span>
-
 <span class="cp">#define DUAL_COIL_TURNOUT(t, p1, p2, p3, desc)</span>
 <span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">desc</span><span class="p">)</span>
 <span class="n">DONE</span>
@@ -806,7 +804,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7b93e834f0>
+    <jinja2.runtime.BlockReference object at 0x7f2b5cd96d40>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
