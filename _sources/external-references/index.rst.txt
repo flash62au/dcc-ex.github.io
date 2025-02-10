@@ -24,8 +24,15 @@ Videos
 Jimmy from 'DIY and Digital Railroad'
 -------------------------------------
 
+* ~ Dec 204 - `Is there FINALLY an affordable DCC System with a lot of power? <https://youtu.be/lkN427GykUk?si=VPw2UyfDLUz7ifsY>`_ |EXTERNAL-LINK|
+* ~ Jan 2024 - EX-8874 - `A Big leap forward for DCC-EX and Model Trains <https://youtu.be/XXBw6Ae2BKQ?si=2vnVPcCDCgsbhkYJ>`_ |EXTERNAL-LINK|
 * 31 July 2023 - `Cheap and Amazing! DCC-EX 2 Years Later <https://www.youtube.com/watch?v=5WXPA0uVFXw>`_ |EXTERNAL-LINK|
 * ~ 2021 - `DCC-EX: A Cheap DIY DCC System?!?! This is a Model Railroad Game Changer <https://www.youtube.com/watch?v=DVDNi9U_K68&t=0s>`_ |EXTERNAL-LINK|
+
+Sumner Patterson
+----------------
+
+* 09 Feb 2025 - DC and DCC - `TrackManager Demo 3 <https://youtu.be/IWxa5MopC9o>`_ |EXTERNAL-LINK|
 
 Wotton Tor
 ----------
@@ -36,6 +43,14 @@ Little Wicket Railway
 ---------------------
 
 * ~ March 2023  - `DCC EX - Amazing Digital Controller for Under £50 <https://youtu.be/mYjLO4yM60E>`_ |EXTERNAL-LINK|
+
+DriverDTrains
+-------------
+
+https://youtu.be/FpgbN-bFzvM?si=4_ERNXpENQFf_mjM
+
+* 09 Feb 2025 - `DriverD #8.b – Configure DCC-EX, EX-CSB1 With EX-Installer! <https://youtu.be/FpgbN-bFzvM?si=Au5UDNP0mdKYw6Fn>`_ |EXTERNAL-LINK|
+* ~ 27 August 2023 - `"#4 Assembling a Mega DCC-EX Command Station" - Driver D (Part 1 Hardware Assembly)  <https://www.youtube.com/watch?v=HatlU7A5S5s>`_ |EXTERNAL-LINK|
 
 Toms Trains and Things
 ----------------------
@@ -61,9 +76,4 @@ Paul Antoine
 ------------
 
 * ~ April 2023 - `"DCC-EX Open Source Model Railroading" - Paul Antoine (Everything Open 2023) <https://youtu.be/YlGL9-v5OAQ>`_ |EXTERNAL-LINK|
-
-DriverDTrains
--------------
-
-* ~ 27 August 2023 - `"#4 Assembling a Mega DCC-EX Command Station" - Driver D (Part 1 Hardware Assembly)  <https://www.youtube.com/watch?v=HatlU7A5S5s>`_ |EXTERNAL-LINK|
 
