@@ -1297,7 +1297,7 @@ Writing CVs - Program on the main
   |_| > **bit:** ???  |BR|
   |_| > **value:** The value to be written to the Configuration Variable memory location (0-255)
   
-  *Response:* ???
+  *Response:* N/A
 
 |hr-dashed|
 
@@ -1338,13 +1338,14 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| > **cv:** CV number
 
   *Response:* |BR|
-  |_| ``<r cv value>`` |BR|
-  |_| > **cv:** The number of the Configuration Variable memory location in the decoder to write to (1-1024) |BR|
+  |_| ``<v cv value>`` |BR|
+  |_| > **cv:** The number of the Configuration Variable memory location in the decoder (1-1024) |BR|
   |_| > **value:** one of |BR|
   |_| |_| |_| |_| • value of the CV |BR|
   |_| |_| |_| |_| • -1: if the write failed
 
-  *Example:* ``<r 3450>`` shows that Loco with ID **3450** is on the programming track.
+  *Example:* ``<v 1 3>`` shows that the value ``3`` is stored in CV ``1``. |BR|
+  *Example:* ``<v 1 -1>`` shows that reading the value stored in CV ``1`` failed.
 
 |hr-dashed|
 
@@ -1384,9 +1385,17 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| |_| |_| |_| • 0=off
  
   *Response:* |BR|
-  |_| Response (successful): **0 | 1** |BR|
-  |_| Response (fail): **<V -1>**
+  |_| ``<v cv bit onOff>`` |BR|
+  |_| > **cv:** CV number |BR|
+  |_| > **bit:** bit to verify in the CV |BR|
+  |_| > **onOff:** one of |BR|
+  |_| |_| |_| |_| • 1=on  |BR|
+  |_| |_| |_| |_| • 0=off |BR|
+  |_| |_| |_| |_| • -1=error
 
+  *Example:* ``<v 1 3 1>`` shows that the value ``1`` is stored in bit ``3`` of CV ``1``. |BR|
+  *Example:* ``<v 1 3 -1>`` shows verifying the value stored in bit ``3`` of CV ``1`` failed.
+  
   *Notes:*
 
     This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read bit command (see above) and return the value read.
@@ -1408,7 +1417,10 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| > **cv:** CV number |BR|
   |_| > **value:** one of |BR|
   |_| |_| |_| |_| • actual value of the CV |BR|
-  |_| |_| |_| |_| • -1: if the write failed
+  |_| |_| |_| |_| • -1: if the verify failed
+
+  *Example:* ``<v 1 3>`` shows that the value ``3`` is stored in CV ``1``. |BR|
+  *Example:* ``<v 1 -1>`` shows verifying the value stored in CV ``1`` failed.
 
   *Notes:*
 
@@ -1428,7 +1440,20 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| |_| |_| |_| • 1=on  |BR|
   |_| |_| |_| |_| • 0=off
   
-  *Response:* ???
+  *Response:* |BR|
+  |_| ``<r0|0|cv bit onOff>`` |BR|
+  |_| > **cv:** CV number |BR|
+  |_| > **bit:** bit changed |BR|
+  |_| > **onOff:** one of |BR|
+  |_| |_| |_| |_| • 0|1 |BR|
+  |_| |_| |_| |_| • -1: if the write failed
+
+  *Example:* ``<r0|0|1 3 1>`` shows that the value ``1`` was written to bit ``3`` of CV ``1``. |BR|
+  *Example:* ``<r0|0|1 3 -1>`` shows that writing to bit ``3`` of CV ``1`` failed.
+
+  *Notes:*
+
+    The response is a legacy DCC++ formatted response that is hard to parse, and it is recommended to write full CVs where possible.
 
 |hr-dashed|
 
@@ -1442,11 +1467,14 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| > **value:** value to change the CV to
 
   *Response:* |BR|
-  |_| ``<w cv value>`` |BR|
+  |_| ``<r cv value>`` |BR|
   |_| > **cv:** CV number |BR|
   |_| > **value:** one of |BR|
   |_| |_| |_| |_| • value CV was changed to |BR|
   |_| |_| |_| |_| • -1: if the write failed
+
+  *Example:* ``<r 1 3>`` shows that the value ``3`` was written to CV ``1``. |BR|
+  *Example:* ``<r 1 -1>`` shows writing a value to CV ``1`` failed.
 
 |hr-dashed|
 
