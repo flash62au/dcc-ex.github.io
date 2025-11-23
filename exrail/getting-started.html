@@ -821,7 +821,7 @@
 <span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w">     </span><span class="c1">// close turnout/point 7</span>
 <span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span><span class="w">  </span><span class="c1">// 5 second wait</span>
 <span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">92</span><span class="p">)</span><span class="w">    </span><span class="c1">// signal 92 to Green</span>
-<span class="w">   </span><span class="n">DONE</span>
+<span class="w"> </span><span class="n">DONE</span>
 </pre></div>
 </div>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -875,7 +875,7 @@
 <span class="w">   </span><span class="n">RED</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="w">     </span><span class="c1">// signal 24 to red</span>
 <span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait 2 seconds</span>
 <span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w">   </span><span class="c1">// signal 27 to green</span>
-<span class="w">   </span><span class="n">DONE</span>
+<span class="w"> </span><span class="n">DONE</span>
 </pre></div>
 </div>
 <p>Sequences that are triggered when ‘events’ occur, include:</p>
@@ -928,7 +928,7 @@
 <span class="w">   </span><span class="n">RED</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="w">     </span><span class="c1">// signal 24 to red</span>
 <span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait 2 seconds</span>
 <span class="w">   </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w">   </span><span class="c1">// signal 27 to green</span>
-<span class="w">   </span><span class="n">DONE</span>
+<span class="w"> </span><span class="n">DONE</span>
 </pre></div>
 </div>
 <p>Turnout/Point commands include:</p>
@@ -965,7 +965,7 @@
 <span class="w">   </span><span class="n">REV</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w">     </span><span class="c1">// move backwards at DCC speed 50</span>
 <span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span><span class="w"> </span><span class="c1">// run for 5 seconds</span>
 <span class="w">   </span><span class="n">STOP</span><span class="w">        </span><span class="c1">// stop the train</span>
-<span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">   </span><span class="c1">// repeat forever</span>
+<span class="w"> </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">   </span><span class="c1">// repeat forever</span>
 </pre></div>
 </div>
 <p>Loco related commands include:</p>
@@ -1023,12 +1023,12 @@
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">85</span><span class="p">)</span>
 <span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w">     </span><span class="c1">// check every 0.1 of a second</span>
 <span class="w">   </span><span class="n">AT</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span><span class="w">         </span><span class="c1">// monitor push button 35</span>
-<span class="w">   </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span><span class="w">  </span><span class="c1">// check the state of turnout/point 105</span>
-<span class="w">      </span><span class="n">THROW</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span><span class="w">  </span><span class="c1">// if closed THROW Turnout/Point 105</span>
-<span class="w">   </span><span class="n">ELSE</span>
-<span class="w">      </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span><span class="w">  </span><span class="c1">// if closed CLOSE Turnout/Point 105</span>
-<span class="w">   </span><span class="n">ENDIF</span>
-<span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">85</span><span class="p">)</span><span class="w">     </span><span class="c1">// repeat forever</span>
+<span class="w">     </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span><span class="w">  </span><span class="c1">// check the state of turnout/point 105</span>
+<span class="w">       </span><span class="n">THROW</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span><span class="w">  </span><span class="c1">// if closed THROW Turnout/Point 105</span>
+<span class="w">     </span><span class="n">ELSE</span>
+<span class="w">       </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span><span class="w">  </span><span class="c1">// if closed CLOSE Turnout/Point 105</span>
+<span class="w">     </span><span class="n">ENDIF</span>
+<span class="w">     </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">85</span><span class="p">)</span><span class="w">     </span><span class="c1">// repeat forever</span>
 </pre></div>
 </div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
@@ -1149,7 +1149,7 @@
 <span class="w">   </span><span class="n">REV</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w">     </span><span class="c1">// move backwards at DCC speed 50</span>
 <span class="w">   </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="mi">20000</span><span class="p">)</span><span class="w"> </span><span class="c1">// run for between 5 to 20 seconds (random)</span>
 <span class="w">   </span><span class="n">STOP</span><span class="w">        </span><span class="c1">// stop the train</span>
-<span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w">   </span><span class="c1">// repeat forever</span>
+<span class="w"> </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w">   </span><span class="c1">// repeat forever</span>
 </pre></div>
 </div>
 <table class="command-table docutils align-default">
@@ -1276,7 +1276,7 @@
 <span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w"> </span><span class="c1">// show green light to user</span>
 <span class="w">  </span><span class="n">JOIN</span><span class="w">      </span><span class="c1">// connect prog track to main</span>
 <span class="w">  </span><span class="n">START</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="c1">// send loco off along route 12</span>
-<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span><span class="w"> </span><span class="c1">// keep doing this for another launch</span>
+<span class="w"> </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span><span class="w"> </span><span class="c1">// keep doing this for another launch</span>
 </pre></div>
 </div>
 <p>The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it’s possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the <code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code> instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)</p>
@@ -1309,7 +1309,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f2f189175b0>
+    <jinja2.runtime.BlockReference object at 0x7f1236094a30>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
