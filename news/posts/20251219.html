@@ -9,7 +9,7 @@
 <meta content="News Announcements &quot;What's Happening&quot;" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Version 5 progress and a breaking change in the development branch &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>New documentation coming soon! &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -21,7 +21,7 @@
 
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/news/posts/20230327.html" />
+    <link rel="canonical" href="https://dcc-ex.com/news/posts/20251219.html" />
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
@@ -692,11 +692,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Version 5 progress and a breaking change in the development branch</li>
+      <li class="breadcrumb-item active">New documentation coming soon!</li>
   
     
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/news/posts/20230327.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/news/posts/20251219.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -707,29 +707,14 @@
            <div itemprop="articleBody">
               <a class="image-product-logo-float-right reference internal image-reference" href="../../_images/product-logo-news.png"><img alt="DCC-EX News" class="image-product-logo-float-right" src="../../_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" />
 </a>
-<section id="version-5-progress-and-a-breaking-change-in-the-development-branch">
-<h1>Version 5 progress and a breaking change in the development branch<a class="headerlink" href="#version-5-progress-and-a-breaking-change-in-the-development-branch" title="Link to this heading"></a></h1>
-<p>We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go.</p>
-<p>Amongst other things, this has resulted in one potentially “breaking” change for users of <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>’s capability to run sequences/routes on start-up.</p>
-<p><strong>Breaking change:</strong> The implicit AUTOSTART at the beginning of the “myAutomation.h” file for <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> has been disabled, as we have found it confuses a great many first time users.</p>
-<blockquote>
-<div><p>What does this mean?</p>
-<p>Previously, when your <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> started up with a “myAutomation.h” file present, anything defined prior to the very first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> statement would execute automatically. This was used to do things like set turnouts/points to a known startup position, automatically start routes or sequences for fully automated layouts, and so forth.</p>
-<p>As of v4.2.31, this behaviour is disabled, meaning nothing defined in “myAutomation.h” will automatically start unless preceded by the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> directive (see <a class="reference internal" href="../../exrail/exrail-command-reference.html#scripts-sequences-types-and-control"><span class="std std-ref">Scripts/Sequences - Types and Control</span></a>).</p>
-</div></blockquote>
-<p>At the time of writing, we are currently at v4.2.37 of the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> development release, and these updates are continuing multiple times a week as we find/fix bugs and refine the software.</p>
-<p>Here are some more highlights of what’s been done since the last news update:</p>
-<ul class="simple">
-<li><p>New &lt;JG&gt; and &lt;JI&gt; commands for multi-track gauges such as current sensing (v4.2.20)</p></li>
-<li><p>Static IP address now configurable for Ethernet shields (v4.2.24)</p></li>
-<li><p>SAMD21 had a bug in EXRAIL due to memory alignment, this likely improves 32-bit support for various microcontrollers (v4.2.25)</p></li>
-<li><p>Improved stability/reliability of the <a href="../../ex-ioexpander/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span></a> device driver (v4.2.26) and bug fix for analogue inputs (v4.2.34)</p></li>
-<li><p>Updated the DFPlayer code to cope with a new variant of the popular sound board seen in the wild, and mods to the HCRS04 ultrasonic driver so it uses less CPU loop time (v4.2.28)</p></li>
-<li><p>Various LCD bug fixes (latest in v4.2.29)</p></li>
-<li><p>Add <code class="docutils literal notranslate"><span class="pre">&lt;z&gt;</span></code> direct I/O pin manipulation command (v4.2.35)</p></li>
-<li><p>Add new “FLAGS” device to the HAL to communicate Vpin changes outside of <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> to software such as <a class="reference internal" href="../../throttles/software/jmri.html"><span class="doc">JMRI</span></a> (v4.2.37)</p></li>
-</ul>
-<p>Some of the above new features and fixes are currently undocumented which we will fix in the coming weeks. In the meantime, feel free to jump onto Discord and chat with the developers and keep up to date (<a class="reference internal" href="../../support/contact-us.html"><span class="doc">Contact Us</span></a>).</p>
+<section id="new-documentation-coming-soon">
+<h1>New documentation coming soon!<a class="headerlink" href="#new-documentation-coming-soon" title="Link to this heading"></a></h1>
+<p>Coming soon! A new, refreshed take on our documentation aimed at making it easier for people to get up and running with DCC-EX.</p>
+<p>While our website and included documentation has continued to evolve and morph with our products over the years, the pace of development continues to outpace the ability to maintain the documentation.</p>
+<p>For those of you who have been using our products for years, you’ve no doubt noticed that there is a lot of detailed, highly technical information available which is great for those who know what they’re doing, but it’s very hard to comprehend for new people, especially those who just want to plug in their new EX-CSB1 and enjoy running their trains.</p>
+<p>With this in mind, we’ve decided to refresh our documentation from the ground up. You’ll still find it in the same place on the <a class="reference external" href="https://dcc-ex.com">DCC-EX website</a>, but it will have a new look and the initial primary focus will be on enabling those people who are new to DCC-EX and need to get started.</p>
+<p>It’s equally important we don’t lose all the detailed knowledge gained over the years, so the current documentation will be retained as the <a class="reference external" href="https://dcc-ex.com/legacy-docs/">DCC-EX legacy documentation</a>. Over time, we will incorporate this into the refreshed documentation also.</p>
+<p>We’d also like to say a huge thanks to those who have contributed so much time and effort into the documentation over the years and continue to do so, it is greatly appreciated!</p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -737,23 +722,16 @@
 <div class="section ablog__prev-next">
   <span class="ablog__prev">
      
-    <a href="20230309.html">
+    <a href="20250313.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>Extra, extra, read all about it! Introducing DCC-EX News!</span>
+      <span>Announcing DCCEXProtocol Library 1.2.0</span>
     </a>
     
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
-     
-    <a href="20230409.html">
-      <span>Final Version 4 Release (v4.1.5)</span>
-      
-      <i class="fa fa-arrow-circle-right"></i>
-      
-    </a>
     
   </span>
 </div>
@@ -774,7 +752,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fee33f3af50>
+    <jinja2.runtime.BlockReference object at 0x7fee3268ff40>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
