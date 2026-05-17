@@ -714,7 +714,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#background" id="id1">Background</a></p></li>
 <li><p><a class="reference internal" href="#the-wifi-different-modes" id="id2">The WiFi different modes</a></p></li>
-<li><p><a class="reference internal" href="#using-usb-vs-wifi" id="id3">Using USB vs WiFi</a></p></li>
+<li><p><a class="reference internal" href="#using-usb-vs-wifi-limitations-of-wifi" id="id3">Using USB vs WiFi - Limitations of WiFi</a></p></li>
 <li><p><a class="reference internal" href="#changing-the-settings" id="id4">Changing the settings</a></p>
 <ul>
 <li><p><a class="reference internal" href="#using-ex-webthrotttle" id="id5">Using EX-WebThrotttle</a></p></li>
@@ -730,9 +730,9 @@
 <p>Also see <a class="reference external" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32/#configuring-the-host-name">WiFi configuration (CSB1 or ESP32 ONLY)</a> on the new web site for more technical information.</p>
 <section id="background">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Background</a><a class="headerlink" href="#background" title="Link to this heading"></a></h2>
-<p>Prior to version 5.7.0, WiFi configuration for <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> was done through options in the <code class="docutils literal notranslate"><span class="pre">config.h</span></code> file. This method required users to modify the firmware source code and recompile it for their specific WiFi settings, which could be cumbersome and error-prone.</p>
-<p>From version 5.7.0, config.h options for WiFi configuration in <code class="docutils literal notranslate"><span class="pre">config.h</span></code> are <em>ignored</em> by the CSB1 or ESP32 EX-CommandStations.</p>
-<p>It is now necessary to use the new WiFi configuration method, which involves connecting to the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> <em>after you have flashed the firmware.</em>  You do so by connecting to the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> via USB or by connecting to the WiFi Access Point network of the CS. (Note that the WiFi Access Point network approach has limitations.)</p>
+<p>Prior to version 5.7.0, WiFi configuration for <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> was done through options in the <code class="docutils literal notranslate"><span class="pre">config.h</span></code> file. This method required users to modify the firmware (by editing <cite>config.h`</cite>) and recompile it for their specific WiFi settings.</p>
+<p>From version 5.7.0, WiFi configuration options in <code class="docutils literal notranslate"><span class="pre">config.h</span></code> are <em>ignored</em> by the CSB1 or ESP32 EX-CommandStations.</p>
+<p>It is now necessary to use a new WiFi configuration method, which involves connecting to the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> <em>after you have flashed the firmware.</em>  You do so by connecting to the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> via USB or by connecting to the WiFi Access Point network of the CS. (Note that the WiFi Access Point network approach has limitations. See below.)</p>
 <p>The advantage of this is that it is independent of the flashing process, and will remember your WiFi settings across firmware updates and changes.</p>
 <p>From version 5.7.0, you must configure the WiFi settings through one of the following methods:</p>
 <ol class="loweralpha simple">
@@ -767,8 +767,8 @@
 </ul>
 </section>
 <hr class="docutils" />
-<section id="using-usb-vs-wifi">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Using USB vs WiFi</a><a class="headerlink" href="#using-usb-vs-wifi" title="Link to this heading"></a></h2>
+<section id="using-usb-vs-wifi-limitations-of-wifi">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Using USB vs WiFi - Limitations of WiFi</a><a class="headerlink" href="#using-usb-vs-wifi-limitations-of-wifi" title="Link to this heading"></a></h2>
 <p>Only <strong>Station (STA) mode</strong> and the <strong>HOSTNAME</strong> can be changed over WiFi.</p>
 <p><strong>Access Point (AP)</strong> mode changes require a serial/USB connection.
 This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the Command Station’s WiFi network could change the AP settings and potentially lock you out of your Command Station. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the Command Station can modify these critical settings.</p>
@@ -795,12 +795,12 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 </ul>
 </li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>In every case above, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the <a href="../../../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> interface.</p>
-</div>
 <p><strong>Resetting the Wifi settings</strong></p>
 <p>The <span class="guilabel">Reset WiFi Settings</span> button on the WiFi Setup page will reset all WiFi settings to their default values. This will cause the Command Station to restart and create its own WiFi network in Access Point mode with the default SSID and password.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In every case above, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station in the <a href="../../../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> interface.</p>
+</div>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="using-ex-toolbox">
@@ -811,13 +811,19 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 <li><p>Go to the <code class="docutils literal notranslate"><span class="pre">WiFi</span> <span class="pre">Setup</span></code> page from the menu or the toolbar buttons and follow the same steps as outlined for the <a href="../../../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> above.</p></li>
 </ol>
 <p>Note: Only <strong>Station (STA) mode</strong> and the <strong>HOSTNAME</strong> can be changed over WiFi. <strong>Access Point (AP) mode</strong> changes require a USB connection.</p>
-<p>In every case above, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the <a href="../../../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a> interface.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In every case above, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station in the <a href="../../../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a> interface.</p>
+</div>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="using-ex-installer-arduino-ide-vsc-throttle-apps">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">Using EX-Installer, Arduino IDE, VSC, throttle apps</a><a class="headerlink" href="#using-ex-installer-arduino-ide-vsc-throttle-apps" title="Link to this heading"></a></h3>
 <p>The process for configuring WiFi settings using the serial monitor or device monitor on any of the EX-Installer, Arduino IDE, VSC or WiFi throttle apps are esentially the same.</p>
-<p>In every case below, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the app’s interface.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In every case below, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station in the app’s interface.</p>
+</div>
 <section id="changing-to-station-mode">
 <h4>Changing to Station Mode<a class="headerlink" href="#changing-to-station-mode" title="Link to this heading"></a></h4>
 <p>i.e. your home router.  You will need to issue the command:</p>
@@ -885,7 +891,7 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fedbe1ee3e0>
+    <jinja2.runtime.BlockReference object at 0x7f6490aa5630>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
