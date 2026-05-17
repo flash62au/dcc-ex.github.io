@@ -733,7 +733,7 @@
 <p>Prior to version 5.7.0, WiFi configuration for <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> was done through options in the <code class="docutils literal notranslate"><span class="pre">config.h</span></code> file. This method required users to modify the firmware source code and recompile it for their specific WiFi settings, which could be cumbersome and error-prone.</p>
 <p>From version 5.7.0, config.h options for WiFi configuration in <code class="docutils literal notranslate"><span class="pre">config.h</span></code> ignored by CSB1 or ESP32 EX-CommandStations.</p>
 <p>It is now necessary to use the new WiFi configuration method, which involves connecting to the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> <em>after you have flashed the firmware.</em>  You do so by connecting to the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> via USB or by connecting to the WiFi Access Point network of the CS. (Note that the WiFi Access Point network approach has limitations.)</p>
-<p>The advantage of this is that it is independent of the flashing process, and will remeber your WiFi settings across firmware updates and changes.</p>
+<p>The advantage of this is that it is independent of the flashing process, and will remember your WiFi settings across firmware updates and changes.</p>
 <p>You can configuring WiFi settings through:</p>
 <ol class="loweralpha simple">
 <li><p><a href="../../../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> (via USB),</p></li>
@@ -759,9 +759,10 @@
 </section>
 <section id="accessing-via-usb-vs-wifi">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Accessing via USB vs WiFi</a><a class="headerlink" href="#accessing-via-usb-vs-wifi" title="Link to this heading"></a></h2>
-<p>Only <strong>Station (STA) mode</strong> can be changed over WiFi.</p>
-<p><strong>Access Point (AP)</strong> mode changes require a serial connection.</p>
+<p>Only <strong>Station (STA) mode</strong> and the <strong>HOSTNAME</strong> can be changed over WiFi.</p>
+<p><strong>Access Point (AP)</strong> mode changes require a serial/USB connection.</p>
 </section>
+<hr class="docutils" />
 <section id="changing-the-settings">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Changing the settings</a><a class="headerlink" href="#changing-the-settings" title="Link to this heading"></a></h2>
 <section id="ex-webthrotttle">
@@ -791,9 +792,9 @@
 <p><a href="../../../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a> provides a similar interface to the <a href="../../../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> for configuring WiFi settings, but it can be accessed either via USB or over WiFi. The process for changing WiFi settings in the <a href="../../../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a> is essentially the same as in the <a href="../../../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a>, with the same options for AP mode, STA mode, Temporary STA mode and Hostname.</p>
 <ol class="arabic simple">
 <li><p>Connect your PC to the <a href="../../../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a> via USB or Wifi.  See <a class="reference internal" href="../../../ex-toolbox/using.html"><span class="doc">EX-Toolbox</span></a> for more details.</p></li>
-<li><p>go to the <code class="docutils literal notranslate"><span class="pre">WiFi</span> <span class="pre">Setup</span></code> page from the menu or the toolbar buttons and follow the same steps as outlined for the <a href="../../../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> above.</p></li>
+<li><p>Go to the <code class="docutils literal notranslate"><span class="pre">WiFi</span> <span class="pre">Setup</span></code> page from the menu or the toolbar buttons and follow the same steps as outlined for the <a href="../../../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> above.</p></li>
 </ol>
-<p>Note: Only <strong>Station (STA) mode</strong> can be changed over WiFi. <strong>Access Point (AP)</strong> mode changes require a USB connection.</p>
+<p>Note: Only <strong>Station (STA) mode</strong> and the <strong>HOSTNAME</strong> can be changed over WiFi. <strong>Access Point (AP) mode</strong> changes require a USB connection.</p>
 <p>In every case above, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the <a href="../../../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a> interface.</p>
 </section>
 <hr class="docutils" />
@@ -802,48 +803,48 @@
 <p>The process for configuring WiFi settings using the serial monitor or device monitor on any of the EX-Installer, Arduino IDE, VSC or WiFi throttle apps are esentially the same.</p>
 <p>In every case below, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the app’s interface.</p>
 <section id="changing-to-station-mode">
-<h4>Changing to Station Mode¶<a class="headerlink" href="#changing-to-station-mode" title="Link to this heading"></a></h4>
+<h4>Changing to Station Mode<a class="headerlink" href="#changing-to-station-mode" title="Link to this heading"></a></h4>
 <p>i.e. your home router.  You will need to issue the command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`cpp</span>
-<span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">&quot;routerSSID&quot;</span> <span class="pre">&quot;routerPassword&quot;&gt;</span>
-<span class="pre">`</span></code>
-e.g. Sets the STA mode to connect to a router with SSID “routerSSID” and password</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="s">&quot;routerSSID&quot;</span><span class="w"> </span><span class="s">&quot;routerPassword&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>e.g. Sets the STA mode to connect to a router with SSID “routerSSID” and password</p>
 <p>The command station will attempt to connect to this network immediately, and on each rerstart. If it fails to connect, it will revert to AP mode.</p>
 </section>
 <section id="changing-the-access-point-settings">
 <h4>Changing the Access Point settings<a class="headerlink" href="#changing-the-access-point-settings" title="Link to this heading"></a></h4>
 <p>To give the Access point a specific name and a password that will not be revealed on the OLED use the command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`cpp</span>
-<span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">AP</span> <span class="pre">&quot;MyCSB1&quot;</span> <span class="pre">&quot;SpamWonderfulSpam&quot;&gt;</span>
-<span class="pre">`</span></code>
-e.g. Sets the AP name to “MyCSB1” and the password to “SpamWonderfulSpam”:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">AP</span><span class="w"> </span><span class="s">&quot;MyCSB1&quot;</span><span class="w"> </span><span class="s">&quot;SpamWonderfulSpam&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>e.g. Sets the AP name to “MyCSB1” and the password to “SpamWonderfulSpam”:</p>
 <p>The AP mode password must be at least 8 characters long.</p>
 <p>The default channel is set to “11”. If you need to use an alternate channel (we recommend using only 1,6, or 11) you may change it with the command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`cpp</span>
-<span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">AP</span> <span class="pre">&quot;MyCSB1&quot;</span> <span class="pre">&quot;SpamWonderfulSpam&quot;</span> <span class="pre">6&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">AP</span><span class="w"> </span><span class="s">&quot;MyCSB1&quot;</span><span class="w"> </span><span class="s">&quot;SpamWonderfulSpam&quot;</span><span class="w"> </span><span class="mi">6</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Use a phone WiFi analyser app to see which channels are relatively quiet in your area.</p>
 </section>
 <section id="hidden-access-point-mode">
 <h4>Hidden Access Point mode<a class="headerlink" href="#hidden-access-point-mode" title="Link to this heading"></a></h4>
 <p>In some environments you may want to hide the SSID from phones scanning for access points. If you do hide the SSID, it is still possible to connect by entering the SSID manually on the phone/tablet.</p>
-<p><code class="docutils literal notranslate"><span class="pre">`cpp</span>
-<span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">HIDDENAP</span> <span class="pre">&quot;MyCSB1&quot;</span> <span class="pre">&quot;SpamWonderfulSpam&quot;</span> <span class="pre">6&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">HIDDENAP</span><span class="w"> </span><span class="s">&quot;MyCSB1&quot;</span><span class="w"> </span><span class="s">&quot;SpamWonderfulSpam&quot;</span><span class="w"> </span><span class="mi">6</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 </section>
 <section id="configuring-the-host-name">
 <h4>Configuring the Host Name<a class="headerlink" href="#configuring-the-host-name" title="Link to this heading"></a></h4>
 <p>The default hostname “DCCEX” but you can change this if you have more than one CS on your network to make them show up with different names. Host names containing “DCCEX” are more readily found by WiFi throttles.</p>
-<p><code class="docutils literal notranslate"><span class="pre">`cpp</span>
-<span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">HOSTNAME</span> <span class="pre">&quot;DCCEX-MYCSB1&quot;&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">HOSTNAME</span><span class="w"> </span><span class="s">&quot;DCCEX-MYCSB1&quot;</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>e.g. Sets the hostname to “DCCEX-MYCSB1”:</p>
 </section>
 <section id="clearing-wifi-settings">
 <h4>Clearing WiFi settings<a class="headerlink" href="#clearing-wifi-settings" title="Link to this heading"></a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">`cpp</span>
-<span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">DEFAULT&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">DEFAULT</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>WiFi will revert to the internally generated ssid and password.</p>
 </section>
 </section>
@@ -868,7 +869,7 @@ e.g. Sets the AP name to “MyCSB1” and the password to “SpamWonderfulSpam�
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f0ef5ca77f0>
+    <jinja2.runtime.BlockReference object at 0x7f1c654afe50>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
