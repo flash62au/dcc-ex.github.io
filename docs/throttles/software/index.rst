@@ -19,13 +19,13 @@ Android (Phones and Tablets)
 
 - :doc:`Engine Driver (Android)<engine-driver>` *recommended*
 - :doc:`DCC++ Throttle (Android) <dccpp-throttle>`
-- :doc:`DCCpp CAB (android) <dccpp-cab>`
+- :doc:`DCCpp CAB (Android) <dccpp-cab>`
 - :doc:`Cab Engineer: DCC Throttle (Android) <cab-engineer>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <rtdrive-dccpp>`
 - :doc:`DCC-EX CAB (iOS and Android) <dccex-cab>`
 - :doc:`WiThrottle Cab (iOS and Android) <withrottle-cab>`
-- `Vector Throttle <https://railworksstudio.com/vector/>`_
+- `Vector Throttle (Android) <https://railworksstudio.com/vector/>`_
 
 Apple iOS (Phones and Tablets)
 ------------------------------
@@ -63,7 +63,7 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     jmri
     ThrottleCard (iOS) <throttlecard>
     Cab Engineer: DCC Throttle (Android) <cab-engineer>
-    DCCpp CAB (android) <dccpp-cab>
+    DCCpp CAB (Android) <dccpp-cab>
     DCC-EX CAB (Android and iOS) <dccex-cab>
     WiThrottle Cab (Android and iOS) <withrottle-cab>
     DCC++ Throttle (android) <dccpp-throttle>
